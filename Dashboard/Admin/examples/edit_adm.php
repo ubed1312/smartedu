@@ -26,7 +26,7 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
     
     $con=mysqli_connect($servername,$username,$password,$dbname);
 
-    $value1 = '1';
+    $value1 = '2';
 
     $sql = "SELECT * FROM admin where Code_Adm='$value1'"; 
     $result =$con->query($sql);
@@ -279,7 +279,7 @@ if ($fileError === 0) {
        $fileDestination1 = 'img/Adm/'.$fileNameNew;
 
 
-      $sql1 = "UPDATE admin SET imagename='$fileDestination1' where Code_Adm='1' ";
+      $sql1 = "UPDATE admin SET imagename='$fileDestination1' where Code_Adm='2'";
       $result1 =$con->query($sql1);
 
     echo  '
@@ -439,7 +439,7 @@ $value1 = $_POST['Nom'];
 $value2 = $_POST['Email'];
 $value3 = $_POST['Password'];
 
-$sql2="SELECT * From admin where Nom='$value1' and Email='$value2' and Password='$value3' and Code_Adm='1'";
+$sql2="SELECT * From admin where Nom='$value1' and Email='$value2' and Password='$value3' and Code_Adm='2'";
 $result2 =$con->query($sql2);
     
 
@@ -470,7 +470,7 @@ if ($result2->num_rows > 0 ) {
 else{
 
   
-  $sql1 = "UPDATE admin SET Nom='$value1', Email='$value2' , Password='$value3' where Code_Adm='1'";
+  $sql1 = "UPDATE admin SET Nom='$value1', Email='$value2' , Password='$value3' where Code_Adm='2 '";
   $result1 =$con->query($sql1);
 
 
@@ -530,7 +530,7 @@ else{
                       <div class="form-group row">
                         <label for="inputName" class="col-sm-2 col-form-label">Password</label>
                         <div class="col-sm-6">
-                        <input class="form-control" type="text" title="Mot de Passe Invalid" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="Password" placeholder="Password" value="<?php echo $row['Password'];?>" required>
+                        <input class="form-control" type="text" title="Mot de Passe Invalid" name="Password" placeholder="Password" value="<?php echo $row['Password'];?>" required>
                         </div>
                       </div>
                      
