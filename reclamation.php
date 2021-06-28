@@ -1,23 +1,27 @@
 <?php 
 
-$servename="localhost";
-$username="root";
-$password="";
-$dbname="siteweb";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "siteweb";
 
-$con = mysqli_connect($servename,$username,$password,$dbname);
+
+//connexion au serveur
+$con = mysqli_connect($servername, $username, $password, $dbname);
 
 if(isset($_POST['Envoyer'])){
 
-  @nom = $_POST['nom'];
-  @prenom = $_POST['prenom'];
-  @apogée = $_POST['apogée'];
-  @cne = $_POST['cne'];
-  @mail = $_POST['mail'];
-  @reclamer = $_POST['reclamer'];
 
 
-    $sql="INSERT INTO reclamation (nom,prenom,apogée,cne,mail,reclamer) VALUES('$nom','$prenom','$apogée','$cne','$mail','$reclamer')";
+     @$nom = $_POST['nom'];
+     @$prenom = $_POST['prenom'];
+     @$apogee = $_POST['apogee'];
+     @$cne = $_POST['cne'];
+     @$mail = $_POST['mail'];
+     @$reclamer = $_POST['reclamer'];
+
+
+    $sql="INSERT INTO reclamation (nom,prenom,apogee,cne,mail,reclamer) VALUES('$nom','$prenom','$apogee','$cne','$mail','$reclamer')";
     $result= $con->query($sql);
     header("location:pricing.html");
 }
