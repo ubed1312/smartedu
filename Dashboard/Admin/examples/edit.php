@@ -351,11 +351,11 @@ else{
                     </div>
                     <div class="form-group">
                       <label>Identifiant</label>
-                      <input class="form-control" type="text" name="identifiant" placeholder="identifiant" title="Champ Invalid" value="">
+                      <input class="form-control" type="text" name="identifiant" value="<?php echo $row['identifiant'];?>" title="Champ Invalid" value="">
                     </div>
                     <div class="form-group">
                       <label>Password</label>
-                      <input class="form-control" type="text" name="psd" placeholder="Password" title="Champ Invalid" value="">
+                      <input class="form-control" type="text" name="psd" value="<?php echo $row['psd'];?>" title="Champ Invalid" value="">
                     </div>
 
 
