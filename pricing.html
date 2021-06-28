@@ -195,10 +195,10 @@
                     <div class="pricingTable">
                         <div class="pricingTable-header">
                             <span class="heading"><h3>Reclamation</h3></span>
-                            <span class="price-value" onclick="maFonction()">Cliquer pour réclamer !</span>
+                            <span class="price-value" id="bt" onclick="toggle(this)">Cliquer pour réclamer !</span>
                         </div>
                         
-                        <div class="pricingContent" id="maD">
+                        <div class="pricingContent" style="display:none;" id="cont">
                             <i class="fa fa-adjust"></i>
                             <form method="Post"  action="reclamation.php">
                                 <label><strong> Saisir votre Nom : </strong><br>
@@ -246,10 +246,10 @@
                             <div class="pricingTable"><br><br>
                                 <div class="pricingTable-header">
                                     <span class="heading"><h3>Demande CERTIFICAT DE SCOLARITE</h3></span>
-                                    <span class="price-value" onclick="maFonctio()">Cliquer pour Demander !</span>
+                                    <span class="price-value" id="bt" onclick="toggle1(this)">Cliquer pour Demander !</span>
                                 </div>
                                 
-                                <div class="pricingContent" >
+                                <div class="pricingContent"style="display:none;" id="cont1" >
                                     <i class="fa fa-adjust"></i>
                                     <form method="post" action="certificat.php">
                                         <label><strong> Saisir votre Nom : </strong><br>
@@ -320,10 +320,10 @@
                                     <div class="pricingTable"><br><br>
                                         <div class="pricingTable-header">
                                             <span class="heading"><h3>Demande Relevé de Note</h3></span>
-                                            <span class="price-value" onclick="maFoncti()">Cliquer pour Demander !</span>
+                                            <span class="price-value" id="bt" onclick="toggle2(this)">Cliquer pour Demander !</span>
                                         </div>
                                         
-                                        <div class="pricingContent" >
+                                        <div class="pricingContent" style="display:none;" id="cont3">
                                             <i class="fa fa-adjust"></i>
                                             <form method="post" action="releve.php">
                                                 <label><strong> Saisir votre Nom : </strong><br>
@@ -658,6 +658,51 @@
     <script src="js/all.js"></script>
     <!-- ALL PLUGINS -->
     <script src="js/custom.js"></script>
+<script>
+    function toggle(ele) {
+        var cont = document.getElementById('cont');
+        if (cont.style.display == 'block') {
+            cont.style.display = 'none';
 
+            document.getElementById(ele.id).value = 'Show DIV';
+        }
+        else {
+            cont.style.display = 'block';
+            document.getElementById(ele.id).value = 'Hide DIV';
+        }
+
+    }
+</script>
+            <script>
+    function toggle1(ele1) {
+        var cont = document.getElementById('cont1');
+        if (cont.style.display == 'block') {
+            cont.style.display = 'none';
+
+            document.getElementById(ele.id).value = 'Show DIV';
+        }
+        else {
+            cont.style.display = 'block';
+            document.getElementById(ele.id).value = 'Hide DIV';
+        }
+
+    }
+</script>
+            </script>
+            <script>
+    function toggle2(ele2) {
+        var cont = document.getElementById('cont3');
+        if (cont.style.display == 'block') {
+            cont.style.display = 'none';
+
+            document.getElementById(ele.id).value = 'Show DIV';
+        }
+        else {
+            cont.style.display = 'block';
+            document.getElementById(ele.id).value = 'Hide DIV';
+        }
+
+    }
+</script>
 </body>
 </html>
