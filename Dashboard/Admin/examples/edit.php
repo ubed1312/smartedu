@@ -244,9 +244,11 @@ $value3 = $_POST['Matiere'];
 $value4 = $_POST['Email'];
 $value5 = $_POST['Education'];
 $value6 = $_POST['Skills'];
+$value7 = $_POST['identifiant'];
+$value8 = $_POST['psd'];
 
 
-$sql="SELECT * From listeprof where nom='$value1' and ville='$value2' and matiere='$value3' and email='$value4' and Education='$value5' and Skills='$value6' ";
+$sql="SELECT * From listeprof where nom='$value1' and ville='$value2' and matiere='$value3' and email='$value4' and Education='$value5' and Skills='$value6' and identifiant='$value7'and psd='$value8'";
 $result = $mysqli->query($sql); 
 
 
@@ -276,7 +278,7 @@ if ($result->num_rows > 0 ) {
 
 else{
 
- $sql1 = "UPDATE listeprof SET nom='$value1', ville='$value2', matiere='$value3' , email='$value4' ,  Education='$value5' ,  Skills='$value6' where ID='$id'";
+ $sql1 = "UPDATE listeprof SET nom='$value1', ville='$value2', matiere='$value3' , email='$value4' ,  Education='$value5' ,  Skills='$value6' , identifiant='$value7' , psd='$value8' where ID='$id'";
  $result1 =$mysqli->query($sql1);
 
  echo  '
@@ -347,13 +349,14 @@ else{
                       <input class="form-control" type="text" name="Skills" placeholder="Skills"
                       title="Champ Invalid" minlength='4' value="<?php echo $row['Skills'];?>">
                     </div>
-                    <!-- <div class="form-group">
-                      <label>Prix/H</label>
-                      <input class="form-control" type="text" name="Prix" placeholder="Skills"
-                      title="Champ Invalid" pattern='[0-9]+(\\.[0-9][0-9]?)?' value="
-                      
-                      ">
-                    </div> -->
+                    <div class="form-group">
+                      <label>Identifiant</label>
+                      <input class="form-control" type="text" name="identifiant" placeholder="identifiant" title="Champ Invalid" value="">
+                    </div>
+                    <div class="form-group">
+                      <label>Password</label>
+                      <input class="form-control" type="text" name="psd" placeholder="Password" title="Champ Invalid" value="">
+                    </div>
 
 
                   </div>

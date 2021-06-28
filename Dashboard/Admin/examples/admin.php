@@ -101,7 +101,7 @@ echo  '
                 </div>
                 <div class="form-group mb-4">
                   <label for="password" class="sr-only">Password</label>
-                  <input type="password" id="password" class="form-control"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Mot de passe" name="pass" required>
+                  <input type="password" id="password" class="form-control"  placeholder="Mot de passe" name="pass" required>
                 
                 </div>
                 <button type="submit" class="btn btn-primary btn-block" name="Envoyer">Connecter</button>
