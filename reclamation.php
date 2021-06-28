@@ -1,31 +1,25 @@
 <?php 
 
-if (isset($_POST['Envoyer'])){
-    extract($_POST);
-    
-    $nom=$_POST['nom'];
-    $prenom=$_POST['prenom'];
-    $apogée=$_POST['apogée'];
-    $cne=$_POST['cne'];
-    $mail=$_POST['mail'];  
-    // $drone=$_POST['drone'];
-    $reclamer=$_POST['reclamer'];
+$servename="localhost";
+$username="root";
+$password="";
+$dbname="siteweb";
 
-    include 'database.php';
+$con = mysqli_connect($servename,$username,$password,$dbname);
 
-global $db;
-// $q = $db -> prepare("INSERT INTO user(nom,prenom,mail,drone,msg) VALUES(:nom,:prenom,:mail,:drone,:msg)");
-$q = $db -> prepare("INSERT INTO réclamation(nom,prenom,apogée,cne,mail,reclamer) VALUES(:nom,:prenom,:apogée,:cne,:mail,:reclamer)");
-$q ->execute([ 'nom' => $nom,
-            'prenom' => $prenom,
-            'apogée' => $apogée,
-            'cne' => $cne,
-            'mail' => $mail,
-            // 'drone'=> 'Homme',
+if(isset($_POST['Envoyer'])){
+
+  @nom = $_POST['nom'];
+  @prenom = $_POST['prenom'];
+  @apogée = $_POST['apogée'];
+  @cne = $_POST['cne'];
+  @mail = $_POST['mail'];
+  @reclamer = $_POST['reclamer'];
 
 
-            'reclamer' => $reclamer
-        ]);
-    }
+    $sql="INSERT INTO reclamation (nom,prenom,apogée,cne,mail,reclamer) VALUES('$nom','$prenom','$apogée','$cne','$mail','$reclamer')";
+    $result= $con->query($sql);
+    header("location:pricing.html");
+}
+
     ?>
-    
