@@ -13,7 +13,7 @@ if(!isset($_SESSION['Email'])){
 $servername="localhost";
 $username="root";
 $password="";
-$dbname="pfe";
+$dbname="siteweb";
 
 $con=mysqli_connect($servername,$username,$password,$dbname);
 
@@ -244,7 +244,7 @@ if(isset($_POST['Ajouter2']))
 $servername="localhost";
 $username="root";
 $password="";
-$dbname="pfe";
+$dbname="siteweb";
 
 
 $id0=$row['CodeEt'];
@@ -396,7 +396,7 @@ if(isset($_POST['Suprimer2']))
 $servername="localhost";
 $username="root";
 $password="";
-$dbname="pfe";
+$dbname="siteweb";
 
 
 $id0=$row['CodeEt'];
@@ -537,7 +537,7 @@ if(isset($_POST['Modifier']))
   $servername="localhost";
   $username="root";
   $password="";
-  $dbname="pfe";
+  $dbname="siteweb";
   
   $con=mysqli_connect($servername,$username,$password,$dbname);
 

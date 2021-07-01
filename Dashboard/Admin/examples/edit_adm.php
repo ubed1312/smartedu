@@ -7,7 +7,7 @@ if(!isset($_SESSION['Email'])){
 $servername="localhost";
 $username="root";
 $password="";
-$dbname="pfe";
+$dbname="siteweb";
 
 $con=mysqli_connect($servername,$username,$password,$dbname);
 
@@ -22,7 +22,7 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
     $servername="localhost";
     $username="root";
     $password="";
-    $dbname="pfe";
+    $dbname="siteweb";
     
     $con=mysqli_connect($servername,$username,$password,$dbname);
 
@@ -238,7 +238,7 @@ if(isset($_POST['Modifier2']))
 $servername="localhost";
 $username="root";
 $password="";
-$dbname="pfe";
+$dbname="siteweb";
 
 
 
@@ -429,7 +429,7 @@ if(isset($_POST['Modifier']))
   $servername="localhost";
   $username="root";
   $password="";
-  $dbname="pfe";
+  $dbname="siteweb";
   
   $con=mysqli_connect($servername,$username,$password,$dbname);
 

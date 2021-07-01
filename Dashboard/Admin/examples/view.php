@@ -10,7 +10,7 @@ if(!isset($_SESSION['Email'])){
 $servername="localhost";
 $username="root";
 $password="";
-$dbname="pfe";
+$dbname="siteweb";
 
 $con=mysqli_connect($servername,$username,$password,$dbname);
 
@@ -322,7 +322,7 @@ $id2 = $row['ID'];
  $servername="localhost";
 $username="root";
 $password="";
-$dbname="pfe";
+$dbname="siteweb";
 
 //connexion au serveur
 $con=mysqli_connect($servername,$username,$password,$dbname);

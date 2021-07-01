@@ -7,7 +7,7 @@ if(!isset($_SESSION['Email'])){
 $servername="localhost";
 $username="root";
 $password="";
-$dbname="pfe";
+$dbname="siteweb";
 
 $con=mysqli_connect($servername,$username,$password,$dbname);
 
@@ -22,7 +22,7 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
     $servername="localhost";
     $username="root";
     $password="";
-    $dbname="pfe";
+    $dbname="siteweb";
     
     $con=mysqli_connect($servername,$username,$password,$dbname);
 
@@ -242,7 +242,8 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
                       <h5 class="widget-user-desc">Admin</h5>
                     </div>
                     <div class="widget-user-image">
-                    <img class="zoom img-circle elevation-2" src="../../dist/<?php echo $row['imagename'];?>" alt="User Avatar">                    </div>
+                    <img class="zoom img-circle elevation-2" src="../../dist/<?php echo $row['imagename'];?>" alt="User Avatar">
+                            </div>
                    <br><br> <div class="card-footer">
                    <br><br>  <div class="row">
                         <div class="col-sm-4 border-right">
