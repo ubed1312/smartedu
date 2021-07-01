@@ -184,9 +184,25 @@
 	</header>
 	<!-- End header -->
 	
-	<div class="all-title-boxee">
+    <style> .al{
+        background: url(images/b.jpg)no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: center;
+        min-height: 300px;}
+        .al h1{
+        color: #fff;
+        font-weight: 600;
+        text-transform: capitalize;
+        padding-top: 11%;
+        font-size: 48px;
+        line-height: 0px;} </style>
+
+	<div class="al">
 		<div class="container text-center">
-			<h1 style="color:sandybrown;">Administration </h1>
+			<h1 style="color:rgb(248, 248, 248);">Administration </h1>
 		</div>
 	</div>
 	
@@ -204,27 +220,27 @@
                             <i class="fa fa-adjust"></i>
                             <form method="Post"  action="reclamation.php">
                                 <label><strong> Saisir votre Nom : </strong><br>
-                                    <input type="text" id="nom" name="nom" style=" width: 480px;"/></label><br>
+                                    <input type="text" id="nom" name="nom" style=" width: 480px;" required=""/></label><br>
                                 <label><strong>Saisir votre Prénom : </strong><br>
-                                    <input type="text" id="prenom" name="prenom" style=" width: 480px;" /></label>    <br>
+                                    <input type="text" id="prenom" name="prenom" style=" width: 480px;" required="" /></label>    <br>
                                     <label><strong>Saisir votre Code Apogée : </strong><br>
-                                        <input type="text" id="apogee" name="apogee" style=" width: 480px;" /></label>    <br>
+                                        <input type="text" id="apogee" name="apogee" style=" width: 480px;" required=""/></label>    <br>
                                         <!-- <label><strong>Saisir votre CIN : </strong><br>
                                             <input type="text" id="cin" name="cin" style=" width: 480px;" /></label>    <br> -->
                                             <label><strong>Saisir votre CNE : </strong><br>
-                                                <input type="text" id="cne" name="cne" style=" width: 480px;" /></label>    <br>
+                                                <input type="text" id="cne" name="cne" style=" width: 480px;" required=""/></label>    <br>
                                     <label><strong>Saisir votre E-mail : </strong> <br>
-                                        <input type="email" id="mail" name="mail" style=" width: 480px;" /></label><br>
+                                        <input type="email" id="mail" name="mail" style=" width: 480px;" required=""/></label><br>
                                         
                                             <label><strong>Saisir votre Réclamation : </strong><br>
-                                                <input type="text" id="reclamer" name="reclamer" style="height: 70px; width: 480px;"  /></label>  <br>                              
+                                                <input type="text" id="reclamer" name="reclamer" style="height: 70px; width: 480px;"  required=""/></label>  <br>                              
                                                 
                                                 <!-- <div class="pricingTable-sign-up" >
                                                     <a class="hover-btn-new orange"><input type="submit" value="Envoyer" name="Envoyer" id="Envoyer" /><span>Reclamer &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a>
                         </div>BUTTON BOX -->
                         <div class="pricingTable-sign-up">
                         
-                            <input type="submit" value="Réclamer" name="Envoyer" id="Envoyer" /><span>Reclamer &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <input class="btn btn-secondary" type="submit" value="Réclamer" name="Envoyer" id="Envoyer" /><span>Reclamer &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                         </div>
                     
                     </form></div>
@@ -255,17 +271,17 @@
                                     <i class="fa fa-adjust"></i>
                                     <form method="post" action="certificat.php">
                                         <label><strong> Saisir votre Nom : </strong><br>
-                                            <input type="text" id="nom" name="nom" style=" width: 480px;"/></label><br>
+                                            <input type="text" id="nom" name="nom" style=" width: 480px;" required=""/></label><br>
                                         <label><strong>Saisir votre Prénom : </strong><br>
-                                            <input type="text" id="prenom" name="prenom" style=" width: 480px;" /></label>    <br>
+                                            <input type="text" id="prenom" name="prenom" style=" width: 480px;" required=""/></label>    <br>
                                             <label><strong>Saisir votre Code Apogée : </strong><br>
-                                                <input type="text" id="apogee" name="apogee" style=" width: 480px;" /></label>    <br>
+                                                <input type="text" id="apogee" name="apogee" style=" width: 480px;" required=""/></label>    <br>
                                                 <!-- <label><strong>Saisir votre CIN : </strong><br>
                                                     <input type="text" id="cin" name="cin" style=" width: 480px;" /></label>    <br> -->
                                                     <label><strong>Saisir votre CNE : </strong><br>
-                                                        <input type="text" id="cne" name="cne" style=" width: 480px;" /></label>    <br>
+                                                        <input type="text" id="cne" name="cne" style=" width: 480px;" required=""/></label>    <br>
                                             <label><strong>Saisir votre E-mail : </strong> <br>
-                                                <input type="email" id="mail" name="mail" style=" width: 480px;" /></label><br>
+                                                <input type="email" id="mail" name="mail" style=" width: 480px;" required=""/></label><br>
                                                 
                                                     <label><strong>Select votre Filiere : </strong><br>
                                                         <!-- <input type="text" id="Utilisateur" name="Réclamation" style="height: 70px; width: 480px;"  /></label>  <br>                               -->
@@ -296,7 +312,7 @@
                                 </div>BUTTON BOX -->
                                 <div class="pricingTable-sign-up">
                         
-                                    <input type="submit" value="Demander" name="Envoyer1" id="Envoyer1" /><span>Demander &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    <input class="btn btn-secondary" type="submit" value="Demander" name="Envoyer1" id="Envoyer1" /><span>Demander &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                 </div>
                             </form></div>
                                 <!-- /  CONTENT BOX--></div></div> <br><br>
@@ -329,17 +345,17 @@
                                             <i class="fa fa-adjust"></i>
                                             <form method="post" action="releve.php">
                                                 <label><strong> Saisir votre Nom : </strong><br>
-                                                    <input type="text" id="nom" name="Nom" style=" width: 480px;"/></label><br>
+                                                    <input type="text" id="nom" name="Nom" style=" width: 480px;" required=""/></label><br>
                                                 <label><strong>Saisir votre Prénom : </strong><br>
-                                                    <input type="text" id="prenom" name="prenom" style=" width: 480px;" /></label>    <br>
+                                                    <input type="text" id="prenom" name="prenom" style=" width: 480px;" required=""/></label>    <br>
                                                     <label><strong>Saisir votre Code Apogée : </strong><br>
-                                                        <input type="text" id="apogee" name="apogee" style=" width: 480px;" /></label>    <br>
+                                                        <input type="text" id="apogee" name="apogee" style=" width: 480px;" required=""/></label>    <br>
                                                         <!-- <label><strong>Saisir votre CIN : </strong><br>
                                                             <input type="text" id="cin" name="cin" style=" width: 480px;" /></label>    <br> -->
                                                             <label><strong>Saisir votre CNE : </strong><br>
-                                                                <input type="text" id="cne" name="cne" style=" width: 480px;" /></label>    <br>
+                                                                <input type="text" id="cne" name="cne" style=" width: 480px;" required=""/></label>    <br>
                                                     <label><strong>Saisir votre E-mail : </strong> <br>
-                                                        <input type="email" id="mail" name="mail" style=" width: 480px;" /></label><br>
+                                                        <input type="email" id="mail" name="mail" style=" width: 480px;" required=""/></label><br>
                                                         
                                                             <label><strong>Select votre Filiere : </strong><br>
                                                                 <!-- <input type="text" id="Utilisateur" name="Réclamation" style="height: 70px; width: 480px;"  /></label>  <br>                               -->
@@ -367,7 +383,7 @@
                                                             
                                                                   <div class="pricingTable-sign-up">
                         
-                                                                    <input type="submit" value="Demander" name="Envoyer2" id="Envoyer2" /><span>Demander &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                                                    <input class="btn btn-secondary" type="submit" value="Demander" name="Envoyer2" id="Envoyer2" /><span>Demander &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                                                 </div><!-- BUTTON BOX--></form></div>
                                         <script>
                                             function maFoncti() {

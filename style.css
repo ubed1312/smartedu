@@ -291,6 +291,8 @@ a img.aligncenter {
     /* Above WP toolbar. */
 }
 
+
+
 /*------------------------------------------------------------------
     LOADER
 -------------------------------------------------------------------*/
@@ -2903,6 +2905,7 @@ body.host_version .first-section .effect-1.slide-btn::after{
 	font-size: 48px;
 	line-height: 0px;
 }
+
 
 span.m_1 {
     font-weight: 300;

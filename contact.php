@@ -182,9 +182,25 @@
 	</header>
 	<!-- End header -->
 	
-	<div class="all-title-box">
+	<style> .al{
+        background: url(images/contact-us.jpg)no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: center;
+        min-height: 300px;}
+        .al h1{
+        color: #fff;
+        font-weight: 600;
+        text-transform: capitalize;
+        padding-top: 11%;
+        font-size: 48px;
+        line-height: 0px;} </style>
+
+	<div class="al">
 		<div class="container text-center">
-			<h1>Contact
+			<h1 style="color :inherit">Contact
                 <!-- <span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span> -->
         </h1>
 		</div>
