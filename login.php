@@ -22,6 +22,8 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
 
  }
 
+
+ 
 else {
     echo 'error';
 }

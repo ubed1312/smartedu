@@ -13,6 +13,7 @@ if(isset($_POST['Envoyer1'])){
 
 
 
+    
      @$nom = $_POST['nom'];
      @$prenom = $_POST['prenom'];
      @$apogee = $_POST['apogee'];
