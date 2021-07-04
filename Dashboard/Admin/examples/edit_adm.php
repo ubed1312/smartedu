@@ -26,7 +26,7 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
     
     $con=mysqli_connect($servername,$username,$password,$dbname);
 
-    $value1 = '2';
+    $value1 = '1';
 
     $sql = "SELECT * FROM admin where Code_Adm='$value1'"; 
     $result =$con->query($sql);

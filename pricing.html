@@ -41,85 +41,27 @@
 <body class="host_version"> 
 
 	<!-- Modal -->
-	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-		<div class="modal-content">
-			<div class="modal-header tit-up">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h4 class="modal-title">Customer Login</h4>
-			</div>
-			<div class="modal-body customer-box">
-				<!-- Nav tabs -->
-				<ul class="nav nav-tabs">
-					<li><a class="active" href="#Login" data-toggle="tab">Login</a></li>
-					<!-- <li><a href="#Registration" data-toggle="tab">Registration</a></li> -->
-				</ul>
-				<!-- Tab panes -->
-				<div class="tab-content">
-					<div class="tab-pane active" >
-						<form role="form" class="form-horizontal" action="login.php">
-							<div class="form-group">
-								<div class="col-sm-12">
-									<input class="form-control" id="identifiant" name="identifiant" placeholder="Votre Identifiant" type="text">
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="col-sm-12">
-									<input class="form-control" id="psd" name="psd" placeholder="password" type="password">
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-10">
-									<button type="submit" class="btn btn-light btn-radius btn-brd grd1" id="Enregistrer" name="Enregistrer">
-										Enregistrer
-									</button>
-    
-									<a class="for-pwd" href="javascript:;">Forgot your password?</a>
-                                    
-								</div>
-							</div>
-						</form>
- 
+	 <div id="add_data_Modal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">S'identifier</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post" action="login.php">
+                            <label>Email</label>
+                            <input type="text" name="email" id="email" class="form-control" required />
+                            <br />
+                            <label>Password</label>
+                            <input type="text" name="psd" id="psd" class="form-control"  required/>
+                            <br />
+                            <center> <input type="submit" name="insert" id="insert" value="Envoyer" class="btn btn-secondary" /></center>
+                        </form>
+                    </div>
 
-					</div>
-					<div class="tab-pane" id="Registration">
-						<form role="form" class="form-horizontal">
-							<div class="form-group">
-								<div class="col-sm-12">
-									<input class="form-control" placeholder="Identifiant" type="text">
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="col-sm-12">
-									<input class="form-control" id="email" placeholder="Email" type="email">
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="col-sm-12">
-									<input class="form-control" id="mobile" placeholder="Mobile" type="email">
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="col-sm-12">
-									<input class="form-control" id="password" placeholder="Password" type="password">
-								</div>
-							</div>
-							<div class="row">							
-								<div class="col-sm-10">
-									<button type="button" class="btn btn-light btn-radius btn-brd grd1">
-										Save &amp; Continue
-									</button>
-									<button type="button" class="btn btn-light btn-radius btn-brd grd1">
-										Cancel</button>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	  </div>
-	</div>
+                </div>
+            </div>
+        </div>
 
     <!-- LOADER -->
 	<div id="preloader">
@@ -170,7 +112,7 @@
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Administration </a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
 								<a class="dropdown-item active" href="pricing.html">Corps administratif </a>
-								<a class="dropdown-item" data-toggle="modal" data-target="#login" href="ensei.html">Corps enseignant </a>
+								<a class="dropdown-item" data-toggle="modal" data-target="#add_data_Modal" href="ensei.html">Corps enseignant </a>
 							</div>
 						</li>
 						<li class="nav-item"><a class="nav-link" href="http://localhost/smartedu/contact.php">Contact</a></li>
@@ -723,5 +665,59 @@
 
     }
 </script>
+         <script>
+            $(document).ready(function() {
+                $('#add').click(function() {
+                    $('#insert').val("Insert");
+                    $('#insert_form')[0].reset();
+                });
+                $(document).on('click', '.edit_data', function() {
+                    var id = $(this).attr("id");
+                    $.ajax({
+                        url: "fetch.php",
+                        method: "POST",
+                        data: {
+                            id: id
+                        },
+                        dataType: "json",
+                        success: function(data) {
+                            $('#id').val(data.id);
+                            $('#nom').val(data.nom);
+                            $('#qte').val(data.qte);
+                            $('#plus').val(data.plus);
+                            $('#insert').val("Update");
+                            $('#add_data_Modal').modal('show');
+                        }
+                    });
+                });
+                $('#insert_form').on("submit", function(event) {
+                    event.preventDefault();
+                    if ($('#id').val() == "") {
+                        alert("id is required");
+                    } else if ($('#nom').val() == '') {
+                        alert("Address is nom");
+                    } else if ($('#qte').val() == '') {
+                        alert("Designation is qte");
+                    } else if ($('#plus').val() == '') {
+                        alert("Address is plus");
+                    } else {
+                        $.ajax({
+                            url: "PH_forcepoint.php",
+                            method: "POST",
+                            data: $('#insert_form').serialize(),
+                            beforeSend: function() {
+                                $('#insert').val("Inserting");
+                            },
+                            success: function(data) {
+                                $('#insert_form')[0].reset();
+                                $('#add_data_Modal').modal('hide');
+                                $('#employee_table').html(data);
+                            }
+                        });
+                    }
+                });
+
+            });
+        </script>
 </body>
 </html>
