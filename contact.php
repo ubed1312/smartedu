@@ -37,7 +37,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-</head>
+
 <body class="host_version"> 
 
 	<!-- Modal -->
@@ -119,15 +119,7 @@
 	  </div>
 	</div>
 
-    <!-- LOADER -->
-	<div id="preloader">
-		<div class="loader-container">
-			<div class="progress-br float shadow">
-				<div class="progress__item"></div>
-			</div>
-		</div>
-	</div>
-	<!-- END LOADER -->	
+
 	
 	<!-- Start header -->
     <header class="top-navbar">
@@ -182,21 +174,7 @@
 	</header>
 	<!-- End header -->
 	
-	<style> .al{
-        background: url(images/contact-us.jpg)no-repeat;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        background-position: center;
-        min-height: 300px;}
-        .al h1{
-        color: #fff;
-        font-weight: 600;
-        text-transform: capitalize;
-        padding-top: 11%;
-        font-size: 48px;
-        line-height: 0px;} </style>
+
 
 	<div class="al">
 		<div class="container text-center">
@@ -276,15 +254,23 @@
 				
 
 				<style type="text/css">/* Reset CSS */
+                    .al{
+        background: url(images/contact-us.jpg)no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: center;
+        min-height: 300px;}
+        .al h1{
+        color: #fff;
+        font-weight: 600;
+        text-transform: capitalize;
+        padding-top: 11%;
+        font-size: 48px;
+        line-height: 0px;}
 
-body {
-    background: #DCDDDF url(https://cssdeck.com/uploads/media/items/7/7AF2Qzt.png);
-    color: #000;
-    font: 14px Arial;
-    margin: 0 auto;
-    padding: 0;
-    position: relative;
-}
+
 
 small{ font-size:10px;}
 b, strong{ font-weight:bold;}
@@ -302,7 +288,7 @@ form:after {
     clear: both;
     visibility: hidden;
 }
-.container { margin: 25px auto; position: relative; width: 900px; }
+
 #content {
     background: #f9f9f9;
     background: -moz-linear-gradient(top,  rgba(248,248,248,1) 0%, rgba(249,249,249,1) 100%);
