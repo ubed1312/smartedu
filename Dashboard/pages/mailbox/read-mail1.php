@@ -267,7 +267,7 @@ $row1 = mysqli_fetch_assoc($result1);
               <!-- /.mailbox-read-info -->
               <div class="mailbox-controls with-border text-center"> 
                 <div class="btn-group">
-
+ 
                 </div>
                 <!-- /.btn-group -->
                
