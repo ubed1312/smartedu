@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
  
      <!-- Site Metas -->
-    <title>FSJESAS</title>  
+    <title> FSJESAS </title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -130,7 +130,7 @@
 	<!-- END LOADER -->	
 	
 	<!-- Start header -->
-    <header class="top-navbar">
+	<header class="top-navbar">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="index.html">
@@ -143,7 +143,7 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbars-host">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item "><a class="nav-link" href="index.html">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
 						<li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Formation </a>
@@ -158,7 +158,7 @@
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Vie étudiants</a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-                            <a class="dropdown-item" href="https://sca.univh2c.ma/cas/login">Espace ENT </a>
+								<a class="dropdown-item" href="https://sca.univh2c.ma/cas/login">Espace ENT </a>
 								<a class="dropdown-item" href="bourse.html">Bourse</a>
                                 <a class="dropdown-item" href="Emploi.html">Calendrier</a>
 							</div>
@@ -171,7 +171,7 @@
 								<a class="dropdown-item" href="ensei.html">Corps enseignant </a>
 							</div>
 						</li>
-						<li class="nav-item active"><a class="nav-link" href="http://localhost/smartedu/contact.php">Contact</a></li>
+						<li class="nav-item  active"><a class="nav-link" href="http://localhost/smartedu/contact.php">Contact</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
                         <li><a class="hover-btn-new log orange" href="#" data-toggle="modal" data-target="#login"><span>Login</span></a></li>
@@ -182,21 +182,7 @@
 	</header>
 	<!-- End header -->
 	
-	<style> .al{
-        background: url(images/contact-us.jpg)no-repeat;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        background-position: center;
-        min-height: 300px;}
-        .al h1{
-        color: #fff;
-        font-weight: 600;
-        text-transform: capitalize;
-        padding-top: 11%;
-        font-size: 48px;
-        line-height: 0px;} </style>
+
 
 	<div class="al">
 		<div class="container text-center">
@@ -276,17 +262,24 @@
 				
 
 				<style type="text/css">/* Reset CSS */
+.al{
+        background: url(images/contact-us.jpg)no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: center;
+        min-height: 300px;}
+        .al h1{
+        color: #fff;
+        font-weight: 600;
+        text-transform: capitalize;
+        padding-top: 11%;
+        font-size: 48px;
+        line-height: 0px;}
 
-body {
-    background: #DCDDDF url(https://cssdeck.com/uploads/media/items/7/7AF2Qzt.png);
-    color: #000;
-    font: 14px Arial;
-    margin: 0 auto;
-    padding: 0;
-    position: relative;
-}
 
-small{ font-size:10px;}
+
 b, strong{ font-weight:bold;}
 a{ text-decoration: none; }
 a:hover{ text-decoration: underline; }
@@ -302,7 +295,7 @@ form:after {
     clear: both;
     visibility: hidden;
 }
-.container { margin: 25px auto; position: relative; width: 900px; }
+
 #content {
     background: #f9f9f9;
     background: -moz-linear-gradient(top,  rgba(248,248,248,1) 0%, rgba(249,249,249,1) 100%);
