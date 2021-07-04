@@ -302,17 +302,15 @@
                                 
                                 <div class="pricingContent"style="display:none;" id="cont5" >
                                     <i class="fa fa-adjust"></i>
-                                    <form method="post" action="certificat.php">
+                                    <form method="post" action="att_travail.php">
                                         <label><strong> Saisir votre Nom : </strong><br>
                                             <input type="text" id="nom" name="nom" style=" width: 480px; " required=""/></label><br>
                                         <label><strong>Saisir votre Prénom : </strong><br>
                                             <input type="text" id="prenom" name="prenom" style=" width: 480px;"required="" /></label>    <br>
-                                            <label><strong>Saisir votre CIN: </strong><br>
-                                                <input type="text" id="apogee" name="apogee" style=" width: 480px;"required="" /></label>    <br>
-                                                <!-- <label><strong>Saisir votre CIN : </strong><br>
-                                                    <input type="text" id="cin" name="cin" style=" width: 480px;" /></label>    <br> -->
+                                                <label><strong>Saisir votre CIN : </strong><br>
+                                                    <input type="text" id="cin" name="cin" style=" width: 480px;" /></label>    <br>
                                                     <label><strong>Saisir votre Departement : </strong><br>
-                                                        <input type="text" id="cne" name="cne" style=" width: 480px;"required="" /></label>    <br>
+                                                        <input type="text" id="departement" name="departement" style=" width: 480px;"required="" /></label>    <br>
                                             <label><strong>Saisir votre E-mail : </strong> <br>
                                                 <input type="email" id="mail" name="mail" style=" width: 480px;"required="" /></label><br>
                                                 
@@ -408,11 +406,11 @@
                                                 
         
                                                                   </select> <br><br>
-                                                                  <label><strong>Selectionner la date exacte : </strong><br>
-                                                                  <input type="date" name="anniversaire">  
+                                                                    <label for="meeting-time"><strong>Selectionner la date et l'heure exacte pour votre reservation: </strong></label><br>
+                                                                    <input type="date" id="date_salle" name="date_salle"  > 
                                                                   <br><br>
-                                                                  <label for="appt"><strong>Selectionner la dure pour votre reservation : </strong></label><br>
-                                                                  <input type="time" id="appt" name="appt"min="09:00" max="18:00" required><br> <small>Office hours are 9am to 6pm</small>
+                                                                  <!-- <label for="appt"><strong>Selectionner la dure pour votre reservation : </strong></label><br>
+                                                                  <input type="time" id="appt" name="appt"min="09:00" max="18:00" required><br> <small>Office hours are 9am to 6pm</small> -->
                                                             
                                                                   <div class="pricingTable-sign-up">
                         
