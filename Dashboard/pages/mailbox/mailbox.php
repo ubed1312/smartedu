@@ -298,10 +298,10 @@ $result =$con->query($sql);
 
 $result = $con->query($sql) or die($con->error);
 
-             
+        
 
 // intialisation de la variable $news
-           
+      
 
 // tant qu'il y a un enregistrement, les instructions dans la boucle s'exécutent
 while ($ligne = $result->fetch_assoc() ) 
