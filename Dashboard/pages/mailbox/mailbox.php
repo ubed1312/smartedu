@@ -298,7 +298,7 @@ $result =$con->query($sql);
 
 $result = $con->query($sql) or die($con->error);
 
-
+             
 
 // intialisation de la variable $news
            
