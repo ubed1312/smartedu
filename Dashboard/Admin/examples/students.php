@@ -172,7 +172,7 @@ if(!isset($_SESSION['Email'])){
               <a href="#" class="nav-link">
                 <i class="nav-icon far fa-envelope"></i>
                 <p>
-                Mail
+                Contact
                <i class="fas fa-angle-left right"></i>
                 </p>
               </a>

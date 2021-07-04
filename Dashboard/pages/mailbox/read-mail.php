@@ -174,7 +174,7 @@ $row1 = mysqli_fetch_assoc($result1);
               <a href="#" class="nav-link active">
                 <i class="nav-icon far fa-envelope"></i>
                 <p>
-                  Mail
+                Contact
                   <i class="fas fa-angle-left right"></i>
                 </p>
               </a>

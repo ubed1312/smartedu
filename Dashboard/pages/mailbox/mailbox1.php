@@ -19,13 +19,13 @@ if(!isset($_SESSION['Email'])){
 $servername="localhost";
 $username="root";
 $password="";
-$dbname="pfe";
+$dbname="siteweb";
 
 $con=mysqli_connect($servername,$username,$password,$dbname);
 
     $value1 = '1';
 
-    $sql = "SELECT * FROM admin where Code_Adm='$value1'"; 
+    $sql = "SELECT * FROM user"; 
     $result =$con->query($sql);
     
     $row = mysqli_fetch_assoc($result);
@@ -117,14 +117,11 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
 
 
       <a href="../../Admin/examples/edit_adm.php" class="nav-link">
-        <div class="image">
-          <img src="../../dist/<?php echo $row['imagename'];?>" class="img-circle elevation-2" alt="User Image">
         
-        </div>
 
         <p style="text-transform: uppercase;">
                 <b>
-                &nbsp; <?php echo $row['Nom'];?>
+                &nbsp; <?php echo $row['nom'];?>
                 </b>
                 </p>
               </a>
@@ -164,7 +161,7 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
               <a href="#" class="nav-link active">
                 <i class="nav-icon far fa-envelope"></i>
                 <p>
-                Mail
+                Contact
                 <i class="fas fa-angle-left right"></i>
                 </p>
               </a>
@@ -290,15 +287,15 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
 $servername="localhost";
 $username="root";
 $password="";
-$dbname="pfe";
+$dbname="siteweb";
 
 
     $con=mysqli_connect($servername,$username,$password,$dbname);
         
-    $id = mysqli_real_escape_string($con,$_SESSION['Email6']);                 
+    // $id = mysqli_real_escape_string($con,$_SESSION['Email6']);                 
 
 
-$sql = "SELECT * FROM contact_adm where Sender ='Admin' Order By Date_Envoie DESC";
+$sql = "SELECT * FROM user";
 $result =$con->query($sql);
 
 $result = $con->query($sql) or die($con->error);
@@ -317,17 +314,15 @@ while ($ligne = $result->fetch_assoc() )
                      
                     </td>
 
-                    <td class="mailbox-name"><b><?php echo 'De &nbsp;'.$row["Nom"].''; ?></b></td>
+                    <td class="mailbox-name"><b><?php echo 'De &nbsp;'.$row["nom"].''; ?></b></td>
 
-                     <td class="mailbox-name"><b>À : &nbsp;</b><?php echo $ligne["Email"]; ?>
+                     <td class="mailbox-name"><b>À : &nbsp;</b><?php echo $ligne["mail"]; ?>
                        
                      </td>
 
-                    <td class="mailbox-subject"><a href="read-mail2.php?msg=<?php echo $ligne["Message"]; ?>" ><?php echo 'Message :</a>' .$ligne["Message"]; ?>
+                    <td class="mailbox-subject"><a href="read-mail2.php?msg=<?php echo $ligne["msg"]; ?>" >
                     </td>
                     
-                    <td class="mailbox-attachment"></td>
-                    <td class="mailbox-date"><?php echo $ligne["Date_Envoie"]; ?></td>
                   </tr>          
 
                   <?php } 
