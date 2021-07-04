@@ -197,7 +197,7 @@ $id2 = $row['ID'];
               <a href="#" class="nav-link">
                 <i class="nav-icon far fa-envelope"></i>
                 <p>
-                  Mail
+                Contact
                   <i class="fas fa-angle-left right"></i>
                 </p>
               </a>
