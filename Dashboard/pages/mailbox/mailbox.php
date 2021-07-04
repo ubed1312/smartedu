@@ -316,11 +316,11 @@ while ($ligne = $result->fetch_assoc() )
 
                     <td class="mailbox-name"><b><?php echo 'De &nbsp;'.$ligne["nom"].''; ?></b></td>
 
-                     <td class="mailbox-name"><b>À : &nbsp;</b><?php echo $row["mail"]; ?>
+                     <td class="mailbox-name"><b>À : &nbsp;</b><?php echo $ligne["mail"]; ?>
                        
                      </td>
 
-                    <td class="mailbox-subject"><a href="read-mail1.php?msg=<?php echo $ligne["msg"]; ?>" >
+                    <td class="mailbox-subject"> <a href="read-mail1.php?msg=<?php echo $ligne["msg"]; ?>" ><?php echo 'Message : </a>'.$ligne["msg"]; ?>
                     </td>
                     
                     

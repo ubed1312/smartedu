@@ -1,19 +1,6 @@
 <?php 
 
-include('../../Admin/examples/dbconnection.php');  
 
-session_start(); 
-
-if(!isset($_SESSION['Email'])){
-
-
-      //Redirect the instructor to login page if he/she is not logged in.
-      echo "
-        <script type='text/javascript'>
-          window.location.href = '../../Admin/examples/admin.php';
-        </script>
-      ";
-    }
 
     
 $servername="localhost";

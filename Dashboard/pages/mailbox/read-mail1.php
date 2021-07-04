@@ -1,34 +1,18 @@
 <?php 
 
-include('../../Admin/examples/dbconnection.php');  
-
-session_start(); 
-
-
-if(!isset($_SESSION['Email'])){
-
-
-      //Redirect the instructor to login page if he/she is not logged in.
-      echo "
-        <script type='text/javascript'>
-          window.location.href = '../../Admin/examples/admin.php';
-        </script>
-      ";
-    }
-
     
 $servername="localhost";
 $username="root";
 $password="";
-$dbname="pfe";
+$dbname="siteweb";
 
 $con=mysqli_connect($servername,$username,$password,$dbname);
 
-$id = mysqli_real_escape_string($con,$_SESSION['Email6']);
+
 
 $value1 = '1';
 
-$sql = "SELECT * FROM admin where Code_Adm='$value1'"; 
+$sql = "SELECT * FROM user"; 
 $result1 =$con->query($sql);
 
 $row1 = mysqli_fetch_assoc($result1);
@@ -36,8 +20,8 @@ $row1 = mysqli_fetch_assoc($result1);
 
    $msg=$_REQUEST["msg"];
 
-  $query = "SELECT * from contact_prof where Email='$id' and Message='".$msg."'"; 
-  $result = mysqli_query($mysqli, $query) or die ( mysqli_error($mysqli));
+  $query = "SELECT * from user where  msg='".$msg."'"; 
+  $result =$con->query($sql);
   $row = mysqli_fetch_assoc($result);  
   ?>
 
@@ -126,14 +110,14 @@ $row1 = mysqli_fetch_assoc($result1);
 
 
       <a href="../../Admin/examples/edit_adm.php" class="nav-link">
-        <div class="image">
+        <!-- <div class="image">
           <img src="../../dist/<?php echo $row1['imagename'];?>" class="img-circle elevation-2" alt="User Image">
         
-        </div>
+        </div> -->
 
         <p style="text-transform: uppercase;">
                 <b>
-                &nbsp; <?php echo $row1['Nom'];?>
+                &nbsp; <?php echo $row1['nom'];?>
                 </b>
                 </p>
               </a>
@@ -276,9 +260,9 @@ $row1 = mysqli_fetch_assoc($result1);
             <!-- /.card-header -->
             <div class="card-body p-0">
               <div class="mailbox-read-info">
-              <h5>De &nbsp;: <?php echo $row['Sender']; ?></h5>
+              <h5>De &nbsp;: <?php echo $row['nom']; ?></h5>
                 <h6>
-                  <span class="mailbox-read-time float-right"><?php echo $row['Date_Envoie']; ?></span></h6>
+                  <span class="mailbox-read-time float-right"><?php echo $row['mail']; ?></span></h6>
               </div>
               <!-- /.mailbox-read-info -->
               <div class="mailbox-controls with-border text-center">
@@ -301,7 +285,7 @@ $row1 = mysqli_fetch_assoc($result1);
             <div class="card-footer">
               <div class="float-right">
 
-                <a href="compose1.php?msg=<?php echo $row['Sender']; ?>" class="nav-link"><button type="button" class="btn btn-default"><i class="fas fa-share"></i>Repondre</button></a>
+                <a href="compose1.php?msg=<?php echo $row['nom']; ?>" class="nav-link"><button type="button" class="btn btn-default"><i class="fas fa-share"></i>Repondre</button></a>
               </div>
               <button type="submit" name="delete" class="btn btn-default" onclick="archiveFunction(this.id)"><i class="far fa-trash-alt"></i>Supprimer</button>
             </div>
