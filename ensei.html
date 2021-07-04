@@ -304,17 +304,17 @@
                                     <i class="fa fa-adjust"></i>
                                     <form method="post" action="certificat.php">
                                         <label><strong> Saisir votre Nom : </strong><br>
-                                            <input type="text" id="nom" name="nom" style=" width: 480px;"/></label><br>
+                                            <input type="text" id="nom" name="nom" style=" width: 480px; " required=""/></label><br>
                                         <label><strong>Saisir votre Prénom : </strong><br>
-                                            <input type="text" id="prenom" name="prenom" style=" width: 480px;" /></label>    <br>
+                                            <input type="text" id="prenom" name="prenom" style=" width: 480px;"required="" /></label>    <br>
                                             <label><strong>Saisir votre CIN: </strong><br>
-                                                <input type="text" id="apogee" name="apogee" style=" width: 480px;" /></label>    <br>
+                                                <input type="text" id="apogee" name="apogee" style=" width: 480px;"required="" /></label>    <br>
                                                 <!-- <label><strong>Saisir votre CIN : </strong><br>
                                                     <input type="text" id="cin" name="cin" style=" width: 480px;" /></label>    <br> -->
                                                     <label><strong>Saisir votre Departement : </strong><br>
-                                                        <input type="text" id="cne" name="cne" style=" width: 480px;" /></label>    <br>
+                                                        <input type="text" id="cne" name="cne" style=" width: 480px;"required="" /></label>    <br>
                                             <label><strong>Saisir votre E-mail : </strong> <br>
-                                                <input type="email" id="mail" name="mail" style=" width: 480px;" /></label><br>
+                                                <input type="email" id="mail" name="mail" style=" width: 480px;"required="" /></label><br>
                                                 
                                                     <!-- <label><strong>Select votre Filiere : </strong><br> -->
                                                         <!-- <input type="text" id="Utilisateur" name="Réclamation" style="height: 70px; width: 480px;"  /></label>  <br>                               -->
@@ -370,57 +370,57 @@
                                 <div class="col-md-12 col-sm-0"><br><br><br><br>
                                     <div class="pricingTable"><br><br>
                                         <div class="pricingTable-header">
-                                            <span class="heading"><h3>Demande Relevé de Note</h3></span>
-                                            <span class="price-value" id="bt" onclick="toggle5(this)">Cliquer pour Demander !</span>
+                                            <span class="heading"><h3>Reserver une salle</h3></span>
+                                            <span class="price-value" id="bt" onclick="toggle5(this)">Cliquer pour Reserver !</span>
                                         </div>
                                         
                                         <div class="pricingContent" style="display:none;" id="cont6">
                                             <i class="fa fa-adjust"></i>
-                                            <form method="post" action="releve.php">
+                                            <form method="post" action="salle.php">
                                                 <label><strong> Saisir votre Nom : </strong><br>
-                                                    <input type="text" id="nom" name="Nom" style=" width: 480px;"/></label><br>
+                                                    <input type="text" id="nom" name="nom" style=" width: 480px;"required=""/></label><br>
                                                 <label><strong>Saisir votre Prénom : </strong><br>
-                                                    <input type="text" id="prenom" name="prenom" style=" width: 480px;" /></label>    <br>
-                                                    <label><strong>Saisir votre Code Apogée : </strong><br>
-                                                        <input type="text" id="apogee" name="apogee" style=" width: 480px;" /></label>    <br>
-                                                        <!-- <label><strong>Saisir votre CIN : </strong><br>
-                                                            <input type="text" id="cin" name="cin" style=" width: 480px;" /></label>    <br> -->
-                                                            <label><strong>Saisir votre CNE : </strong><br>
-                                                                <input type="text" id="cne" name="cne" style=" width: 480px;" /></label>    <br>
-                                                    <label><strong>Saisir votre E-mail : </strong> <br>
-                                                        <input type="email" id="mail" name="mail" style=" width: 480px;" /></label><br>
+                                                    <input type="text" id="prenom" name="prenom" style=" width: 480px;"required="" /></label>    <br>
+                                                        <label><strong>Saisir votre CIN : </strong><br>
+                                                            <input type="text" id="cin" name="cin" style=" width: 480px;"required="" /></label>    <br>
+                                                    <label><strong>Saisir votre Departement: </strong> <br>
+                                                        <input type="text" id="departement" name="departement" style=" width: 480px;" /></label><br>
                                                         
-                                                            <label><strong>Select votre Filiere : </strong><br>
+                                                            <label><strong>Selectionner la salle que vous souhaitez reserver : </strong><br>
                                                                 <!-- <input type="text" id="Utilisateur" name="Réclamation" style="height: 70px; width: 480px;"  /></label>  <br>                               -->
-                                                                <select class="form-select" name="filiere" id="filiere" aria-label="Default select example" style="height: 50px; width: 480px;">
+                                                                <select class="form-select" name="salle" id="salle" aria-label="Default select example" style="height: 50px; width: 480px;">
                                                                     <option selected>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                 &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open this select menu</option>
-                                                <option value="LP-Action Commerciale">LP-Action Commerciale</option>
-                                                <option value="LP-MIAGE">LP-MIAGE</option>
-                                                <option value="LP-MRHA">LP-MRHA</option>
-                                                <option value="LP-MSN">LP-MSN</option>
-                                                <option value="LP-CCA">LP-CCA</option>
-                                                <option value="LP-Techniques De Banque">LP-Techniques De Banque</option>
-                                                <option value="LF-Economie et Gestion">LF-Economie et Gestion</option>
-                                                <option value="LF-Droit français">LF-Droit français</option>
-                                                <option value="LF-MQASS">LF-MQASS</option>
-                                                <option value="LF-Medical Sciences">LF-Medical Sciences</option>
-                                                <option value="Master-ICM">Master-ICM</option>
-                                                <option value="Master-IMDC">Master-IMDC</option>
-                                                <option value="Master-ESGT">Master-ESGT</option>
-                                                <option value="Master-MR">Master-MR</option>
-                                                <option value="Master-MAPT">Master-MAPT</option>
+                                                <option value="salle-1">salle-1</option>
+                                                <option value="salle-2">salle-2</option>
+                                                <option value="salle-3">salle-3</option>
+                                                <option value="salle-4">salle-4</option>
+                                                <option value="salle-5">salle-5</option>
+                                                <option value="salle-6">salle-6</option>
+                                                <option value="salle-7">salle-7</option>
+                                                <option value="salle-8">salle-8</option>
+                                                <option value="salle-9">salle-9</option>
+                                                <option value="salle-10">salle-10</option>
+                                                <option value="salle-11">salle-11</option>
+                                                <option value="salle-12">salle-12</option>
+                                                <option value="salle-13">salle-13</option>
+                                                <option value="salle-14">salle-14</option>
+                                                
         
-                                                                  </select>
-                                                                
+                                                                  </select> <br><br>
+                                                                  <label><strong>Selectionner la date exacte : </strong><br>
+                                                                  <input type="date" name="anniversaire">  
+                                                                  <br><br>
+                                                                  <label for="appt"><strong>Selectionner la dure pour votre reservation : </strong></label><br>
+                                                                  <input type="time" id="appt" name="appt"min="09:00" max="18:00" required><br> <small>Office hours are 9am to 6pm</small>
                                                             
                                                                   <div class="pricingTable-sign-up">
                         
-                                                                    <input class="btn btn-outline-dark" type="submit" value="Demander" name="Envoyer2" id="Envoyer2" /><span>Demander &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                                                    <input class="btn btn-outline-dark" type="submit" value="Reserver" name="Envoyer2" id="Envoyer2" /><span>Reserver &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                                                 </div><!-- BUTTON BOX--></form></div>
                                         <script>
                                             function miFoncti() {
-                                              var div = document.getElementById("m");
+                                              var div = document.getElementById("mo");
                                               if (div.style.display === "none") {
                                                 div.style.display = "block";
                                               } else {
@@ -433,12 +433,7 @@
 
 
 
-
-
-
-
-                        
-
+                                        
                 <!-- <div class="col-md-12 col-sm-0">
                     <div class="pricingTable pink"><br><br><br>
                         <div class="pricingTable-header"><br><br>
@@ -739,7 +734,7 @@
 
     }
 </script>
-            </script>
+            
             <script>
     function toggle5(ele2) {
         var cont = document.getElementById('cont6');
