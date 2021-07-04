@@ -12,7 +12,7 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
  $value1 = $_POST['email'];
  $value2 = $_POST['psd'];     
 
-if(isset($_POST['insert']))
+if(isset($_POST['Envoyer']))
 
  {
 
