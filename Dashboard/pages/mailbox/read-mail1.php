@@ -265,7 +265,7 @@ $row1 = mysqli_fetch_assoc($result1);
                   <span class="mailbox-read-time float-right"><?php echo $row['mail']; ?></span></h6>
               </div>
               <!-- /.mailbox-read-info -->
-              <div class="mailbox-controls with-border text-center">
+              <div class="mailbox-controls with-border text-center"> 
                 <div class="btn-group">
 
                 </div>
