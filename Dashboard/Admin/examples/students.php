@@ -263,11 +263,14 @@ while ($ligne = $resultat->fetch_assoc())
                   
                   <div class="row">
                     <div class="col-7">
-                      <h2 class="lead"><b><?php echo $ligne["CodeEt"]; ?>-Nom/Prenom : <?php echo $ligne["Nom"]; ?></b></h2>
+                      <h2 class="lead"><b><?php echo $ligne["CodeEt"]; ?>-Nom et Prenom : <?php echo $ligne["Nom"]; ?></b></h2>
 
                       <p class="text-muted text-sm"><b>Email : </b> <?php echo $ligne["Email"]; ?></p>
+                      <p class="text-muted text-sm"><b>CIN : </b> <?php echo $ligne["cin"]; ?></p>
+                      <p class="text-muted text-sm"><b>CNE : </b> <?php echo $ligne["cne"]; ?></p>
+                      <p class="text-muted text-sm"><b>Filiere : </b> <?php echo $ligne["filiere"]; ?></p>
                       <ul class="ml-4 mb-0 fa-ul text-muted">
-                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Ville : <?php echo $ligne["Ville"]; ?></li>
+                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Ville : <?php echo $ligne["Ville"]; ?></li><br>
                         <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Phone :  <?php echo $ligne["Tel"]; ?></li>
                       </ul>
                     </div>
@@ -316,9 +319,9 @@ if ($ligne['Date_deleted'] == NULL && $ligne['is_deleted'] =='0')
 ?>
                    
 
-                    <a href="../../pages/mailbox/compose2.php?CodeEt=<?php echo $ligne["CodeEt"]; ?>" class="btn btn-sm bg-teal">
+                    <!-- <a href="../../pages/mailbox/compose2.php?CodeEt=<?php echo $ligne["CodeEt"]; ?>" class="btn btn-sm bg-teal">
                       <i class="fas fa-comments">&nbsp;Contacter</i></a>
-                      
+                       -->
                      <a href="edit_stud.php?CodeEt=<?php echo $ligne["CodeEt"]; ?>" class="btn btn-sm btn-primary">
                    	<i class="fas fa-pencil-alt">&nbsp;Editer</i></a> 
                   

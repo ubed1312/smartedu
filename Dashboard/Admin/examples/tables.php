@@ -218,7 +218,15 @@ if(!isset($_SESSION['Email'])){
           <div class="card-body p-0">
             <div class="card-body">
               <div class="table-responsive">
+<!-- /*********************************Hadshi ylh kanzido pour ajout prof****************************/ -->
+              <table class="table table-striped table-advance table-hover">
+                <h4><div class=pull-right>
+                <a href="ajoutprof.php"><button class="btn btn-success" >Ajouter Professeur</button></a>&nbsp;&nbsp;</div></h4>
+                <hr>
 
+
+
+<!-- /*********************************Hadshi ylh kanzido pour ajout prof****************************/ -->
 
                 <form name="f1" action="" onsubmit="return validation()" method="POST">
 

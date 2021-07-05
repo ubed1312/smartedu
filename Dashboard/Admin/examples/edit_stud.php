@@ -543,10 +543,13 @@ if(isset($_POST['Modifier']))
 
 $value1 = $_POST['Nom'];
 $value2 = $_POST['Email'];
+$value5 = $_POST['cin'];
+$value7 = $_POST['filiere'];
+$value6 = $_POST['cne'];
 $value3 = $_POST['Ville'];
 $value4 = $_POST['Tel'];
 
-$sql2="SELECT * From listeetud where Nom='$value1' and Email='$value2' and Ville='$value3' and Tel='$value4'";
+$sql2="SELECT * From listeetud where Nom='$value1' and Email='$value2' and cin='$value5' and cne='$value6' and filiere='$value7' and Ville='$value3' and Tel='$value4'";
 $result2 =$mysqli->query($sql2);
     
 
@@ -577,7 +580,7 @@ if ($result2->num_rows > 0 ) {
 else{
 
   
-  $sql3 = "UPDATE listeetud SET Nom='$value1', Email='$value2' , Ville='$value3' , Tel='$value4' where CodeEt=$id";
+  $sql3 = "UPDATE listeetud SET Nom='$value1', Email='$value2', cin='$value5', cne='$value6', filiere='$value7' , Ville='$value3' , Tel='$value4' where CodeEt=$id";
   $result3 =$mysqli->query($sql3);
   echo  '
 
@@ -612,20 +615,36 @@ else{
 
                         <div class="active tab-pane ">
                           <form class="form-horizontal">
-
                           <div class="form-group row">
-                              <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
-                              <div class="col-sm-7">
-                                <input class="form-control" type="text" name="Email" placeholder="Email"
-                                title="Email Invalid" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" value="<?php echo $row['Email'];?>" readonly>
-                              </div>
-                            </div>
-
-                            <div class="form-group row">
                               <label for="inputName" class="col-sm-2 col-form-label">Name</label>
                               <div class="col-sm-7">
                                 <input class="form-control" type="text" name="Nom" placeholder="Nom"
                                 title="Nom Invalid" pattern="[A-Za-z ]{2,32}" value="<?php echo $row['Nom'];?>"> </div>
+                            </div>
+                          <div class="form-group row">
+                              <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                              <div class="col-sm-7">
+                                <input class="form-control" type="text" name="Email" placeholder="Email"
+                                title="Email Invalid"  value="<?php echo $row['Email'];?>" readonly>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="inputName" class="col-sm-2 col-form-label">CIN</label>
+                              <div class="col-sm-7">
+                                <input class="form-control" type="text" name="cin" placeholder="cne"
+                                title="CIN Invalid"  value="<?php echo $row['cin'];?>"> </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="inputName" class="col-sm-2 col-form-label">CNE</label>
+                              <div class="col-sm-7">
+                                <input class="form-control" type="text" name="cne" placeholder="cne"
+                                title="CNE Invalid"  value="<?php echo $row['cne'];?>"> </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="inputName" class="col-sm-2 col-form-label">Filiére</label>
+                              <div class="col-sm-7">
+                                <input class="form-control" type="text" name="filiere" placeholder="Filiere"
+                                title="Nom Invalid" value="<?php echo $row['filiere'];?>"> </div>
                             </div>
 
                             <div class="form-group row">

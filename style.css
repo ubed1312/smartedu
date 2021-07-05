@@ -296,7 +296,7 @@ a img.aligncenter {
 /*------------------------------------------------------------------
     LOADER
 -------------------------------------------------------------------*/
-
+/* Telechargement li kitbedel mn page l page khra */
 .loader-container {
   position: absolute;
   top: 0;
@@ -312,7 +312,7 @@ a img.aligncenter {
   left: 0;
   width: 100%;
   height: 50%;
-  background: #eea412;
+  background: #17202A ; /*******************fond telechargement****************/
   z-index: -1;
   transition: top 1.2s linear 3.1s;
 }
@@ -323,7 +323,7 @@ a img.aligncenter {
   left: 0;
   width: 100%;
   height: 50%;
-  background: #eea412;
+  background: #17202A ;  /*******************fond telechargement****************/
   z-index: -1;
   transition: bottom 1.2s linear 3.1s;
 }
@@ -369,7 +369,7 @@ a img.aligncenter {
   margin-top: 0px;
   height: 50px;
 }
-
+/******************************** da2ira li lwest *****************************/
 .progress-br.float.shadow:before {
   border-top-width: 50px;
   margin-top: -50px;
@@ -383,12 +383,12 @@ a img.aligncenter {
   margin: -50px 0 0 50px;
   width: 50px;
   height: 50px;
-  border-top: solid 10px #6e912d;
-  border-right: solid 10px #6e912d;
+  border-top: solid 10px #3b495a;      /*******Cercle*******/
+  border-right: solid 10px #2E4053;
   border-top-right-radius: 100%;
   z-index: -1;
   transform-origin: left bottom;
-  -webkit-animation: spin 3s linear infinite;
+  -webkit-animation: spin 2s linear infinite;
 }
 .progress-br.shadow:after {
   content: '';
@@ -397,10 +397,10 @@ a img.aligncenter {
   left: 50%;
   width: 100px;
   height: 100px;
-  color: #6e912d;
+  color: #ffffff;
   text-align: center;
   line-height: 100px;
-  border: 2px solid #6e912d;
+  border: 2px solid #7e7e7e;
   border-radius: 50%;
   margin: -50px 0 0 -0px;
   z-index: -1;
@@ -468,13 +468,14 @@ a img.aligncenter {
 
 
 .top-navbar .bg-light{
-	background: #4c5a7d !important;
+	/* background: #4c5a7d !important;         **Menu bar l9dim**        */
+    background: #4a6781!important;
 }
 
-.top-navbar .navbar-light .navbar-nav .nav-link{
+.top-navbar .navbar-light .navbar-nav .nav-link{     
 	color: #ffffff;
 	font-size: 16px;
-	font-weight: 500;
+	font-weight: 497;         /******************  Font size dyal ketba li fmenu bar *****************/
 }
 
 .top-navbar .navbar-light .navbar-nav .nav-item{
@@ -625,8 +626,8 @@ a img.aligncenter {
 }
 
 .top-navbar .navbar-light .navbar-nav li .dropdown-menu a:hover{
-	background: #eea412;
-	color: #ffffff;
+	background:#515f6d;     /*****************Color hover dyal navbar****************/
+	color: #ffffff ;
 }
 
 .navbar-right li a{
@@ -711,8 +712,10 @@ a img.aligncenter {
 
 
 .box-slider .carousel-control-prev{
-	border-radius: 2px;
-	background: #eea412;
+	border-radius: 12px;
+	background: 
+    #1A5276
+    ;
 	position: absolute;
 	left: 0px;
 	font-size: 38px;
@@ -722,7 +725,7 @@ a img.aligncenter {
 	line-height: 20px;
 	opacity: 1;
 }
-.box-slider .carousel-control-next{
+.box-slider .carousel-control-next{               /*************button li kedewez slide***********/
 	border-radius: 2px;
 	background: #eea412;
 	position: absolute;
@@ -740,8 +743,9 @@ a img.aligncenter {
 	position: relative;
 	display: inline-block;
 	font-size: 18px;
-	color: #333333;
+	color: #ffffff;
 	font-weight: 500;
+    border-radius: 9px;
 }
 
 
@@ -757,12 +761,13 @@ a img.aligncenter {
 .big-tagline a.hover-btn-new::after {
   background: #fff;
   content: '';
+  border-radius: 6px;
   position: absolute;
   z-index: 1;
 }
 
 .big-tagline a.hover-btn-new:hover span {
-  color: #eea412;
+  color: #17202A;
 }
 
 .hover-btn-new::before {
@@ -773,7 +778,7 @@ a img.aligncenter {
 }
 
 .hover-btn-new::after {
-  background: #eea412 !important;
+  background: #17202A !important;
   height: 100%;
   left: 0;
   top: 0;
@@ -793,7 +798,7 @@ a img.aligncenter {
 
 
 .first-section .big-tagline a:hover{
-	color: #333333;
+	color: #313069;
 }
 .box-slider .carousel-inner{
 	height: 100%;
@@ -810,7 +815,7 @@ a img.aligncenter {
 -------------------------------------------------------------------*/
 
 .dbcolor{
-	background: #eea412;
+	background:#0e1722;
 }
 
 .parallax {
@@ -880,7 +885,7 @@ a img.aligncenter {
     background-color: #448AFF;
 }
 .section.cl {
-	background-color: #2d3032;
+	background-color: #141c25;
 }
 
 .hover-btn-new{
@@ -902,7 +907,7 @@ a img.aligncenter {
 }
 
 .orange{
-	border-color: #eea412;
+	border-color: #eea412; /********moka3ab*********/
 }
 
 .first-section {
@@ -920,7 +925,7 @@ a img.aligncenter {
 	top: 0px;
 	left: 0px;
     display: block;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.5);    /************slide fumer li fou9 tsawer**********/
 }
 
 .first-section h2 {
@@ -935,7 +940,7 @@ a img.aligncenter {
 }
 
 .first-section h2 strong{
-	color: #eea412;
+	color: #eea412;   /************3onwan slide FSJES AS**********/
 }
 
 .first-section .lead {
@@ -961,7 +966,7 @@ a img.aligncenter {
 }
 
 .section-title p {
-    color: #999;
+    color: rgb(102, 102, 102);
     font-weight: 400;
     font-size: 18px;
     line-height: 33px;
@@ -1064,14 +1069,14 @@ a img.aligncenter {
 }
 .message-box a.hover-btn-new::before,
 .message-box a.hover-btn-new::after {
-	background: #eea412;
+	background: #F4F6F7;
 	content: '';
 	position: absolute;
 	z-index: 1;
 }
 
 .message-box a.hover-btn-new:hover span {
-  color: #333333;
+  color: #121b24;
 }
 .message-box a.hover-btn-new::before {
   height: 100%;
@@ -1080,7 +1085,7 @@ a img.aligncenter {
   width: 100%;
 }
 .message-box a.hover-btn-new::after {
-  background: #333333 !important;
+  background: #141d25!important;
   height: 100%;
   left: 0;
   top: 0;
@@ -1089,7 +1094,7 @@ a img.aligncenter {
 .message-box a.hover-btn-new span{
 	position: relative;
 	z-index: 2;
-	color: #fff;
+	color: rgb(255, 255, 255);
 }
 .message-box a.hover-btn-new:hover:after {
   height: 0;
@@ -1117,7 +1122,7 @@ a img.aligncenter {
 	height: 100px;
 	line-height: 100px;
 	text-align: center;
-	border: 3px solid #4babb1;
+	border: 3px solid #215457;
 	border-radius: 6px;
 	margin-bottom: 20px;
 	-webkit-transition: all 0.3s;
@@ -1127,7 +1132,7 @@ a img.aligncenter {
 }
 .icon-box-hmv i{
 	font-size: 60px;
-	color: #eea412;
+	color: #09003a;
 }
 .inner-hmv h3{
 	font-size: 28px;
@@ -1240,7 +1245,7 @@ a img.aligncenter {
 .portfolio-filter ul li .btn-dark {
     box-shadow: none;
     background-color: transparent;
-    border: 1px solid #e6e7e6 !important;
+    border: 1px solid #e7e6e6 !important;
     color: #1f1f1f;
     font-weight: 400;
     font-size: 13px;
@@ -1275,7 +1280,7 @@ a img.aligncenter {
     width: 100%;
     height: 100%;
 }
-
+/***********************ha 2 feeeeeeen wselt*********************/
 .da-thumbs .pitem a div h3 {
     display: block;
     color: #ffffff;

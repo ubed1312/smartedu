@@ -240,15 +240,15 @@ if(isset($_POST['Modifier']))
 
 $value1 = $_POST['Nom'];
 $value2 = $_POST['Ville'];
-$value3 = $_POST['Matiere'];
+$value3 = $_POST['matiere'];
 $value4 = $_POST['Email'];
 $value5 = $_POST['Education'];
 $value6 = $_POST['Skills'];
 $value7 = $_POST['identifiant'];
-$value8 = $_POST['psd'];
+$value8 = $_POST['password'];
 
 
-$sql="SELECT * From listeprof where nom='$value1' and ville='$value2' and matiere='$value3' and email='$value4' and Education='$value5' and Skills='$value6' and identifiant='$value7'and psd='$value8'";
+$sql="SELECT * From listeprof where nom='$value1' and ville='$value2' and matiere='$value3' and email='$value4' and Education='$value5' and Skills='$value6' and identifiant='$value7'and password='$value8'";
 $result = $mysqli->query($sql); 
 
 
@@ -278,7 +278,7 @@ if ($result->num_rows > 0 ) {
 
 else{
 
- $sql1 = "UPDATE listeprof SET nom='$value1', ville='$value2', matiere='$value3' , email='$value4' ,  Education='$value5' ,  Skills='$value6' , identifiant='$value7' , psd='$value8' where ID='$id'";
+ $sql1 = "UPDATE listeprof SET nom='$value1', ville='$value2', matiere='$value3' , email='$value4' ,  Education='$value5' ,  Skills='$value6' , identifiant='$value7' , password='$value8' where ID='$id'";
  $result1 =$mysqli->query($sql1);
 
  echo  '
@@ -334,7 +334,7 @@ else{
 
                     <div class="form-group">
                       <label>Matiere</label>
-                      <input class="form-control" type="text" name="Matiere" placeholder="Matiere"
+                      <input class="form-control" type="text" name="matiere" placeholder="Matiere"
                       title="Matiere Invalid" minlength='2' value="<?php echo $row['matiere'];?>">
                     </div>
 
@@ -355,7 +355,7 @@ else{
                     </div>
                     <div class="form-group">
                       <label>Password</label>
-                      <input class="form-control" type="text" name="psd" value="<?php echo $row['psd'];?>" title="Champ Invalid" value="">
+                      <input class="form-control" type="text" name="password" value="<?php echo $row['password'];?>" title="Champ Invalid" value="">
                     </div>
 
 
