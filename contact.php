@@ -257,7 +257,7 @@
 
 				<style type="text/css">/* Reset CSS */
                     .al{
-        background: url(images/contact-us.jpg)no-repeat;
+        background: url(images/call.jpg)no-repeat;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;

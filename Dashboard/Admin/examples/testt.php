@@ -1,84 +1,67 @@
-<?php      
-   
+<?php 
+
+include('dbconnection.php');
+
 session_start(); 
 
 if(!isset($_SESSION['Email'])){
 
-$servername="localhost";
-$username="root";
-$password="";
-$dbname="siteweb";
 
-$con=mysqli_connect($servername,$username,$password,$dbname);
 
       //Redirect the instructor to login page if he/she is not logged in.
       echo "
         <script type='text/javascript'>
-          window.location.href = 'admin.php';
-        </script>
-      ";
-    }
+          window.location.href ='admin.php';
+          </script>
+        ";
+      }
+  
+      $servername="localhost";
+      $username="root";
+      $password="";
+      $dbname="siteweb";
+      
+      $con=mysqli_connect($servername,$username,$password,$dbname);
+  
+      $value1 = '1';
 
-    $servername="localhost";
-    $username="root";
-    $password="";
-    $dbname="siteweb";
-    
-    $con=mysqli_connect($servername,$username,$password,$dbname);
-
-    $value1 = '1';
-
-    $sql = "SELECT * FROM admin where Code_Adm='$value1'"; 
-    $result =$con->query($sql);
-    
-    $row = mysqli_fetch_assoc($result);
-   
-  ?>
-
-
+      $sql = "SELECT * FROM admin where Code_Adm='$value1'"; 
+      $result =$con->query($sql);
+      
+      $row = mysqli_fetch_assoc($result);
+     
+    ?>
 
 <!DOCTYPE html>
 <html>
 
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>
     Super Prof
-  </title>
-  <!-- Tell the browser to be responsive to screen width -->
+  </title> <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../../plugins/datatables-bs4/css/dataTables.bootstrap4.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
   <link href="../../dist/img/cap.png" rel="shortcut icon" />
-
-  <!-- fullCalendar -->
-  <link rel="stylesheet" href="../../plugins/fullcalendar/main.min.css">
-  <link rel="stylesheet" href="../../plugins/fullcalendar-daygrid/main.min.css">
-  <link rel="stylesheet" href="../../plugins/fullcalendar-timegrid/main.min.css">
-  <link rel="stylesheet" href="../../plugins/fullcalendar-bootstrap/main.min.css">
-
-  <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="../../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-
-
 </head>
 <style>
-  .zoom:hover {
-    transform: scale(2);
-    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-  }
 
+.zoom:hover {
+  transform: scale(2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
 </style>
-
 <body class="hold-transition sidebar-mini">
   <div class="wrapper">
     <!-- Navbar -->
@@ -88,11 +71,12 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
         <li class="nav-item">
           <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
         </li>
-
+        
 
       </ul>
 
-
+   
+    
 
       <!-- Right navbar links -->
       <ul class="navbar-nav ml-auto">
@@ -112,7 +96,7 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
 
             </a>
             <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item">
+            <a href="edit_adm.php" class="dropdown-item">
               <i class="fas fa-users mr-2"></i>Profil
 
             </a>
@@ -128,22 +112,26 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
       </ul>
     </nav>
     <!-- /.navbar -->
+
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
 
       <!-- Sidebar -->
-      <div class="sidebar ">
+      <div class="sidebar">
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel pb mb-3">
           <br>
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <li class="nav-item">
 
-              <a href="edit_adm.php" class="nav-link active">
+
+              <a href="edit_adm.php" class="nav-link">
                 <div class="image">
                   <img src="../../dist/<?php echo $row['imagename'];?>" class="img-circle elevation-2" alt="User Image">
+
                 </div>
+
                 <p style="text-transform: uppercase;">
                   <b>
                     &nbsp; <?php echo $row['Nom'];?>
@@ -162,12 +150,11 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
 
-           
             <li class="nav-item">
-              <a href="tables.php" class="nav-link ">
+              <a href="#" class="nav-link active">
                 <i class="nav-icon fas fa-chalkboard-teacher"></i>
                 <p>
-                  Liste des professeurs
+                Liste des professeurs
 
                 </p>
               </a>
@@ -177,7 +164,7 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
               <a href="students.php" class="nav-link">
                 <i class="nav-icon fas fa-user-graduate"></i>
                 <p>
-                  Liste des Etudiants
+                Liste des Etudiants
 
                 </p>
               </a>
@@ -187,8 +174,8 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
               <a href="#" class="nav-link">
                 <i class="nav-icon far fa-envelope"></i>
                 <p>
-                  Mail
-                  <i class="fas fa-angle-left right"></i>
+                Contact
+               <i class="fas fa-angle-left right"></i>
                 </p>
               </a>
               <ul class="nav nav-treeview">
@@ -201,7 +188,6 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
 
               </ul>
             </li>
-
           </ul>
         </nav>
 
@@ -210,9 +196,7 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
       <!-- /.sidebar -->
     </aside>
 
-        <!-- Content Wrapper. Contains page content -->
-        
-        <div class="content-wrapper">
+    <div class="content-wrapper">
 
 
       <section class="content">
@@ -364,44 +348,66 @@ header("location:tables.php");
     </div>
 
 
-        <!-- /.content-wrapper -->
-        <footer class="main-footer">
 
-          <strong>Copyright &copy;<script>
-              document.write(new Date().getFullYear());
 
-            </script></strong>
-        </footer>
-     
-
+    
+    <footer class="main-footer">
+    
+    <strong>Copyright &copy;<script>document.write(new Date().getFullYear());</script></strong> 
+  </footer>
+  </div>
 
 
 
 
+  </div>
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script language="JavaScript" type="text/javascript">
+    $(document).ready(function () {
+      $("a.delete").click(function (e) {
+        if (!confirm('êtes-vous sûr de supprimer ?')) {
+          e.preventDefault();
+          return false;
+        }
+        return true;
+      });
+    });
+
+  </script>
+
+  <script src="../../plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- DataTables -->
+  <script src="../../plugins/datatables/jquery.dataTables.js"></script>
+  <script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+  <!-- AdminLTE App -->
+  <script src="../../dist/js/adminlte.min.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="../../dist/js/demo.js"></script>
+  <!-- page script -->
 
 
 
-      <script src="../../plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
-      <!-- jQuery UI -->
-      <script src="../../plugins/jquery-ui/jquery-ui.min.js"></script>
-      <!-- overlayScrollbars -->
-      <script src="../../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-      <!-- Page specific script -->
 
-      <script src="../../plugins/jquery/jquery.min.js"></script>
-      <!-- Bootstrap -->
-      <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-      <!-- overlayScrollbars -->
-      <script src="../../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-      <!-- jQuery UI -->
-      <script src="../../plugins/jquery-ui/jquery-ui.min.js"></script>
-      <!-- AdminLTE App -->
-      <script src="../../dist/js/adminlte.min.js"></script>
-      <!-- AdminLTE for demo purposes -->
-      <script src="../../dist/js/demo.js"></script>
+  <script>
+    $(function () {
+      $("#example1").DataTable();
+      $('#example2').DataTable({
+        "paging": true,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+      });
+    });
 
-
-
-    </body>
+  </script>
+</body>
 
 </html>
+
+
+
+

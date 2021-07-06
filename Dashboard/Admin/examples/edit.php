@@ -239,16 +239,17 @@ if(isset($_POST['Modifier']))
  {
 
 $value1 = $_POST['Nom'];
+$value9 = $_POST['cin'];
 $value2 = $_POST['Ville'];
 $value3 = $_POST['matiere'];
 $value4 = $_POST['Email'];
 $value5 = $_POST['Education'];
 $value6 = $_POST['Skills'];
-$value7 = $_POST['identifiant'];
+// $value7 = $_POST['identifiant'];
 $value8 = $_POST['password'];
 
 
-$sql="SELECT * From listeprof where nom='$value1' and ville='$value2' and matiere='$value3' and email='$value4' and Education='$value5' and Skills='$value6' and identifiant='$value7'and password='$value8'";
+$sql="SELECT * From listeprof where nom='$value1' and ville='$value2' and matiere='$value3' and email='$value4' and Education='$value5' and Skills='$value6' and password='$value8'and cin='$value9'";
 $result = $mysqli->query($sql); 
 
 
@@ -278,7 +279,7 @@ if ($result->num_rows > 0 ) {
 
 else{
 
- $sql1 = "UPDATE listeprof SET nom='$value1', ville='$value2', matiere='$value3' , email='$value4' ,  Education='$value5' ,  Skills='$value6' , identifiant='$value7' , password='$value8' where ID='$id'";
+ $sql1 = "UPDATE listeprof SET nom='$value1', ville='$value2', matiere='$value3' , email='$value4' ,  Education='$value5' ,  Skills='$value6' ,password='$value8',cin='$value9' where ID='$id'";
  $result1 =$mysqli->query($sql1);
 
  echo  '
@@ -321,9 +322,14 @@ else{
                     </div>
 
                     <div class="form-group">
-                      <label>Nom</label>
+                      <label>Nom & Prénom</label>
                       <input class="form-control" type="text" name="Nom" placeholder="Nom"
                       title="Nom Invalid" pattern="[A-Za-z ]{2,32}"   value="<?php echo $row['nom'];?>">
+                    </div>
+                    <div class="form-group">
+                      <label>CIN</label>
+                      <input class="form-control" type="text" name="cin" placeholder="CIN"
+                      title="Nom Invalid"   value="<?php echo $row['cin'];?>">
                     </div>
 
                     <div class="form-group">
@@ -349,10 +355,10 @@ else{
                       <input class="form-control" type="text" name="Skills" placeholder="Skills"
                       title="Champ Invalid" minlength='4' value="<?php echo $row['Skills'];?>">
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                       <label>Identifiant</label>
                       <input class="form-control" type="text" name="identifiant" value="<?php echo $row['identifiant'];?>" title="Champ Invalid" value="">
-                    </div>
+                    </div> -->
                     <div class="form-group">
                       <label>Password</label>
                       <input class="form-control" type="text" name="password" value="<?php echo $row['password'];?>" title="Champ Invalid" value="">
