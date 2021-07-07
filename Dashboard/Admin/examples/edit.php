@@ -243,13 +243,13 @@ $value9 = $_POST['cin'];
 $value2 = $_POST['Ville'];
 $value3 = $_POST['matiere'];
 $value4 = $_POST['Email'];
-$value5 = $_POST['Education'];
+// $value5 = $_POST['Education'];
 $value6 = $_POST['Skills'];
 // $value7 = $_POST['identifiant'];
 $value8 = $_POST['password'];
 
 
-$sql="SELECT * From listeprof where nom='$value1' and ville='$value2' and matiere='$value3' and email='$value4' and Education='$value5' and Skills='$value6' and password='$value8'and cin='$value9'";
+$sql="SELECT * From listeprof where nom='$value1' and ville='$value2' and matiere='$value3' and email='$value4' and Skills='$value6' and password='$value8'and cin='$value9'";
 $result = $mysqli->query($sql); 
 
 
@@ -279,7 +279,7 @@ if ($result->num_rows > 0 ) {
 
 else{
 
- $sql1 = "UPDATE listeprof SET nom='$value1', ville='$value2', matiere='$value3' , email='$value4' ,  Education='$value5' ,  Skills='$value6' ,password='$value8',cin='$value9' where ID='$id'";
+ $sql1 = "UPDATE listeprof SET nom='$value1', ville='$value2', matiere='$value3' , email='$value4'  ,  Skills='$value6' ,password='$value8',cin='$value9' where ID='$id'";
  $result1 =$mysqli->query($sql1);
 
  echo  '
@@ -344,11 +344,11 @@ else{
                       title="Matiere Invalid" minlength='2' value="<?php echo $row['matiere'];?>">
                     </div>
 
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                       <label>Education</label>
                       <input class="form-control" type="text" name="Education" placeholder="Education"
                       title="Champ Invalid" pattern="[A-Za-z-à-é ]{4,70}"  value="<?php echo $row['Education'];?>">
-                    </div>
+                    </div> -->
 
                     <div class="form-group">
                       <label>Compétences</label>
