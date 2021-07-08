@@ -2,16 +2,16 @@
 <!-- #eea412;    orange -->
 <!DOCTYPE html>
 <html lang="en">
-    
+
     <!-- Basic -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
-   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
- 
+
      <!-- Site Metas -->
-    <title> FSJESAS </title>  
+    <title> FSJESAS </title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -40,7 +40,7 @@
     <![endif]-->
 
 </head>
-<body class="host_version"> 
+<body class="host_version">
 
 	<!-- Modal -->
 	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -75,9 +75,9 @@
 									<button type="submit" class="btn btn-light btn-radius btn-brd grd1" id="Enregistrer" name="Enregistrer">
 										Enregistrer
 									</button>
-    
+
 									<a class="for-pwd" href="javascript:;">Forgot your password?</a>
-                                    
+
 								</div>
 							</div>
 						</form>
@@ -104,7 +104,7 @@
 									<input class="form-control" id="password" placeholder="Password" type="password">
 								</div>
 							</div>
-							<div class="row">							
+							<div class="row">
 								<div class="col-sm-10">
 									<button type="button" class="btn btn-light btn-radius btn-brd grd1">
 										Save &amp; Continue
@@ -129,8 +129,8 @@
 			</div>
 		</div>
 	</div>
-	<!-- END LOADER -->	
-	
+	<!-- END LOADER -->
+
 	<!-- Start header -->
 	<header class="top-navbar">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -183,7 +183,7 @@
 		</nav>
 	</header>
 	<!-- End header -->
-	
+
 	<div id="carouselExampleControls" class="carousel slide bs-slider box-slider" data-ride="carousel" data-pause="hover" data-interval="false" >
 		<!-- Indicators -->
 		<ol class="carousel-indicators">
@@ -206,7 +206,7 @@
 											<a href="about.html" class="hover-btn-new"><span>Read More</span></a>
 									</div>
 								</div>
-							</div><!-- end row -->            
+							</div><!-- end row -->
 						</div><!-- end container -->
 					</div>
 				</div><!-- end section -->
@@ -226,7 +226,7 @@
 											<a href="about.html" class="hover-btn-new"><span>Read More</span></a>
 									</div>
 								</div>
-							</div><!-- end row -->            
+							</div><!-- end row -->
 						</div><!-- end container -->
 					</div>
 				</div><!-- end section -->
@@ -245,7 +245,7 @@
 											<a href="about.html" class="hover-btn-new"><span>Read More</span></a>
 									</div>
 								</div>
-							</div><!-- end row -->            
+							</div><!-- end row -->
 						</div><!-- end container -->
 					</div>
 				</div><!-- end section -->
@@ -263,7 +263,7 @@
 			</a>
 		</div>
 	</div>
-	
+
     <div id="overviews" class="section wb">
         <div class="container">
             <div class="section-title row text-center">
@@ -273,7 +273,7 @@
                         </p>
                 </div>
             </div><!-- end title -->
-        
+
             <div class="row align-items-center">
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <div class="message-box">
@@ -286,17 +286,17 @@
 
                             ■ la formation de cadres spécialisés aptes à répondre aux besoins des organisations privées et publiques, <br>
                             ■ le développement de recherches fondamentales et appliquées en sciences Juridiques, sciences économiques, sciences de gestion et sciences sociales.<br><br>
-Elle propose un large spectre de formations au sein desquelles les enseignants et des intervenants professionnels transmettent aux étudiants des savoirs 
+Elle propose un large spectre de formations au sein desquelles les enseignants et des intervenants professionnels transmettent aux étudiants des savoirs
 et des méthodes les préparant à faire face à toutes les situations que présente, sur le plan national et international, notre société en mutation. <br>
 
-La diversification des formations qui y sont proposées, les collaborations régulières entre les enseignants et les professionnels, l’originalité et la reconnaissance 
+La diversification des formations qui y sont proposées, les collaborations régulières entre les enseignants et les professionnels, l’originalité et la reconnaissance
 des recherches qui y sont menées attirent un nombre croissant d’étudiants.<br>
                             Ainsi, la Faculté accueille chaque année, dans ses locaux, plus de 20 000 étudiants marocains et étrangers.<br>
                              Elle est habilitée à délivrer les diplômes de Licence (Etudes Fondamentales et Professionnelles), DEUG/DUT, Master et Master Spécialisé et Doctorat.<br>
                              <div id="mDIV" style="display:none;">
                             Parallèlement à sa mission de formation, d’enseignement et de recherche scientifique,
                              la Faculté des sciences Juridiques, Economiques et Sociales noue de fructueux partenariats avec plus d’une vingtaine d’universités étrangères.
-                            
+
                             Au-delà de la maîtrise indispensable des connaissances spécifiques de Droit,
                              d’Economie et de Gestion, les étudiants reçoivent une formation de qualité (stages et enseignements pratiques) , ouverte sur la société, sur le monde professionnel,
                               et sur l’international qui fait d’ailleurs depuis de nombreuses années, la renommée de la Faculté.</p>
@@ -316,7 +316,7 @@ des recherches qui y sont menées attirent un nombre croissant d’étudiants.<b
                         <a class="hover-btn-new orange" onclick="maaFonction()"><span>Learn More</span></a>
                     </div><!-- end messagebox -->
                 </div><!-- end col -->
-				
+
 				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <div class="post-media wow fadeIn">
                         <img src="images/a.jpg" alt="" class="img-fluid img-rounded">
@@ -329,7 +329,7 @@ des recherches qui y sont menées attirent un nombre croissant d’étudiants.<b
                         <img src="images/mission.jpg" alt="" class="img-fluid img-rounded">
                     </div><!-- end media -->
                 </div><!-- end col -->
-				
+
 				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <div class="message-box">
                         <h2>Ses missions :</h2>
@@ -343,7 +343,7 @@ des recherches qui y sont menées attirent un nombre croissant d’étudiants.<b
                         -  Promouvoir la recherche scientifique<br>
                         -  Participer à l'insertion professionnelle de nos lauréats<br>
                         -  Véhiculer une culture para-universitaire et citoyenne<br>
-                        
+
                         -  Participation au développement économique régional et national.</span></span></p>
 
                         <!-- <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum.</p> -->
@@ -361,7 +361,7 @@ des recherches qui y sont menées attirent un nombre croissant d’étudiants.<b
                         <a class="hover-btn-new orange" onclick="maFonction()"><span>Learn More</span></a>
                     </div><!-- end messagebox -->
                 </div><!-- end col -->
-				
+
             </div><!-- end row -->
         </div><!-- end container -->
     </div><!-- end section -->
@@ -395,12 +395,15 @@ des recherches qui y sont menées attirent un nombre croissant d’étudiants.<b
                                   <?php
 
 
+$servername="localhost";
+$username="root";
+$password="";
+$dbname="siteweb";
 
-$del_at="0";
-$requete = "SELECT * FROM note";
+$con=mysqli_connect($servername,$username,$password,$dbname);
+$requete = "SELECT * FROM note where event='afficher' limit 6";
 // envoi de la requête
-global $resultat;
-$resultat = $mysqli->query($requete) or die ('Erreur '.$requete.' '.$mysqli->error);
+$resultat = $con->query($requete);
 
 // intialisation de la variable $news
 $news = '';
@@ -411,15 +414,17 @@ while ($ligne = $resultat->fetch_assoc())
                                 <div class="col-md-4">
                                     <div class="pricing-table pricing-table-highlighted">
                                         <div class="pricing-table-header grd1">
-                                            <h2>Les notes</h2>
+                                            <h2>Les Notes</h2>
                                             <h3><?php echo $ligne['filiere']; ?></h3>
+                                            <p><?php echo $ligne['drone']; ?></p>
+                                             <p>Pr : <?php echo $ligne['nom']; ?></p>
                                         </div>
                                         <div class="pricing-table-space"></div>
                                         <div class="pricing-table-features">
                                             <img src="images/download.jpg" alt="" class="img-fluid">
                                         </div>
                                         <div class="pricing-table-sign-up">
-                                            <a href="#" class="hover-btn-new orange"><span>View</span></a>
+                                            <a  ><span>Voir les notes suer Ent</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -429,52 +434,9 @@ while ($ligne = $resultat->fetch_assoc())
 
                         <div class="tab-pane fade" id="tab2">
                             <div class="row text-center">
-                                <div class="col-md-4">
-                                    <div class="pricing-table pricing-table-highlighted">
-                                        <div class="pricing-table-header grd1">
-                                            <h2>Portes Ouverts</h2>
-                                            <h3>2020-2021</h3>
-                                        </div>
-                                        <div class="pricing-table-space"></div>
-                                        <div class="pricing-table-features">
-                                            <img src="images/download.jpg" alt="" class="img-fluid">
-                                        </div>
-                                        <div class="pricing-table-sign-up">
-                                            <a href="#" class="hover-btn-new orange"><span>View</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="pricing-table pricing-table-highlighted">
-                                        <div class="pricing-table-header grd1">
-                                            <h2>Portes Ouverts</h2>
-                                            <h3>2020-2021</h3>
-                                        </div>
-                                        <div class="pricing-table-space"></div>
-                                        <div class="pricing-table-features">
-                                            <img src="images/download.jpg" alt="" class="img-fluid">
-                                        </div>
-                                        <div class="pricing-table-sign-up">
-                                            <a href="#" class="hover-btn-new orange"><span>View</span></a>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <div class="col-md-4">
-                                    <div class="pricing-table pricing-table-highlighted">
-                                        <div class="pricing-table-header grd1">
-                                            <h2>Portes Ouverts</h2>
-                                            <h3>2020-2021</h3>
-                                        </div>
-                                        <div class="pricing-table-space"></div>
-                                        <div class="pricing-table-features">
-                                            <img src="images/download.jpg" alt="" class="img-fluid">
-                                        </div>
-                                        <div class="pricing-table-sign-up">
-                                            <a href="#" class="hover-btn-new orange"><span>View</span></a>
-                                        </div>
-                                    </div>
-                                </div>
+
+
                             </div><!-- end row -->
                         </div><!-- end pane -->
                     </div><!-- end content -->
@@ -715,7 +677,7 @@ while ($ligne = $resultat->fetch_assoc())
 								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
 								<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
 							</ul><!-- end links -->
-						</div>						
+						</div>
                     </div><!-- end clearfix -->
                 </div><!-- end col -->
 
@@ -733,7 +695,7 @@ while ($ligne = $resultat->fetch_assoc())
                         </ul><!-- end links -->
                     </div><!-- end clearfix -->
                 </div><!-- end col -->
-				
+
                 <div class="col-lg-4 col-md-4 col-xs-12">
                     <div class="widget clearfix">
                         <div class="widget-title">
@@ -770,7 +732,7 @@ while ($ligne = $resultat->fetch_assoc())
     <div class="copyrights">
         <div class="container">
             <div class="footer-distributed">
-                <div class="footer-center">                   
+                <div class="footer-center">
                     <p class="footer-company-name">All Rights Reserved. &copy; 2021</p>
                 </div>
             </div>

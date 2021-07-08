@@ -359,6 +359,9 @@ if(!isset($_SESSION['Email'])){
                            <th>
                           Actions
                         </th>
+                          <th>
+                          Afficher
+                        </th>
                       </tr>
                     </thead>
 
@@ -446,7 +449,24 @@ else{
 
                         </td>
   <?php } ?>
+                                 <?php
+
+                        if ($ligne['event'] == 'masque')
+{
+
+?>
+                          <td>
+                               <a class=" btn btn-dark btn-sm" href="afficher.php?id=<?php echo $ligne["id"] ?>"><i class="fas fa-eye"></i>Afficher</a><br>
+
+                          </td>
+                          <?php }else{  ?>
+                          <td>
+                               <a class=" btn btn-light btn-sm" href="masque.php?id=<?php echo $ligne["id"] ?>"><i class="fas fa-eye"></i>Masquer</a><br>
+
+                          </td>
+                          <?php } ?>
                         <?php } ?>
+
 
                       </tr>
 
