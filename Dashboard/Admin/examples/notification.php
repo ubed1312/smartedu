@@ -218,7 +218,7 @@ if(!isset($_SESSION['Email'])){
                with font-awesome or any other icon font library -->
 
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="tables.php" class="nav-link">
                 <i class="nav-icon fas fa-chalkboard-teacher"></i>
                 <p>
                 Liste des Professeurs
@@ -282,7 +282,7 @@ if(!isset($_SESSION['Email'])){
 
      ?>
               <li class="nav-item">
-              <a href="notification.php" class="nav-link  active">
+              <a href="#" class="nav-link  active">
              <i class="fa fa-bell"   id="over" data-value ="<?php echo $count_active;?>" style="z-index:-99 !important;font-size:10px;color:white;margin:0.6rem 0.1rem !important;"></i>
 
 
@@ -311,7 +311,7 @@ if(!isset($_SESSION['Email'])){
         <!-- Default box -->
         <div class="card card-info">
           <div class="card-header">
-          <h3 class="card-title">Liste des professeurs</h3>
+          <h3 class="card-title">Liste des notes saisis par les professeurs</h3>
 
             <div class="card-tools">
               <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip"
@@ -351,7 +351,7 @@ if(!isset($_SESSION['Email'])){
                           Session
                         </th>
                         <th>
-                          Filière
+                        Filière
                         </th>
                           <th>
                           File

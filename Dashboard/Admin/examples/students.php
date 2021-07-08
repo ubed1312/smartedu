@@ -423,7 +423,7 @@ else
 ?>
 
 
-                 <img src="<?php echo $ligne['imagename'];?>" height="160" width="160"  class="zoom img-circle">
+                 <img src="../../dist/<?php echo $ligne['imagename'];?>" height="160" width="160"  class="zoom img-circle">
 
                   <?php 
 }

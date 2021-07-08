@@ -1,3 +1,7 @@
+<?php
+  include("./connection/DB.php");
+?>
+
 <?php      
    
 session_start(); 
@@ -79,6 +83,84 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
 
 </style>
 
+<style>
+        body {
+             margin:0 !important;
+             padding:0 !important;
+             box-sizing: border-box;
+             font-family: 'Roboto', sans-serif;
+        }
+        .round{
+           width:21px;
+          height:21px;
+          border-radius:50%;
+          position:relative;
+          background:red;
+          display:inline-block;
+          padding:-7rem 1rem !important;
+          margin:0.3rem 2rem !important;
+          left:-19px;
+          top:3px;
+
+        }
+        .round > span {
+          color:white;
+          display:block;
+          text-align:center;
+          font-size:1rem !important;
+          padding:0 !important;
+        }
+        #list{
+
+          display: none;
+          top: 33px;
+          position: absolute;
+          right: 2%;
+          background:#ffffff;
+  z-index:100 !important;
+    width: 25vw;
+    margin-left: -37px;
+
+    padding:0 !important;
+    margin:0 auto !important;
+
+
+        }
+        .message > span {
+           width:100%;
+           display:block;
+           color:red;
+           text-align:justify;
+           margin:0.2rem 0.3rem !important;
+           padding:0.3rem !important;
+           line-height:1rem !important;
+           font-weight:bold;
+           border-bottom:1px solid white;
+           font-size:1.8rem !important;
+
+        }
+        .message{
+          /* background:#ff7f50;
+          margin:0.3rem 0.2rem !important;
+          padding:0.2rem 0 !important;
+          width:100%;
+          display:block; */
+
+        }
+        .message > .msg {
+           width:90%;
+           margin:0.2rem 0.3rem !important;
+           padding:0.2rem 0.2rem !important;
+           text-align:justify;
+           font-weight:bold;
+           display:block;
+           word-wrap: break-word;
+
+
+        }
+
+    </style>
+
 <body class="hold-transition sidebar-mini">
   <div class="wrapper">
     <!-- Navbar -->
@@ -140,7 +222,7 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <li class="nav-item">
 
-              <a href="edit_adm.php" class="nav-link active">
+              <a href="edit_adm.php" class="nav-link ">
                 <div class="image">
                   <img src="../../dist/<?php echo $row['imagename'];?>" class="img-circle elevation-2" alt="User Image">
                 </div>
@@ -174,7 +256,7 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
             </li>
 
             <li class="nav-item">
-              <a href="students.php" class="nav-link">
+              <a href="students.php" class="nav-link active">
                 <i class="nav-icon fas fa-user-graduate"></i>
                 <p>
                   Liste des Etudiants
@@ -201,6 +283,49 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
 
               </ul>
             </li>
+
+
+            <?php
+       $find_notifications = "Select * from note where statut='en cours'";
+       $result = mysqli_query($connection,$find_notifications);
+       $count_active = '';
+       $notifications_data = array();
+       $deactive_notifications_dump = array();
+        while($rows = mysqli_fetch_assoc($result)){
+                $count_active = mysqli_num_rows($result);
+                $notifications_data[] = array(
+                                 "id" => $rows['id'],
+                            "module"=>$rows['module'],
+                            "nom"=>$rows['nom']
+                );
+        }
+        //only five specific posts
+        $deactive_notifications = "Select * from note";
+        $result = mysqli_query($connection,$deactive_notifications);
+        while($rows = mysqli_fetch_assoc($result)){
+          $deactive_notifications_dump[] = array(
+                       "id" => $rows['id'],
+                            "module"=>$rows['module'],
+                            "nom"=>$rows['nom']
+          );
+        }
+
+     ?>
+              <li class="nav-item">
+              <a href="notification.php" class="nav-link">
+             <i class="fa fa-bell"   id="over" data-value ="<?php echo $count_active;?>" style="z-index:-99 !important;font-size:10px;color:white;margin:0.6rem 0.1rem !important;"></i>
+
+
+                <p>
+               Notifications
+
+                </p><?php if(!empty($count_active)){?>
+                    <div class="round"  data-value ="<?php echo $count_active;?>"><span><?php echo $count_active; ?></span></div>
+                    <?php }?>
+              </a>
+            </li>
+
+
 
           </ul>
         </nav>

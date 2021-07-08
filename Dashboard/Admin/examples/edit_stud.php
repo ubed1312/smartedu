@@ -658,7 +658,7 @@ else{
                             <div class="form-group row">
                               <label for="inputName" class="col-sm-2 col-form-label">Tel</label>
                               <div class="col-sm-7">
-                                <input class="form-control" type="text" title="Tek Invalid" pattern="[0-9]{10}" name="Tel" placeholder="06xxxxxxxx"
+                                <input class="form-control" type="text" title="Tek Invalid" name="Tel" placeholder="06xxxxxxxx"
                                   value="<?php echo $row['Tel'];?>">
                               </div>
                             </div>

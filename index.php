@@ -135,7 +135,7 @@
 	<header class="top-navbar">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<div class="container-fluid">
-				<a class="navbar-brand" href="index.html">
+				<a class="navbar-brand" href="index.php">
 					<img src="images/university.jpg" style="height: 57px; weight: 10px" alt="" />
 				</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
@@ -145,7 +145,7 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbars-host">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+						<li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
 						<li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Formation </a>
@@ -371,10 +371,10 @@ des recherches qui y sont menées attirent un nombre croissant d’étudiants.<b
     <div id="plan" class="section lb">
         <div class="container">
             <div class="section-title text-center">
-                <h3>Actualités & Evenements</h3>
+                <h3>Actualités</h3>
                 <p>Lorem ipsum dolor sit aet, consectetur adipisicing lit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
             </div><!-- end title -->
-
+<center>
             <div class="row">
                 <div class="col-md-6 offset-md-3">
                     <div class="message-box">
@@ -383,7 +383,7 @@ des recherches qui y sont menées attirent un nombre croissant d’étudiants.<b
                         </ul>
                     </div>
                 </div><!-- end col -->
-            </div>
+            </div></center>
 
             <hr class="invis">
 
@@ -660,8 +660,8 @@ while ($ligne = $resultat->fetch_assoc())
         </div><!-- end container -->
     </div><!-- end section -->
 
-    <footer class="footer">
-        <div class="container">
+    <footer class="footer"> 
+        <div class="container"> 
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-xs-12">
                     <div class="widget clearfix">
@@ -687,7 +687,7 @@ while ($ligne = $resultat->fetch_assoc())
                             <h3>Information Link</h3>
                         </div>
                         <ul class="footer-links">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.php">Home</a></li>
                             <li><a href="course-grid-1.html">Formation</a></li>
                             <li><a href="Teachers.html">Professeurs</a></li>
 							<li><a href="about.html">About</a></li>

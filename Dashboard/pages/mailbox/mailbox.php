@@ -1,3 +1,4 @@
+
 <?php 
 
 include('../../Admin/examples/dbconnection.php');  
@@ -32,6 +33,7 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
 
   ?>
 
+
   <!DOCTYPE html>
 <html>
 <head>
@@ -40,6 +42,9 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
   <title>
     Super Prof
   </title>
+
+
+
 
   <link href="../../dist/img/cap.png" rel="shortcut icon" />   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -175,6 +180,7 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
                
               </ul>
             </li>
+
 
 
           </ul>

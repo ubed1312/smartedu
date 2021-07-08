@@ -1,6 +1,7 @@
 <?php
   include("./connection/DB.php");
 ?>
+
 <?php      
    
 session_start(); 
@@ -495,7 +496,7 @@ if(isset($_POST['Ajouter']))
 $sql = "INSERT INTO listeprof( nom, cin, tel, ville, matiere, skills, email, password, file) VALUES('$nom','$cin','$tel','$ville','$matiere','$skills','$email','$password','$fileDestination1')";
 $result = $con->query($sql);
                 }}}
-header("location:tables.php");
+
 }?>
 
 
