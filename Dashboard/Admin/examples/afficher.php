@@ -19,9 +19,9 @@ session_start();
 include('dbconnection.php');
 
 
-$del_at="1";
+// $del_at="1";
 $id=$_REQUEST['id'];
-$date_del =date("F j, Y, g:i a");
+// $date_del =date("F j, Y, g:i a");
 
 
 $query = "UPDATE note SET event='afficher'  WHERE ID='".$id."' ";
