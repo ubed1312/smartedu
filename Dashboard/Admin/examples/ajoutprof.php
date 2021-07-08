@@ -1,3 +1,6 @@
+<?php
+  include("./connection/DB.php");
+?>
 <?php      
    
 session_start(); 
@@ -140,7 +143,7 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <li class="nav-item">
 
-              <a href="edit_adm.php" class="nav-link active">
+              <a href="edit_adm.php" class="nav-link ">
                 <div class="image">
                   <img src="../../dist/<?php echo $row['imagename'];?>" class="img-circle elevation-2" alt="User Image">
                 </div>
@@ -164,7 +167,7 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
 
            
             <li class="nav-item">
-              <a href="tables.php" class="nav-link ">
+              <a href="tables.php" class="nav-link active ">
                 <i class="nav-icon fas fa-chalkboard-teacher"></i>
                 <p>
                   Liste des professeurs
@@ -201,6 +204,124 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
 
               </ul>
             </li>
+
+<style>
+        body {
+             margin:0 !important;
+             padding:0 !important;
+             box-sizing: border-box;
+             font-family: 'Roboto', sans-serif;
+        }
+        .round{
+           width:21px;
+          height:21px;
+          border-radius:50%;
+          position:relative;
+          background:red;
+          display:inline-block;
+          padding:-7rem 1rem !important;
+          margin:0.3rem 2rem !important;
+          left:-19px;
+          top:3px;
+
+        }
+        .round > span {
+          color:white;
+          display:block;
+          text-align:center;
+          font-size:1rem !important;
+          padding:0 !important;
+        }
+        #list{
+
+          display: none;
+          top: 33px;
+          position: absolute;
+          right: 2%;
+          background:#ffffff;
+  z-index:100 !important;
+    width: 25vw;
+    margin-left: -37px;
+
+    padding:0 !important;
+    margin:0 auto !important;
+
+
+        }
+        .message > span {
+           width:100%;
+           display:block;
+           color:red;
+           text-align:justify;
+           margin:0.2rem 0.3rem !important;
+           padding:0.3rem !important;
+           line-height:1rem !important;
+           font-weight:bold;
+           border-bottom:1px solid white;
+           font-size:1.8rem !important;
+
+        }
+        .message{
+          /* background:#ff7f50;
+          margin:0.3rem 0.2rem !important;
+          padding:0.2rem 0 !important;
+          width:100%;
+          display:block; */
+
+        }
+        .message > .msg {
+           width:90%;
+           margin:0.2rem 0.3rem !important;
+           padding:0.2rem 0.2rem !important;
+           text-align:justify;
+           font-weight:bold;
+           display:block;
+           word-wrap: break-word;
+
+
+        }
+
+    </style>
+               <?php
+       $find_notifications = "Select * from note where statut='en cours'";
+       $result = mysqli_query($connection,$find_notifications);
+       $count_active = '';
+       $notifications_data = array();
+       $deactive_notifications_dump = array();
+        while($rows = mysqli_fetch_assoc($result)){
+                $count_active = mysqli_num_rows($result);
+                $notifications_data[] = array(
+                                 "id" => $rows['id'],
+                            "module"=>$rows['module'],
+                            "nom"=>$rows['nom']
+                );
+        }
+        //only five specific posts
+        $deactive_notifications = "Select * from note";
+        $result = mysqli_query($connection,$deactive_notifications);
+        while($rows = mysqli_fetch_assoc($result)){
+          $deactive_notifications_dump[] = array(
+                       "id" => $rows['id'],
+                            "module"=>$rows['module'],
+                            "nom"=>$rows['nom']
+          );
+        }
+
+     ?>
+              <li class="nav-item">
+              <a href="notification.php" class="nav-link ">
+             <i class="fa fa-bell"   id="over" data-value ="<?php echo $count_active;?>" style="z-index:-99 !important;font-size:10px;color:white;margin:0.6rem 0.1rem !important;"></i>
+
+
+                <p>
+               Notifications
+
+                </p><?php if(!empty($count_active)){?>
+                    <div class="round"  data-value ="<?php echo $count_active;?>"><span><?php echo $count_active; ?></span></div>
+                    <?php }?>
+              </a>
+            </li>
+
 
           </ul>
         </nav>
@@ -244,7 +365,7 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
         <div class="col-lg-12">
           <div class="form-panel">
             <!-- <h4 class="mb"><i class="fa fa-angle-right"></i> Form client</h4> -->
-            <form class="form-horizontal style-form" method="post">
+            <form class="form-horizontal style-form" method="post" enctype='multipart/form-data'>
               
               <div class="form-group">
                 <label class="col-sm-2 col-sm-2 control-label">Nom & Prénom</label>
@@ -338,11 +459,32 @@ if(isset($_POST['Ajouter']))
 @$email = $_POST['email'];
 @$password = $_POST['password'];
 
-     @$file = rand(1000,10000)."-".$_FILES["file"]["name"];
-     @$tname = $_FILES["files"]["tmp_name"];
-     @$uploads_dir = '/images';
+     $file = $_FILES['file'];
+        $fileName = $_FILES['file']['name'];
+        $fileTmpName = $_FILES['file']['tmp_name'];
+        $fileSize = $_FILES['file']['size'];
+        $fileError = $_FILES['file']['error'];
+        $fileType = $_FILES['file']['type'];
 
-     move_uploaded_file($tname,$uploads_dir.'/'.$file);
+
+        $fileExt = explode('.', $fileName);
+        $fileActualExt = strtolower(end($fileExt));
+
+
+        $allowed = array('png', 'jpg', 'jpeg', 'webp', 'gif', 'svg');
+       //Tu fais les vérifications nécéssaires
+        if (in_array($fileActualExt, $allowed))
+        //Si l'extension n'est pas dans le tableau
+        {
+            if ($fileError === 0) {
+
+                if ($fileSize < 5000000) {
+
+                    $fileNameNew = uniqid('', true) . "." . $fileActualExt;
+                    $fileDestination = 'images/' . $fileNameNew;
+                    move_uploaded_file($fileTmpName, $fileDestination);
+
+                    $fileDestination1 = 'images/' . $fileNameNew;
 
 
 // $categorie = $_POST['categorie'];
@@ -350,8 +492,9 @@ if(isset($_POST['Ajouter']))
 // $Education = $_POST['Education'];
 // $skills = $_POST['skills'];
 
-$sql = "INSERT INTO ajoutprof( nom, cin, tel, ville, matiere, skills, email, password, file) VALUES('$nom','$cin','$tel','$ville','$matiere','$skills','$email','$password','$file')";
+$sql = "INSERT INTO listeprof( nom, cin, tel, ville, matiere, skills, email, password, file) VALUES('$nom','$cin','$tel','$ville','$matiere','$skills','$email','$password','$fileDestination1')";
 $result = $con->query($sql);
+                }}}
 header("location:tables.php");
 }?>
 

@@ -1,11 +1,11 @@
 <?php
   include("./connection/DB.php");
 ?>
-<?php 
+<?php
 
 include('dbconnection.php');
 
-session_start(); 
+session_start();
 
 if(!isset($_SESSION['Email'])){
 
@@ -18,21 +18,21 @@ if(!isset($_SESSION['Email'])){
           </script>
         ";
       }
-  
+
       $servername="localhost";
       $username="root";
       $password="";
       $dbname="siteweb";
-      
+
       $con=mysqli_connect($servername,$username,$password,$dbname);
-  
+
       $value1 = '1';
 
-      $sql = "SELECT * FROM admin where Code_Adm='$value1'"; 
+      $sql = "SELECT * FROM admin where Code_Adm='$value1'";
       $result =$con->query($sql);
-      
+
       $row = mysqli_fetch_assoc($result);
-     
+
     ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -155,12 +155,12 @@ if(!isset($_SESSION['Email'])){
         <li class="nav-item">
           <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
         </li>
-        
+
 
       </ul>
 
-   
-    
+
+
 
       <!-- Right navbar links -->
       <ul class="navbar-nav ml-auto">
@@ -218,10 +218,10 @@ if(!isset($_SESSION['Email'])){
                with font-awesome or any other icon font library -->
 
             <li class="nav-item">
-              <a href="#" class="nav-link active">
+              <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-chalkboard-teacher"></i>
                 <p>
-                Liste des professeurs
+                Liste des Professeurs
 
                 </p>
               </a>
@@ -282,7 +282,7 @@ if(!isset($_SESSION['Email'])){
 
      ?>
               <li class="nav-item">
-              <a href="notification.php" class="nav-link">
+              <a href="notification.php" class="nav-link  active">
              <i class="fa fa-bell"   id="over" data-value ="<?php echo $count_active;?>" style="z-index:-99 !important;font-size:10px;color:white;margin:0.6rem 0.1rem !important;"></i>
 
 
@@ -324,15 +324,6 @@ if(!isset($_SESSION['Email'])){
           <div class="card-body p-0">
             <div class="card-body">
               <div class="table-responsive">
-<!-- /*********************************Hadshi ylh kanzido pour ajout prof****************************/ -->
-              <table class="table table-striped table-advance table-hover">
-                <h4><div class=pull-right>
-                <a href="ajoutprof.php"><button class="btn btn-success" >Ajouter Professeur</button></a>&nbsp;&nbsp;</div></h4>
-                <hr>
-
-
-
-<!-- /*********************************Hadshi ylh kanzido pour ajout prof****************************/ -->
 
                 <form name="f1" action="" onsubmit="return validation()" method="POST">
 
@@ -343,27 +334,27 @@ if(!isset($_SESSION['Email'])){
 
                       <tr>
                              <th>
-                          Image
+                          ID
                         </th>
                       <th>
                           Nom
                         </th>
 
                         <th>
-                          CIN
+                          Prénom
                         </th>
                         <th>
-                          Ville
+                          Module
                         </th>
 
                         <th>
-                          Email
+                          Session
                         </th>
                         <th>
-                          Telephone
+                          Filière
                         </th>
                           <th>
-                          Matiere
+                          File
                         </th>
                            <th>
                           Actions
@@ -379,9 +370,9 @@ if(!isset($_SESSION['Email'])){
                       <?php
 
 
-                        
-$del_at="0"; 
-$requete = "SELECT * FROM listeprof";
+
+$del_at="0";
+$requete = "SELECT * FROM note ";
 // envoi de la requête
 global $resultat;
 $resultat = $mysqli->query($requete) or die ('Erreur '.$requete.' '.$mysqli->error);
@@ -390,92 +381,71 @@ $resultat = $mysqli->query($requete) or die ('Erreur '.$requete.' '.$mysqli->err
 $news = '';
 
 // tant qu'il y a un enregistrement, les instructions dans la boucle s'exécutent
-while ($ligne = $resultat->fetch_assoc()) 
+while ($ligne = $resultat->fetch_assoc())
 { ?>
                       <tr>
-       <td>
-                       <center>
-                          <img src="<?php echo $ligne['file'];?>" class="zoom profile-user-img img-fluid img-circle" >
-                      </center>
+      <td>
+                          <?php echo $ligne["id"]; ?>
                         </td>
+
                         <td>
                           <?php echo $ligne["nom"]; ?>
                         </td>
 
-                        
+
                         <td>
-                          <?php echo $ligne["cin"]; ?>
+                          <?php echo $ligne["prenom"]; ?>
 
                         </td>
                         <td>
-                          <?php echo $ligne["ville"]; ?>
+                          <?php echo $ligne["module"]; ?>
 
                         </td>
 
                         <td>
-                          <?php echo $ligne["email"]; ?>
+                          <?php echo $ligne["drone"]; ?>
 
                         </td>
                            <td>
-                          <?php echo $ligne["tel"]; ?>
+                          <?php echo $ligne["filiere"]; ?>
 
                         </td>
                            <td>
-                          <?php echo $ligne["matiere"]; ?>
+                         <a class=" btn btn-success btn-sm" href="download.php?file=<?php echo $ligne["file"] ?>"><i class="fas fa-download"></i>Download</a><br>
 
                         </td>
 
 
                      <?php
 
-                        if ($ligne['Date_deleted'] == NULL && $ligne['is_deleted'] =='0')
+                        if ($ligne['statut'] == 'en cours')
 {
 
 ?>
                         <td class="project-actions text-left">
-<!--
-                          <a class="btn btn-primary btn-sm" href="view.php?id=<?php echo $ligne["id"]; ?>">
-                            <i class="fas fa-folder">
-                            </i>
-                            Afficher
-                          </a>
--->
 
 
-                          <a class="btn btn-info btn-sm" href="edit.php?id=<?php echo $ligne["id"]; ?>">
-                            <i class="fas fa-pencil-alt">
-                            </i>
-                            Éditer
-                          </a>
 
-                          <a class="delete btn btn-danger btn-sm" href="delete.php?id=<?php echo $ligne["id"]; ?>">
-                            <i class="fas fa-trash">
-                            </i>
-                            Supprimer
+
+                          <a class="delete btn btn-info btn-sm" href="valide.php?id=<?php echo $ligne["id"]; ?>">
+                            <i class="far fa-check-circle"></i>
+
+                            Valide
                           </a>
                         </td>
-   <?php 
+   <?php
 }
+else{
 
-else
-{
 
 ?>
-                             <td class="project-actions text-left">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                             <a class="btn btn-success btn-sm" href="ajout.php?id=<?php echo $ligne["id"]; ?>">
-                         
-                            <i class="fas fa-user-plus">
-                            </i>
-                            &nbsp; Ajouter une autre fois
-                          </a>
+                <td class="project-actions text-left">
+
+
+                            Deja Valide
+
                         </td>
-
-<?php 
-}
-
-?>
-
+  <?php } ?>
                         <?php } ?>
 
                       </tr>
@@ -497,10 +467,10 @@ else
 
 
 
-    
+
     <footer class="main-footer">
-    
-    <strong>Copyright &copy;<script>document.write(new Date().getFullYear());</script></strong> 
+
+    <strong>Copyright &copy;<script>document.write(new Date().getFullYear());</script></strong>
   </footer>
   </div>
 
@@ -512,7 +482,7 @@ else
   <script language="JavaScript" type="text/javascript">
     $(document).ready(function () {
       $("a.delete").click(function (e) {
-        if (!confirm('êtes-vous sûr de supprimer ?')) {
+        if (!confirm('êtes-vous sûr de valider ?')) {
           e.preventDefault();
           return false;
         }

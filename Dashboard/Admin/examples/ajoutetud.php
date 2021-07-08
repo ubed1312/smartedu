@@ -244,7 +244,7 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
         <div class="col-lg-12">
           <div class="form-panel">
             <!-- <h4 class="mb"><i class="fa fa-angle-right"></i> Form client</h4> -->
-            <form class="form-horizontal style-form" method="post">
+            <form class="form-horizontal style-form" method="post" enctype='multipart/form-data'>
               
               <div class="form-group">
                 <label class="col-sm-2 col-sm-2 control-label">Nom & Prénom</label>
@@ -345,11 +345,51 @@ if(isset($_POST['Ajouter']))
 @$Ville = $_POST['Ville'];
 @$Tel = $_POST['Tel'];
 
-     @$file = rand(1000,10000)."-".$_FILES["file"]["name"];
-     @$tname = $_FILES["files"]["tmp_name"];
-     @$uploads_dir = '/images';
+//     @$file = rand(1000,10000)."-".$_FILES["file"]["name"];
+//     @$tname = $_FILES["files"]["tmp_name"];
+//     @$uploads_dir = '/images';
+//
+//     move_uploaded_file($tname,$uploads_dir.'/'.$file);
 
-     move_uploaded_file($tname,$uploads_dir.'/'.$file);
+
+
+
+
+
+
+
+     $file = $_FILES['file'];
+        $fileName = $_FILES['file']['name'];
+        $fileTmpName = $_FILES['file']['tmp_name'];
+        $fileSize = $_FILES['file']['size'];
+        $fileError = $_FILES['file']['error'];
+        $fileType = $_FILES['file']['type'];
+
+
+        $fileExt = explode('.', $fileName);
+        $fileActualExt = strtolower(end($fileExt));
+
+
+        $allowed = array('png', 'jpg', 'jpeg', 'webp', 'gif', 'svg');
+       //Tu fais les vérifications nécéssaires
+        if (in_array($fileActualExt, $allowed))
+        //Si l'extension n'est pas dans le tableau
+        {
+            if ($fileError === 0) {
+
+                if ($fileSize < 5000000) {
+
+                    $fileNameNew = uniqid('', true) . "." . $fileActualExt;
+                    $fileDestination = 'images/' . $fileNameNew;
+                    move_uploaded_file($fileTmpName, $fileDestination);
+
+                    $fileDestination1 = 'images/' . $fileNameNew;
+
+
+
+
+
+
 
 
 // $categorie = $_POST['categorie'];
@@ -357,8 +397,8 @@ if(isset($_POST['Ajouter']))
 // $Education = $_POST['Education'];
 // $skills = $_POST['skills'];
 
-$sql = "INSERT INTO listeetud( Nom, imagename, Email, filiere, cin, cne, Password, Ville, Tel) VALUES('$Nom','$file','$Email','$filiere','$cin','$cne','$Password','$Ville','$Tel')";
-$result = $con->query($sql);
+$sql = "INSERT INTO listeetud( Nom, imagename, Email, filiere, cin, cne, Password, Ville, Tel) VALUES('$Nom','$fileDestination1','$Email','$filiere','$cin','$cne','$Password','$Ville','$Tel')";
+$result = $con->query($sql);   }}}
 header("location:students.php");
 }?>
 

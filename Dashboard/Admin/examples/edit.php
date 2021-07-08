@@ -318,13 +318,13 @@ else{
                     <div class="form-group">
                       <label>Email addresse</label>
                       <input class="form-control" type="text" name="Email" placeholder="Email"
-                      title="Email Invalid" pattern="[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"  value="<?php echo $row['email'];?>" readonly>
+                      title="Email Invalid"   value="<?php echo $row['email'];?>" readonly>
                     </div>
 
                     <div class="form-group">
                       <label>Nom & Prénom</label>
                       <input class="form-control" type="text" name="Nom" placeholder="Nom"
-                      title="Nom Invalid" pattern="[A-Za-z ]{2,32}"   value="<?php echo $row['nom'];?>">
+                      title="Nom Invalid"    value="<?php echo $row['nom'];?>">
                     </div>
                     <div class="form-group">
                       <label>CIN</label>
@@ -353,7 +353,7 @@ else{
                     <div class="form-group">
                       <label>Compétences</label>
                       <input class="form-control" type="text" name="Skills" placeholder="Skills"
-                      title="Champ Invalid" minlength='4' value="<?php echo $row['Skills'];?>">
+                      title="Champ Invalid" minlength='4' value="<?php echo $row['skills'];?>">
                     </div>
                     <!-- <div class="form-group">
                       <label>Identifiant</label>
@@ -385,7 +385,7 @@ else{
 
                 </div>
                 <div class="widget-user-image">
-                  <img class="zoom img-circle elevation-2" src="../../dist/<?php echo $row['imagename'];?>"
+                  <img class="zoom img-circle elevation-2" src="<?php echo $row['file'];?>"
                     alt="User Avatar">
 
                 </div>
