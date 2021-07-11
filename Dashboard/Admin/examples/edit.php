@@ -44,7 +44,7 @@ $row = mysqli_fetch_assoc($result);
   <title>
     Super Prof
   </title>
-  <link href="../../dist/img/cap.png" rel="shortcut icon" />
+  <link href="../../dist/img/fsjes.png" rel="shortcut icon" />
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
     name='viewport' />
   <!-- Tell the browser to be responsive to screen width -->

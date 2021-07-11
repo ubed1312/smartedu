@@ -8,7 +8,7 @@
   <title>
     Super Prof
   </title>
-  <link href="../../dist/img/cap.png" rel="shortcut icon" />
+  <link href="../../dist/img/fsjes.png" rel="shortcut icon" />
   </head>
   <body>
 
@@ -42,7 +42,7 @@ echo  '
                     swal({
                       icon: "success",
                       title: "Bien .",
-                      text: "evenement afficher",
+                      text: "Evenement Afficher",
                     })
                   });
                 </script>

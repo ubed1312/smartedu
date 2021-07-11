@@ -23,7 +23,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Site CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylee.css">
     <!-- ALL VERSION CSS -->
     <link rel="stylesheet" href="css/versions.css">
     <!-- Responsive CSS -->
@@ -372,13 +372,18 @@ des recherches qui y sont menées attirent un nombre croissant d’étudiants.<b
         <div class="container">
             <div class="section-title text-center">
                 <h3>Actualités</h3>
-                <p>Lorem ipsum dolor sit aet, consectetur adipisicing lit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                <p>Toutes les informations relatives aux événements récents ou aux actualités diffusées par les enseignants et l'administration de la faculté seront afficher dedans. </p>
             </div><!-- end title -->
 <center>
-            <div class="row">
-                <div class="col-md-6 offset-md-3">
-                    <div class="message-box">
-                        <ul class="nav nav-pills nav-stacked" id="myTabs">
+            <div class="row" >
+                <div class="col-md-6 offset-md-3" >
+                    <div class="message-box" >
+                        <ul class="nav nav-pills nav-stacked" id="myTabs"><p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </p>
                             <li><a class="active" href="#tab1" data-toggle="pill">Actualités</a></li>
                         </ul>
                     </div>
@@ -424,7 +429,7 @@ while ($ligne = $resultat->fetch_assoc())
                                             <img src="images/download.jpg" alt="" class="img-fluid">
                                         </div>
                                         <div class="pricing-table-sign-up">
-                                            <a  ><span>Voir les notes suer Ent</span></a>
+                                            <a  href='https://sca.univh2c.ma/cas/login'><span >Voir les notes sur Ent</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -477,7 +482,7 @@ while ($ligne = $resultat->fetch_assoc())
 			 <div class="section-title row text-center">
                 <div class="col-md-8 offset-md-2">
                     <h3>Notre historique</h3>
-                    <p class="lead">Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem!</p>
+                    <p class="lead">La Faculté des sciences juridiques, économiques et sociales d'Ain Sebaa (FSJESA) est une composante de l'Université Hassan II de Casablanca au Maroc.</p>
                 </div>
             </div><!-- end title -->
 			<div class="timeline">
@@ -498,29 +503,25 @@ while ($ligne = $resultat->fetch_assoc())
 						<div class="timeline__item">
 							<div class="timeline__content img-bg-03">
 								<h2>2014</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus. Lorem
-									ipsum dolor sit amet, consectetur adipiscing elit.</p>
+								<p>fait partie d’un réseau vaste à travers le Maroc dont la vocation est la formation universitaire dans les sciences économiques et gestion, juridiques et sociales.</p>
 							</div>
 						</div>
 						<div class="timeline__item">
 							<div class="timeline__content img-bg-04">
 								<h2>2012</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus. Lorem
-									ipsum dolor sit amet, consectetur adipiscing elit.</p>
+								<p>FSJESA d’Ain Sebâa compte 43 enseignants chercheurs, 23 personnels administratifs et techniques et plus de 6000 étudiants dont 1200 en dernière année de licence 260 en master et 440 en filières professionnelles. </p>
 							</div>
 						</div>
 						<div class="timeline__item">
 							<div class="timeline__content img-bg-01">
 								<h2>2010</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus. Lorem
-									ipsum dolor sit amet, consectetur adipiscing elit.</p>
+								<p>La FSJESA est implantée dans une zone de concentration de l’activité industrielle.</p>
 							</div>
 						</div>
 						<div class="timeline__item">
 							<div class="timeline__content img-bg-02">
 								<h2>2007</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus. Lorem
-									ipsum dolor sit amet, consectetur adipiscing elit.</p>
+								<p>Elle délivre plus que 1000 diplômes par an</p>
 							</div>
 						</div>
 						<div class="timeline__item">
@@ -556,7 +557,7 @@ while ($ligne = $resultat->fetch_assoc())
                     <div class="testi-carousel owl-carousel owl-theme">
                         <div class="testimonial clearfix">
 							<div class="testi-meta">
-                                <img src="images/Dean.png" alt="" class="img-fluid">
+                                <img src="images/tes.jpg" alt="" class="img-fluid">
                                 <h4>IDRISS ABBADI </h4>
                             </div>
                             <div class="desc">

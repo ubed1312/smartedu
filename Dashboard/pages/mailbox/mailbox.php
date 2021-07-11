@@ -46,7 +46,7 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
 
 
 
-  <link href="../../dist/img/cap.png" rel="shortcut icon" />   <!-- Tell the browser to be responsive to screen width -->
+  <link href="../../dist/img/fsjes.png" rel="shortcut icon" />   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
@@ -232,12 +232,12 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
                   <i class="far fa-envelope"></i> Messages envoyés
                   </a>
                 </li>              
-                
-                <li class="nav-item">
+                <!-- supprimer -->
+                <!-- <li class="nav-item">
                   <a href="mails_deleted.php" class="nav-link">
                     <i class="far fa-trash-alt"></i> Corbeille
                   </a>
-                </li>
+                </li> -->
               </ul>
             </div>
             <!-- /.card-body -->

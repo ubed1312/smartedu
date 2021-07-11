@@ -62,7 +62,7 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
-  <link href="../../dist/img/cap.png" rel="shortcut icon" />
+  <link href="../../dist/img/fsjes.png" rel="shortcut icon" />
 
   <!-- fullCalendar -->
   <link rel="stylesheet" href="../../plugins/fullcalendar/main.min.css">

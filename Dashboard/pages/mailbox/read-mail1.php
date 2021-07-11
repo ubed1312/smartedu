@@ -35,7 +35,7 @@ $row1 = mysqli_fetch_assoc($result1);
     Super Prof
   </title>
 
-  <link href="../../dist/img/cap.png" rel="shortcut icon" />   <!-- Tell the browser to be responsive to screen width -->
+  <link href="../../dist/img/fsjes.png" rel="shortcut icon" />   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Font Awesome -->
@@ -230,12 +230,12 @@ $row1 = mysqli_fetch_assoc($result1);
                   <i class="far fa-envelope"></i> Messages Envoyés
                   </a>
                 </li>              
-                
-                <li class="nav-item">
+                <!-- supprimer -->
+                <!-- <li class="nav-item">
                   <a href="mails_deleted.php" class="nav-link">
                     <i class="far fa-trash-alt"></i> Corbeille
                   </a>
-                </li>
+                </li> -->
               </ul>
             </div>
             <!-- /.card-body -->
@@ -274,7 +274,7 @@ $row1 = mysqli_fetch_assoc($result1);
               </div>
               <!-- /.mailbox-controls -->
               <div class="mailbox-read-message">
-                <?php echo 'Message :'.$msg; ?>
+                <?php echo 'Message :  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$msg; ?>
               </div>
               <!-- /.mailbox-read-message -->
             </div>
@@ -287,7 +287,9 @@ $row1 = mysqli_fetch_assoc($result1);
 
                 <a href="compose1.php?msg=<?php echo $row['nom']; ?>" class="nav-link"><button type="button" class="btn btn-default"><i class="fas fa-share"></i>Repondre</button></a>
               </div>
-              <button type="submit" name="delete" class="btn btn-default" onclick="archiveFunction(this.id)"><i class="far fa-trash-alt"></i>Supprimer</button>
+
+              <!-- supprimer -->
+              <!-- <button type="submit" name="delete" class="btn btn-default" onclick="archiveFunction(this.id)"><i class="far fa-trash-alt"></i>Supprimer</button> -->
             </div>
             <!-- /.card-footer -->
           </div>
