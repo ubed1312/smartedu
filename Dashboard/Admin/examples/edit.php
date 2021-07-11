@@ -318,7 +318,7 @@ else{
                     <div class="form-group">
                       <label>Email addresse</label>
                       <input class="form-control" type="text" name="Email" placeholder="Email"
-                      title="Email Invalid"   value="<?php echo $row['email'];?>" readonly>
+                      title="Email Invalid"   value="<?php echo $row['email'];?>" >
                     </div>
 
                     <div class="form-group">

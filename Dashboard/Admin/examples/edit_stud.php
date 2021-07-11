@@ -596,7 +596,7 @@ else{
                     swal.fire({
                       icon: "success",
                       title: "Bien .",
-                      text: "L Etudiant a ete modifiée",
+                      text: "L Etudiant a été modifiée",
                     })
                   });
                 </script>
@@ -625,7 +625,7 @@ else{
                               <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
                               <div class="col-sm-7">
                                 <input class="form-control" type="text" name="Email" placeholder="Email"
-                                title="Email Invalid"  value="<?php echo $row['Email'];?>" readonly>
+                                title="Email Invalid"  value="<?php echo $row['Email'];?>">
                               </div>
                             </div>
                             <div class="form-group row">

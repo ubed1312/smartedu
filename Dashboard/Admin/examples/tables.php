@@ -37,7 +37,7 @@ if(!isset($_SESSION['Email'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Notifications</title>
+    <title>Liste des professeurs</title>
 
 <style>
         body {
@@ -380,7 +380,7 @@ if(!isset($_SESSION['Email'])){
 
 
                         
-$del_at="0"; 
+// $del_at="0"; 
 $requete = "SELECT * FROM listeprof";
 // envoi de la requête
 global $resultat;

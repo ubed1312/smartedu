@@ -266,7 +266,8 @@ if(!isset($_SESSION['Email'])){
 
         }
 
-    </style>
+    </style>    
+    <!--  ----------------- notification  ----------------- -->
                <?php
        $find_notifications = "Select * from note where statut='en cours'";
        $result = mysqli_query($connection,$find_notifications);

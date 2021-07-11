@@ -331,7 +331,9 @@ while ($ligne = $result->fetch_assoc() )
                     
                     
                     
-                  </tr>          
+                  </tr>   
+
+<!-- Had while 2 momkin t7eyed -->
 
                   <?php } 
 
