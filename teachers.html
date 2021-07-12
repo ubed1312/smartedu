@@ -7,7 +7,7 @@
    
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
- 
+	<link rel="stylesheet" href="css/style.css"/> 
      <!-- Site Metas -->
     <title>FSJESAS</title>  
     <meta name="keywords" content="">
@@ -39,6 +39,76 @@
 
 </head>
 <body class="host_version"> 
+<!-- Identifiant d'enseignant -->
+
+<div id="add_data_Modal" class="modal fade">
+
+    <center><div class="form-v6-content">
+        <div class="form-left">
+            <img src="images/login2.jpg" alt="form" width="490" height="431">
+        </div>
+        <form class="form-detail" role="form" action = "login.php" method = "POST"  >
+            <h2>S'identifier</h2>
+
+            <div class="form-row">
+                <input type="text" name="email" id="email" class="input-text" placeholder="Email"  required >
+            </div>
+            <div class="form-row">
+                <input type="password" name="psd" id="psd" class="input-text" placeholder="Mot de passe"  required>
+            </div>
+
+            <div class="form-row-last">
+                <cennter><input type="submit" name="Envoyer" id="Envoyer" class="register" value="S'identifier"></cennter>
+            </div>
+        </form>
+        </div></center>
+    </div>
+
+<!-- -------- -->
+
+
+
+
+
+
+
+
+<!-- Identifiant d'etudiant -->
+
+<div id="add_data_Modal2" class="modal fade">
+
+    <center><div class="form-v6-content">
+        <div class="form-left">
+            <img src="images/etu.jpg" alt="form" width="580" height="429">
+        </div>
+        <form class="form-detail" role="form" action = "loginetud.php" method = "POST"  >
+            <h2>S'identifier</h2>
+
+            <div class="form-row">
+                <input type="text" name="Email" id="Email" class="input-text" placeholder="Email"  required >
+            </div>
+            <div class="form-row">
+                <input type="password" name="cne" id="cne" class="input-text" placeholder="Mot de passe"  required>
+            </div>
+
+            <div class="form-row-last">
+                <cennter><input type="submit" name="Envoyer1" id="Envoyer1" class="register" value="S'identifier"></cennter>
+            </div>
+        </form>
+        </div></center>
+    </div>
+
+<!-- -------- -->
+
+
+
+
+
+
+
+
+
+
 
 	<!-- Modal -->
 	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -167,8 +237,9 @@
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Administration </a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item"  href="pricing.html">Corps administratif </a>
-								<a class="dropdown-item" href="ensei.html">Corps enseignant </a>
+								<a class="dropdown-item" data-toggle="modal" data-target="#add_data_Modal2" href="pricing.html">Corps administratif </a>
+								
+								<a class="dropdown-item" data-toggle="modal" data-target="#add_data_Modal" href="ensei.html">Corps enseignant </a>
 							</div>
 						</li>
 						<li class="nav-item"><a class="nav-link" href="http://localhost/smartedu/contact.php">Contact</a></li>
@@ -289,7 +360,7 @@
 						</div>
 					</div>
 				</div>
-				<br><br>
+				<br><br><br><br>
 				<div class="col-lg-3 col-md-6 col-12">
 					<div class="our-team">
 						<div class="team-img">
@@ -368,6 +439,152 @@
 						<div class="team-content">
 							<h3 class="title">Pr.Mustapha SHAB</h3>
 							<span class="post">Comptabilité genérale</span>
+						</div>
+					</div>
+				</div> <br><br><br><br>
+
+				<div class="col-lg-3 col-md-6 col-12">
+					<div class="our-team">
+						<div class="team-img">
+							<img src="images/prof.jpg">
+							<div class="social">
+								<ul>
+									<li><a href="#" class="fa fa-facebook"></a></li>
+									<li><a href="#" class="fa fa-twitter"></a></li>
+									<li><a href="#" class="fa fa-linkedin"></a></li>
+									<li><a href="#" class="fa fa-skype"></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="team-content">
+							<h3 class="title">Pr.Faiq Gmira</h3>
+							<span class="post">Developement</span>
+						</div>
+					</div>
+				</div><div class="col-lg-3 col-md-6 col-12">
+					<div class="our-team">
+						<div class="team-img">
+							<img src="images/prof.jpg">
+							<div class="social">
+								<ul>
+									<li><a href="#" class="fa fa-facebook"></a></li>
+									<li><a href="#" class="fa fa-twitter"></a></li>
+									<li><a href="#" class="fa fa-linkedin"></a></li>
+									<li><a href="#" class="fa fa-skype"></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="team-content">
+							<h3 class="title">Pr.abdelaziz ezziani</h3>
+							<span class="post">Mathématique</span>
+						</div>
+					</div>
+				</div><div class="col-lg-3 col-md-6 col-12">
+					<div class="our-team">
+						<div class="team-img">
+							<img src="images/prof.jpg">
+							<div class="social">
+								<ul>
+									<li><a href="#" class="fa fa-facebook"></a></li>
+									<li><a href="#" class="fa fa-twitter"></a></li>
+									<li><a href="#" class="fa fa-linkedin"></a></li>
+									<li><a href="#" class="fa fa-skype"></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="team-content">
+							<h3 class="title">Pr.azia mahil</h3>
+							<span class="post">Economie Monétaire</span>
+						</div>
+					</div>
+				</div><div class="col-lg-3 col-md-6 col-12">
+					<div class="our-team">
+						<div class="team-img">
+							<img src="images/profw.jpg">
+							<div class="social">
+								<ul>
+									<li><a href="#" class="fa fa-facebook"></a></li>
+									<li><a href="#" class="fa fa-twitter"></a></li>
+									<li><a href="#" class="fa fa-linkedin"></a></li>
+									<li><a href="#" class="fa fa-skype"></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="team-content">
+							<h3 class="title">Pr.chokri khalid</h3>
+							<span class="post">Probabilité</span>
+						</div>
+					</div>
+				</div><div class="col-lg-3 col-md-6 col-12">
+					<div class="our-team">
+						<div class="team-img">
+							<img src="images/prof.jpg">
+							<div class="social">
+								<ul>
+									<li><a href="#" class="fa fa-facebook"></a></li>
+									<li><a href="#" class="fa fa-twitter"></a></li>
+									<li><a href="#" class="fa fa-linkedin"></a></li>
+									<li><a href="#" class="fa fa-skype"></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="team-content">
+							<h3 class="title">Pr.booumaalif imad</h3>
+							<span class="post">Microéconomie</span>
+						</div>
+					</div>
+				</div><div class="col-lg-3 col-md-6 col-12">
+					<div class="our-team">
+						<div class="team-img">
+							<img src="images/prof.jpg">
+							<div class="social">
+								<ul>
+									<li><a href="#" class="fa fa-facebook"></a></li>
+									<li><a href="#" class="fa fa-twitter"></a></li>
+									<li><a href="#" class="fa fa-linkedin"></a></li>
+									<li><a href="#" class="fa fa-skype"></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="team-content">
+							<h3 class="title">Pr.boulitama othmane</h3>
+							<span class="post">Comptabilité Générale</span>
+						</div>
+					</div>
+				</div><div class="col-lg-3 col-md-6 col-12">
+					<div class="our-team">
+						<div class="team-img">
+							<img src="images/prof.jpg">
+							<div class="social">
+								<ul>
+									<li><a href="#" class="fa fa-facebook"></a></li>
+									<li><a href="#" class="fa fa-twitter"></a></li>
+									<li><a href="#" class="fa fa-linkedin"></a></li>
+									<li><a href="#" class="fa fa-skype"></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="team-content">
+							<h3 class="title">Pr.Fremane noureddine</h3>
+							<span class="post">Analyse Mathématique</span>
+						</div>
+					</div>
+				</div><div class="col-lg-3 col-md-6 col-12">
+					<div class="our-team">
+						<div class="team-img">
+							<img src="images/prof.jpg">
+							<div class="social">
+								<ul>
+									<li><a href="#" class="fa fa-facebook"></a></li>
+									<li><a href="#" class="fa fa-twitter"></a></li>
+									<li><a href="#" class="fa fa-linkedin"></a></li>
+									<li><a href="#" class="fa fa-skype"></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="team-content">
+							<h3 class="title">Pr.Kaoutar BOUSHIB</h3>
+							<span class="post">Comptabilité Générale 2</span>
 						</div>
 					</div>
 				</div>
@@ -570,6 +787,66 @@
     <script src="js/all.js"></script>
     <!-- ALL PLUGINS -->
     <script src="js/custom.js"></script>
+
+
+
+
+	<script>
+		$(document).ready(function() {
+			$('#add').click(function() {
+				$('#insert').val("Insert");
+				$('#insert_form')[0].reset();
+			});
+			$(document).on('click', '.edit_data', function() {
+				var id = $(this).attr("id");
+				$.ajax({
+					url: "fetch.php",
+					method: "POST",
+					data: {
+						id: id
+					},
+					dataType: "json",
+					success: function(data) {
+						$('#id').val(data.id);
+						$('#nom').val(data.nom);
+						$('#qte').val(data.qte);
+						$('#plus').val(data.plus);
+						$('#insert').val("Update");
+						$('#add_data_Modal2').modal('show');
+					}
+				});
+			});
+			$('#insert_form').on("submit", function(event) {
+				event.preventDefault();
+				if ($('#id').val() == "") {
+					alert("id is required");
+				} else if ($('#nom').val() == '') {
+					alert("Address is nom");
+				} else if ($('#qte').val() == '') {
+					alert("Designation is qte");
+				} else if ($('#plus').val() == '') {
+					alert("Address is plus");
+				} else {
+					$.ajax({
+						url: "PH_forcepoint.php",
+						method: "POST",
+						data: $('#insert_form').serialize(),
+						beforeSend: function() {
+							$('#insert').val("Inserting");
+						},
+						success: function(data) {
+							$('#insert_form')[0].reset();
+							$('#add_data_Modal2').modal('hide');
+							$('#employee_table').html(data);
+						}
+					});
+				}
+			});
+
+		});
+	</script>
+
+
 
 </body>
 </html>

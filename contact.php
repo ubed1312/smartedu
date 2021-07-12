@@ -7,7 +7,7 @@
    
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
- 
+    <link rel="stylesheet" href="css/style.css"/>
      <!-- Site Metas -->
     <title>FSJESAS</title>  
     <meta name="keywords" content="">
@@ -39,6 +39,34 @@
 
 
 <body class="host_version"> 
+
+<!-- Identifiant d'enseignant -->
+
+<div id="add_data_Modal" class="modal fade">
+
+    <center><div class="form-v6-content">
+        <div class="form-left">
+            <img src="images/login2.jpg" alt="form" width="490" height="431">
+        </div>
+        <form class="form-detail" role="form" action = "login.php" method = "POST"  >
+            <h2>S'identifier</h2>
+
+            <div class="form-row">
+                <input type="text" name="email" id="email" class="input-text" placeholder="Email"  required >
+            </div>
+            <div class="form-row">
+                <input type="password" name="psd" id="psd" class="input-text" placeholder="Mot de passe"  required>
+            </div>
+
+            <div class="form-row-last">
+                <cennter><input type="submit" name="Envoyer" id="Envoyer" class="register" value="S'identifier"></cennter>
+            </div>
+        </form>
+        </div></center>
+    </div>
+
+<!-- -------- -->
+
 
 	<!-- Modal -->
 	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -159,8 +187,8 @@
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Administration </a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="pricing.html">Corps administratif </a>
-								<a class="dropdown-item" href="ensei.html">Corps enseignant </a>
+                            <a class="dropdown-item" data-toggle="modal" data-target="#add_data_Modal2" href="pricing.html">Corps administratif </a>
+								<a class="dropdown-item" data-toggle="modal" data-target="#add_data_Modal" href="ensei.html">Corps enseignant </a>
 							</div>
 						</li>
 						<li class="nav-item active"><a class="nav-link" href="http://localhost/smartedu/contact.php">Contact</a></li>
@@ -179,19 +207,16 @@
 	<div class="al">
 		<div class="container text-center">
 			<h1 style="color :white">Contact
-                <!-- <span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span> -->
-        </h1>
+                <!-- <span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span> --></h1>
 		</div>
 	</div>
-	
 
-    <div id="contact" class="section wb" style="background: url(images/backe.jpg); background-attachment:fixed;
-        
-    
-    ">
+
+    <div id="contact" class="section wb" style="background: url(images/backe.jpg); background-attachment:fixed; ">
         
         <div class="container">
-            <div class="section-title text-center" >
+            <div style="background-color: #F4F6F7;">
+            <div class="section-title text-center">
                 <h2 style="font-size: 70px; font-weight: 800;">Contactez nous!</h2>
                 <p class="lead">Laissez-nous vous donner plus de détails sur notre faculté, n'hésitez pas à nous contacter.</p>
             </div><!-- end title -->
@@ -220,43 +245,10 @@
                                         <p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-globe"></i></span> <a href="https://www.est-uh2c.ac.ma/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://www.Fsjes-uh2c.ac.ma/</a></p></h4>
                                         </div>
                                     
-                                </div></div></div>
+                                </div></div></div></div>
                         
 <!-- /**************************************************************** */ -->
 
-
-
-
-            
-            <!-- <div class="row">
-                <div class="col-xl-6 col-md-12 col-sm-12">
-                    <div class="contact_form">
-                        <div id="message"></div><div></div>
-                        <form id="contactform" class="" action="contact.php" name="contactform" method="post">
-                            <div class="row row-fluid">
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <input type="text" name="first_name" id="first_name" class="form-control" placeholder="First Name">
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last Name">
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <input type="email" name="email" id="email" class="form-control" placeholder="Your Email">
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <input type="text" name="phone" id="phone" class="form-control" placeholder="Your Phone">
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12">
-                                    <textarea class="form-control" name="comments" id="comments" rows="6" placeholder="Give us more details.."></textarea>
-                                </div>
-                                <div class="text-center pd">
-                                    <button type="submit" value="SEND" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Get a Quote</button>
-                                </div>
-                            </div>
-						</div>
-                        </form></center>
-                    </div>
-                </div>end col -->
 				
 
 				<style type="text/css">/* Reset CSS */
@@ -514,20 +506,11 @@ form:after {
             <div> <input type="text" placeholder="votre nom" name="nom" id="nom" required="" /> </div>
             <div> <input type="text" placeholder="votre prenom" name="prenom" id="prenom" required="" /> </div>
             <div> <input type="text" placeholder="votre e-mail" name="mail" id="mail" required="" /> </div>
-            <!-- <div>
-   <input type="radio" id="Homme" name="drone" value="Homme" checked>
-  <label for="Homme">Homme</label>
-  <input type="radio" id="Femme" name="drone" value="Femme">
-  <label for="Femme">Femme</label>
-</div> -->
+    
             <div >
            <input style="height:65px;" type="text" placeholder="votre message" name="msg" id="msg" />
             </div>
             
-            <!-- <div class="col-lg-12 col-md-12 col-sm-12">
-<textarea class="form-control" name="comments" id="comments" rows="6" placeholder="Give us more details.."></textarea>
-</div> -->
-
             <div>
                 <input type="submit" value="Envoyer" name="Envoyer" id="Envoyer" />
             </div>
@@ -567,7 +550,7 @@ $q ->execute([ 'nom' => $nom,
 
             </div><!-- end row -->
         </div><!-- end container -->
-    </div><!-- end section -->
+    
 
 	<div class="parallax section dbcolor">
         <div class="container">

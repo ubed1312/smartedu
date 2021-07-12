@@ -6,7 +6,7 @@
     <!-- Basic -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+    <link rel="stylesheet" href="css/style.css"/>
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -41,6 +41,59 @@
 
 </head>
 <body class="host_version">
+
+<div id="add_data_Modal" class="modal fade">
+
+    <center><div class="form-v6-content">
+        <div class="form-left">
+            <img src="images/login2.jpg" alt="form" width="490" height="431">
+        </div>
+        <form class="form-detail" role="form" action = "login.php" method = "POST"  >
+            <h2>S'identifier</h2>
+
+            <div class="form-row">
+                <input type="text" name="email" id="email" class="input-text" placeholder="Email"  required >
+            </div>
+            <div class="form-row">
+                <input type="password" name="psd" id="psd" class="input-text" placeholder="Mot de passe"  required>
+            </div>
+
+            <div class="form-row-last">
+                <cennter><input type="submit" name="Envoyer" id="Envoyer" class="register" value="S'identifier"></cennter>
+            </div>
+        </form>
+        </div></center>
+    </div>
+
+
+
+    <!-- Identifiant d'etudiant -->
+
+<div id="add_data_Modal2" class="modal fade">
+
+<center><div class="form-v6-content">
+    <div class="form-left">
+        <img src="images/etu.jpg" alt="form" width="580" height="429">
+    </div>
+    <form class="form-detail" role="form" action = "loginetud.php" method = "POST"  >
+        <h2>S'identifier</h2>
+
+        <div class="form-row">
+            <input type="text" name="Email" id="Email" class="input-text" placeholder="Email"  required >
+        </div>
+        <div class="form-row">
+            <input type="password" name="cne" id="cne" class="input-text" placeholder="Mot de passe"  required>
+        </div>
+
+        <div class="form-row-last">
+            <cennter><input type="submit" name="Envoyer1" id="Envoyer1" class="register" value="S'identifier"></cennter>
+        </div>
+    </form>
+    </div></center>
+</div>
+
+<!-- -------- -->
+
 
 	<!-- Modal -->
 	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -169,8 +222,8 @@
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Administration </a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="pricing.html">Corps administratif </a>
-								<a class="dropdown-item" href="ensei.html">Corps enseignant </a>
+                            <a class="dropdown-item" data-toggle="modal" data-target="#add_data_Modal2" href="pricing.html">Corps administratif </a>
+								<a class="dropdown-item" data-toggle="modal" data-target="#add_data_Modal" href="ensei.html">Corps enseignant </a>
 							</div>
 						</li>
 						<li class="nav-item"><a class="nav-link" href="http://localhost/smartedu/contact.php">Contact</a></li>

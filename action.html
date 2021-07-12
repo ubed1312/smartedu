@@ -7,7 +7,7 @@
    
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
- 
+	<link rel="stylesheet" href="css/style.css"/>
      <!-- Site Metas -->
     <title>FSJESAS</title>  
     <meta name="keywords" content="">
@@ -39,6 +39,63 @@
 
 </head>
 <body class="host_version"> 
+
+<!-- Identifiant d'enseignant -->
+
+<div id="add_data_Modal" class="modal fade">
+
+    <center><div class="form-v6-content">
+        <div class="form-left">
+            <img src="images/login2.jpg" alt="form" width="490" height="431">
+        </div>
+        <form class="form-detail" role="form" action = "login.php" method = "POST"  >
+            <h2>S'identifier</h2>
+
+            <div class="form-row">
+                <input type="text" name="email" id="email" class="input-text" placeholder="Email"  required >
+            </div>
+            <div class="form-row">
+                <input type="password" name="psd" id="psd" class="input-text" placeholder="Mot de passe"  required>
+            </div>
+
+            <div class="form-row-last">
+                <cennter><input type="submit" name="Envoyer" id="Envoyer" class="register" value="S'identifier"></cennter>
+            </div>
+        </form>
+        </div></center>
+    </div>
+
+<!-- -------- -->
+
+
+
+<!-- Identifiant d'etudiant -->
+
+<div id="add_data_Modal2" class="modal fade">
+
+    <center><div class="form-v6-content">
+        <div class="form-left">
+            <img src="images/etu.jpg" alt="form" width="580" height="429">
+        </div>
+        <form class="form-detail" role="form" action = "loginetud.php" method = "POST"  >
+            <h2>S'identifier</h2>
+
+            <div class="form-row">
+                <input type="text" name="Email" id="Email" class="input-text" placeholder="Email"  required >
+            </div>
+            <div class="form-row">
+                <input type="password" name="cne" id="cne" class="input-text" placeholder="Mot de passe"  required>
+            </div>
+
+            <div class="form-row-last">
+                <cennter><input type="submit" name="Envoyer1" id="Envoyer1" class="register" value="S'identifier"></cennter>
+            </div>
+        </form>
+        </div></center>
+    </div>
+
+<!-- -------- -->
+
 
 	<!-- Modal -->
 	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -167,8 +224,8 @@
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Administration </a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="pricing.html">Corps administratif </a>
-								<a class="dropdown-item" href="ensei.html">Corps enseignant </a>
+								<a class="dropdown-item" data-toggle="modal" data-target="#add_data_Modal2" href="pricing.html">Corps administratif </a>
+								<a class="dropdown-item" data-toggle="modal" data-target="#add_data_Modal" href="ensei.html">Corps enseignant </a>
 							</div>
 						</li>
 						<li class="nav-item"><a class="nav-link" href="http://localhost/smartedu/contact.php">Contact</a></li>
@@ -201,15 +258,15 @@
 
 	<div class="al">
 		<div class="container text-center">
-			<h1 style="color: papayawhip;">Action Commerciale</h1>
+			<h1 style="color: rgb(255, 255, 255);">Action Commerciale</h1>
 		</div>
 	</div>
-	
-    <div id="overviews" class="section wb" style="background-color: blanchedalmond;">
+	<br><br>
+    <div id="overviews" class="section wb" style="background-color: rgb(255, 255, 255);">
         <div class="container" >
             <div class="row"> 
                 <div class="col-lg-9 blog-post-single">
-                    <div class="blog-item" style="background-color: rgb(248, 248, 248)">  <!----had style momkin n7ydo---->
+                    <div class="blog-item" style="background-color: rgb(245, 245, 245)">  <!----had style momkin n7ydo---->
 						<div class="image-blog">
 							<img src="images/blog_7.jpg" alt="" class="img-fluid">
 						</div>
@@ -275,7 +332,7 @@
 							<h3 class="author_name"><strong>Cordinateur de la filière&nbsp;: </strong></h3><br>
 							<h5 class="container">Pr. SAIDI&nbsp;AHMED</h5><br><br></div>
 						<div class="author-desc">
-							<img src="images/Gmira.png" alt="about author">
+							<img src="images/Prof.jpg" alt="about author">
 							<ul class="author-social">
 								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -327,23 +384,23 @@
 					</div><br><br> -->
 					<h3><strong>Information Link</strong></h3>
 					<ul >
-						<li><a href="index.php">Home</a></li>
-						<li><a href="course-grid-1.html">Formation</a></li>
-						<li><a href="Teachers.html">Professeurs</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="http://localhost/smartedu/contact.php">Contact</a></li>
-						<li><a href="pricing.html">Vie d'etudiants</a></li>
-						<li><a href="ensei.html">Administration</a></li>
+						<li><a href="index.php">Home</a></li><hr>
+						<li><a href="course-grid-1.html">Formation</a></li><hr>
+						<li><a href="Teachers.html">Professeurs</a></li><hr>
+						<li><a href="about.html">About</a></li><hr>
+						<li><a href="http://localhost/smartedu/contact.php">Contact</a></li><hr>
+						<li><a href="pricing.html">Vie d'etudiants</a></li><hr>
+						<li><a href="ensei.html">Administration</a></li><hr>
 
 					</ul> 
 
 					<br><br><h3 class="widget-title"><strong>Contacts</strong></h3><br>
 					<ul class="footer-links-soi">
-						<li><a href="https://www.facebook.com/i.UH2C/?_rdc=1&_rdr"><i class="fa fa-facebook"></i> </a></li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Facebook</b><br><br>
-						<li><a href="#"><i class="fa fa-github"></i></a></li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Github</b><br><br>
-						<li><a href="#"><i class="fa fa-twitter"></i></a></li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twitter</b><br><br>
-						<li><a href="#"><i class="fa fa-dribbble"></i></a></li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dribbble</b><br><br>
-						<li><a href="#"><i class="fa fa-pinterest"></i></a></li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pinterest</b><br><br>
+						<li><a href="https://www.facebook.com/i.UH2C/?_rdc=1&_rdr"><i class="fa fa-facebook"></i> </a></li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Facebook</b><br><br><hr>
+						<li><a href="#"><i class="fa fa-github"></i></a></li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Github</b><br><br><hr>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twitter</b><br><br><hr>
+						<li><a href="#"><i class="fa fa-dribbble"></i></a></li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dribbble</b><br><br><hr>
+						<li><a href="#"><i class="fa fa-pinterest"></i></a></li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pinterest</b><br><br><hr>
 					</ul>
 				</div>
             </div><!-- end row -->
