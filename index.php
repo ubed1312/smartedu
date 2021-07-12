@@ -161,7 +161,7 @@
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Vie étudiants</a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
 								<a class="dropdown-item" href="https://sca.univh2c.ma/cas/login">Espace ENT </a>
-								<a class="dropdown-item" href="bourse.html">Bourse</a>
+								<a class="dropdown-item" href="bourse.php">Bourse</a>
                                 <a class="dropdown-item" href="Emploi.html">Calendrier</a>
 							</div>
 						</li>
@@ -570,7 +570,7 @@ while ($ligne = $resultat->fetch_assoc())
 
                         <div class="testimonial clearfix">
 							<div class="testi-meta">
-                                <img src="images/testi_02.png" alt="" class="img-fluid">
+                                <img src="images/profw.jpg" alt="" class="img-fluid">
                                 <h4>Bouchra BELMOUFFEQ </h4>
                             </div>
                             <div class="desc">
@@ -583,7 +583,7 @@ while ($ligne = $resultat->fetch_assoc())
 
                         <div class="testimonial clearfix">
 							<div class="testi-meta">
-                                <img src="images/testi_03.png" alt="" class="img-fluid ">
+                                <img src="images/profw.jpg" alt="" class="img-fluid ">
                                 <h4>Rajae JEMGHILI  </h4>
                             </div>
                             <div class="desc">
@@ -595,7 +595,7 @@ while ($ligne = $resultat->fetch_assoc())
                         <!-- end testimonial -->
                         <div class="testimonial clearfix">
 							<div class="testi-meta">
-                                <img src="images/testi_01.png" alt="" class="img-fluid">
+                                <img src="images/prof.jpg" alt="" class="img-fluid">
                                 <h4>Abdellaati ELHAKMAOUI  </h4>
                             </div>
                             <div class="desc">
@@ -608,7 +608,7 @@ while ($ligne = $resultat->fetch_assoc())
 
                         <div class="testimonial clearfix">
 							<div class="testi-meta">
-                                <img src="images/testi_02.png" alt="" class="img-fluid">
+                                <img src="images/prof.jpg" alt="" class="img-fluid">
                                 <h4>Hicham BOUANANI  </h4>
                             </div>
                             <div class="desc">
@@ -619,17 +619,8 @@ while ($ligne = $resultat->fetch_assoc())
                         </div>
                         <!-- end testimonial -->
 
-                        <div class="testimonial clearfix">
-							<div class="testi-meta">
-                                <img src="images/testi_03.png" alt="" class="img-fluid">
-                                <h4>Venanda Mercy </h4>
-                            </div>
-                            <div class="desc">
-                                <h3><i class="fa fa-quote-left"></i> Great & Talented Team!</h3>
-                                <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
-                            </div>
-                            <!-- end testi-meta -->
-                        </div><!-- end testimonial -->
+                        
+                        <!-- end testimonial -->
                     </div><!-- end carousel -->
                 </div><!-- end col -->
             </div><!-- end row -->

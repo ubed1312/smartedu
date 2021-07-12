@@ -151,7 +151,7 @@
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Vie étudiants</a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
                             <a class="dropdown-item" href="https://sca.univh2c.ma/cas/login">Espace ENT </a>
-								<a class="dropdown-item" href="bourse.html">Bourse</a>
+								<a class="dropdown-item" href="bourse.php">Bourse</a>
                                 <a class="dropdown-item" href="Emploi.html">Calendrier</a>
 							</div>
 						</li>
@@ -185,20 +185,24 @@
 	</div>
 	
 
-    <div id="contact" class="section wb">
+    <div id="contact" class="section wb" style="background: url(images/backe.jpg); background-attachment:fixed;
+        
+    
+    ">
+        
         <div class="container">
-            <div class="section-title text-center">
-                <h3>Contactez nous!</h3>
+            <div class="section-title text-center" >
+                <h2 style="font-size: 70px; font-weight: 800;">Contactez nous!</h2>
                 <p class="lead">Laissez-nous vous donner plus de détails sur notre faculté, n'hésitez pas à nous contacter.</p>
             </div><!-- end title -->
 
 <!-- /**************************************************************** */ -->
-<div class="row">
+<div class="row" >
                             <div class="col-md-12">
                                 <div class="contact-info-wrap-flex">
                                     
-                                        <div class="con-info">
-                                        <h4>
+                                        <div class="con-info" >
+                                        <h4 style="font-size: 20px; font-weight: 50;">
                                         <p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-map-marker"></i></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Faculté des Sciences Juridique Economique et Sociale Beausite, BP :2634 Ain sebaa - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Casablanca, MAROC</p>
@@ -256,8 +260,8 @@
 				
 
 				<style type="text/css">/* Reset CSS */
-                    .al{
-        background: url(images/call.jpg)no-repeat;
+                    .al{                        
+        background: url(images/ccc.jpg)no-repeat;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;

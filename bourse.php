@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
  
      <!-- Site Metas -->
-    <title>FSJESAS</title>  
+    <title> FSJESAS </title>  
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -145,10 +145,10 @@
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item "><a class="nav-link" href="index.php">Home</a></li>
 						<li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-						<li class="nav-item dropdown">
+						<li class="nav-item ">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Formation </a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item active" href="course-grid-1.html">Licence Professionnelle</a>
+								<a class="dropdown-item" href="course-grid-1.html">Licence Professionnelle</a>
 								<a class="dropdown-item" href="course-grid-2.html">Licence Fondamentale</a>
 								<a class="dropdown-item" href="course-grid-3.html">Master</a>
 								<a class="dropdown-item" href="course-grid-4.html">Doctorat</a>
@@ -159,8 +159,8 @@
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Vie étudiants </a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
 								<a class="dropdown-item" href="https://sca.univh2c.ma/cas/login">Espace ENT </a>
-								<a class="dropdown-item " href="bourse.php">Bourse </a>
-                                <a class="dropdown-item" href="Emploi.html">Calendrier</a>
+								<a class="dropdown-item dropdown active" href="bourse.php">Bourse</a>
+                                <a class="dropdown-item " href="Emploi.html">Calendrier</a>
 							</div>
 						</li>
 						<li class="nav-item"><a class="nav-link" href="teachers.html">Professeurs</a></li>
@@ -182,16 +182,15 @@
 	</header>
 	<!-- End header -->
 	
-	
 	<style> .al{
-        background: url(images/h.jpg)no-repeat;
+        background: url(images/bours.jpg)no-repeat;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
         background-position: center;
         min-height: 300px;}
-        .al h1{
+        .al h1 {
         color: #fff;
         font-weight: 600;
         text-transform: capitalize;
@@ -201,90 +200,48 @@
 
 	<div class="al">
 		<div class="container text-center">
-			<h1 style="color: papayawhip;">Action Commerciale</h1>
+			<h1 style="color: papayawhip;">Bourse</h1>
 		</div>
 	</div>
-	
-    <div id="overviews" class="section wb" style="background-color: blanchedalmond;">
+        <br><br><br>
+    <div id="overviews" class="section wb"  >
         <div class="container" >
             <div class="row"> 
                 <div class="col-lg-9 blog-post-single">
-                    <div class="blog-item" style="background-color: rgb(248, 248, 248)">  <!----had style momkin n7ydo---->
+                    <div class="blog-item" style="background-color:#eff2f5;">  <!----had style momkin n7ydo---->
 						<div class="image-blog">
-							<img src="images/blog_7.jpg" alt="" class="img-fluid">
-						</div>
+							<img src="images/bourse.jpg" alt="" class="img-fluid"  height="20 " width="20">
+						</div><br>
 						<div class="post-content">
 							
 							<div class="blog-title">
-								<h2><a  title="">Presentation de la filiére </a></h2>
-							</div>
+								<h2><a  title=""><strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  BOURSES </strong> : </a></h2>
+							</div><br>
 							<div class="blog-desc">
 								<!-- <p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p> -->
-								<blockquote class="default">
-									Cette licence a pour objectif de Former des techniciens en communication et négociation commerciales qui soient former des techniciens capables de maîtriser l’organisation et la gestion du portefeuille client dans sa globalité, de la prospection jusqu’à la fidélisation, en tenant compte des usages du marché, de la politique de l’entreprise, des offres et pratiques de la concurrence.
-								</blockquote>
-								<p><strong style="font-size: large;">Capacité d’accueil&nbsp; <i class="fa fa-users" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;: </strong>40 étudiants</p>
-								<p><strong style="font-size: large;">Objectifs</strong><strong>&nbsp;:</strong></p>
-								
-					<ul><li>Manager une unité commerciale ;</li>
-					<li>Gérer la relation clientèle</li>
-					<li>Gérer et animer l’offre de produits et/ou de services ;</li>
-					<li>Maitrise du cadre juridique bilatéral et régional régissant le commerce extérieur du Maroc</li>
-					<li>Rechercher et exploiter les informations nécessaires à l’activité commerciale.</li>
-					</ul><p><strong style="font-size: large;">&nbsp;Débouchés&nbsp;:</strong></p>
-					<ul><li>Des postes de responsabilité dans les&nbsp;administrations, établissements publics et entreprises privées traitant des questions relevant&nbsp;du commerce international, des compétences de l’OMC et de l’insertion internationale du Maroc</li>
-						<li>Chef de projet</li>
-						<li>Responsable informatique</li>
-					</ul><p>&nbsp;<strong style="font-size: large;">Conditions d’accès&nbsp;:</strong></p>
-					<p> La formation est ouverte aux titulaires d’un DEUG en sciences
-						économique et Sociales, d’un DUT ou BTS, finance ou comptabilité ou
-						diplômes équivalents.</p>
-					<ul><li><strong style="font-size: large;">Diplômes requis :</strong></li>
-					<li>Niveau : Bac+2</li>
-					<li>Type: DEUG en économie ou commerce, ou encore tout autre diplôme équivalent reconnu</li>
-					<li><strong style="font-size: large;">Pré-requis pédagogiques spécifiques :</strong></li>
-					<li>Connaissance des problématiques de droit international économique, d’économie internationale&nbsp; de commerce, des connaissance informatique.</li>
-					<li><strong style="font-size: large;">Procédures de sélection :</strong></li>
-					<li>Etude du dossier : Nombre d’années d’étude : 2 ans au maximum pour l’obtention du Bac+2</li>
-					<li>Test écrit: Test écrit sous forme de dissertation ou commentaire de texte /de tableaux.</li>
-					<li>Entretien: Entretien oral devant un jury de professeurs du licence.</li>
-					</ul><p><strong style="font-size: large;">Contenu pédagogique</strong></p>
-					<table align="center" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td>
-						<p><strong style="font-size: large;">Semestre 1 </strong></p>
-						</td>
-						<td>
-						<p><strong style="font-size: large;">Semestre 2 </strong></p>
-						</td>
-						</tr><tr><td>
-						<p>■ Technique Comptable&nbsp;<br> ■  Administration Systèmes & réseaux<br> ■  Outils mathématiques<br> ■  Orientée Objet Avancée<br> ■  Management des projets et communication professionnelle&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br> ■  Outils de développement</p>
-						</td>
-						<td>
-						<p>■  Conception et modélisation d'un SI<br> ■  Base de Données avancée<br> ■  Gestion financière<br> ■  Stage</p>
-						</td>
-						</tr><tr><td>
-						</tr></tbody></table><div style="clear:both;">&nbsp;</div>
-						<p>&nbsp;</p>
-						<p>&nbsp;</p>
+								<p style="color:black">
+                                    L’UH2C diffuse,dans les délais, les différentes propositions de bourses offertes par des organismes gouvernementaux et privés, Facilite la réception des bourses octroyées par le ministère de l’enseignement supérieur dans les brefs délais, soutient les étudiants de doctorat les plus méritant dans leur démarche pour avoir une bourse de recherche octroyée par le ministère chargé de la recherche scientifique.Ainsi,les étudiants ont la possibilité de bénéficier des bourses suivantes :<br><br>
+                    
+                                    ■  Des bourses sociales (Licence) attribuées en fonction des critères sociaux (charges parentales, éloignement du domicile familiale, etc.…). Ces bourses sont accordées pour une période de 9 mois.<br><br>
+                                    
+                                    ■  Des bourses sociales (Master) attribuées en fonction des critères sociaux (charges parentales, éloignement du domicile familiale, etc.…). Les boursiers de cette catégorie bénéficient d’une bourse complète pour une année renouvelable peu importe leur domicile familiale.<br><br>
+                                    
+                                    ■  Des Bourses de Mérite octroyées à 70% des étudiants de cycle de Doctorat pour une période d’une année renouvelable durant les trois années d’étude, sous réserve de la soumission d’un rapport annuel signé par l’encadrant.<br><br>
+                                    
+                                    Consultation des bourses du ministère d'Enseignement Supérieur, de la Recherche Scientifique et de la Formation des Cadres
+                                    
+                                    La Division Informatique a mis à la disposition des étudiants une application pour la gestion des bourses. Cette application permet à l’étudiant moyennant son Code National (CNE) de consulter sa situation de bourse. Le résultat de la recherche diffère en fonction de la situation de la bourse. Ainsi, des messages personnalisés à chaque situation permettront de mieux orienter les étudiants et de réduire le nombre de contact avec l’administration centrale.
+                                    
+                                    Pour consulter votre situation de bourse: 
+                                        <a href="https://e-bourse-maroc.onousc.ma/"  style="a:hover; color:red;" >Cliquer ici</a>.</p>
 					
 							</div>							
 						</div>
 					</div>
 					
-					<div class="blog-author">
-						<div class="author-bio">
-							<h3 class="author_name"><strong>Cordinateur de la filière&nbsp;: </strong></h3><br>
-							<h5 class="container">Pr. SAIDI&nbsp;AHMED</h5><br><br></div>
-						<div class="author-desc">
-							<img src="images/Gmira.png" alt="about author">
-							<ul class="author-social">
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-skype"></i></a></li>
-							</ul>
-						</div>
-					</div>
                 </div><!-- end col -->
 				<div class="col-lg-3 col-12 right-single">
+               
 					<div class="widget-search">
 						<div class="site-search-area">
 							<form method="get" id="site-searchform" action="#">
@@ -294,61 +251,113 @@
 								</div>
 							</form>
 						</div>
-					</div>
-					<div class="widget-categories">
-						<h3 class="widget-title"><strong>Categories</strong></h3>
-						<ul><hr>
-							<li><a href="miage.html"><b>Méthodes Informatiques Appliquées à la Gestion des Entreprises</b></a></li><hr>
-							<li><a href="#"><b>Techniques De Distribution</b></a></li><hr>
-							<li><a href="#"><b>Ingénierie Financière</b></a></li><hr>
-							<li><a href="#"><b>Techniques De Banque</b></a></li><hr>
-							<li><a href="#"><b>Marketing Stratégique Et Négociations</b></a></li><hr>
-							<li><a href="#"><b>Management Des Ressources Humaines Applique</b></a></li><hr>
-							<li><a href="#"><b>Comptabilité Contrôle Et Audit</b></a></li><hr>
-						</ul>
-					</div>
-					<!-- <div class="widget-tags">
-						<h3 class="widget-title"><strong> Search Tags </strong></h3>
-						<ul class="tags">
-							<li><a href="#"><b>business</b></a></li>
-							<li><a href="#"><b>jquery</b></a></li>
-							<li><a href="#">corporate</a></li>
-							<li><a href="#">portfolio</a></li>
-							<li><a href="#">css3</a></li>
-							<li><a href="#"><b>theme</b></a></li>
-							<li><a href="#"><b>html5</b></a></li>
-							<li><a href="#"><b>mysql</b></a></li>
-							<li><a href="#">multipurpose</a></li>
-							<li><a href="#">responsive</a></li>
-							<li><a href="#">premium</a></li>
-							<li><a href="#">javascript</a></li>
-							<li><a href="#"><b>Best jQuery</b></a></li>
-						</ul>
-					</div><br><br> -->
-					<h3><strong>Information Link</strong></h3>
-					<ul >
-						<li><a href="index.php">Home</a></li>
-						<li><a href="course-grid-1.html">Formation</a></li>
-						<li><a href="Teachers.html">Professeurs</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="http://localhost/smartedu/contact.php">Contact</a></li>
-						<li><a href="pricing.html">Vie d'etudiants</a></li>
-						<li><a href="ensei.html">Administration</a></li>
+					</div> 
+					 <div class="d-flex flex-column align-items-start bg-warning my-2"> 
+                                    <div >
+                                    <?php
 
-					</ul> 
 
-					<br><br><h3 class="widget-title"><strong>Contacts</strong></h3><br>
-					<ul class="footer-links-soi">
-						<li><a href="https://www.facebook.com/i.UH2C/?_rdc=1&_rdr"><i class="fa fa-facebook"></i> </a></li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Facebook</b><br><br>
-						<li><a href="#"><i class="fa fa-github"></i></a></li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Github</b><br><br>
-						<li><a href="#"><i class="fa fa-twitter"></i></a></li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twitter</b><br><br>
-						<li><a href="#"><i class="fa fa-dribbble"></i></a></li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dribbble</b><br><br>
-						<li><a href="#"><i class="fa fa-pinterest"></i></a></li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pinterest</b><br><br>
-					</ul>
+$servername="localhost";
+$username="root";
+$password="";
+$dbname="siteweb";
+
+$con=mysqli_connect($servername,$username,$password,$dbname);
+$requete = "SELECT * FROM note where event='afficher' limit 6";
+// envoi de la requête
+$resultat = $con->query($requete);
+
+// intialisation de la variable $news
+$news = '';
+
+// tant qu'il y a un enregistrement, les instructions dans la boucle s'exécutent
+while ($ligne = $resultat->fetch_assoc())
+{ ?>
+                                <div >
+                                    <div class="pricing-table pricing-table-highlighted">
+                                    <center> <div class="pricing-table-header grd1">
+                                            <h2>Les Notes</h2>
+                                            <h3><?php echo $ligne['filiere']; ?></h3>
+                                            <p><?php echo $ligne['drone']; ?></p>
+                                             <p>Pr : <?php echo $ligne['nom']; ?></p>
+                                        </div>
+                                        
+                                        <div class="pricing-table-features">
+                                            <img src="images/download.jpg" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                        <a  href='https://sca.univh2c.ma/cas/login'><span >Voir les notes sur Ent</span></a></center>
+                                        </div><br><br>
+                                    </div>
+                                </div>
+                                <?php } ?>
+                                        </div></div><br><br>
+                                        <!-- <div class="pricing-table pricing-table-highlighted">
+                                            <center> <div class="pricing-table-header grd1">
+                                                <h2>Inscription</h2>
+                                                <h3>2020-2021</h3>
+                                            </div>
+                                            <div class="pricing-table-space"></div>
+                                            <div class="pricing-table-features">
+                                                <img src="images/download.jpg" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="pricing-table-sign-up">
+                                                <a href="#" class="hover-btn-new orange"><span>View</span></a></center>
+                                            </div><br><br> -->
+
+
+
+
+                                            <!-- <h3 class="widget-title"><strong>Contacts</strong></h3><br>
+                                            <ul class="footer-links-soi">
+                                                <li><a href="https://www.facebook.com/i.UH2C/?_rdc=1&_rdr"><i class="fa fa-facebook"></i> </a></li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Facebook</b><br><br>
+                                                <li><a href="#"><i class="fa fa-github"></i></a></li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Github</b><br><br>
+                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twitter</b><br><br>
+                                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dribbble</b><br><br>
+                                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pinterest</b><br><br>
+                                            </ul> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            
+
+
+                                        </div>
+                                    </div>
+                                
+					
+                    
+					<!-- <h3><strong>Information Link</strong></h3>
+					<ul ><hr>
+						<li><a href="index.html">Home</a></li><hr>
+						<li><a href="course-grid-1.html">Formation</a></li><hr>
+						<li><a href="Teachers.html">Professeurs</a></li><hr>
+						<li><a href="about.html">About</a></li><hr>
+						<li><a href="http://localhost/smartedu/contact.php">Contact</a></li><hr>
+						<li><a href="pricing.html">Vie d'etudiants</a></li><hr>
+						<li><a href="ensei.html">Administration</a></li><hr>
+
+					</ul>  -->
+
+					
 				</div>
             </div><!-- end row -->
         </div><!-- end container -->
     </div><!-- end section -->
+
 
     <div class="parallax section dbcolor">
         <div class="container">
@@ -426,33 +435,13 @@
                             </li>
                         </ul><!-- end links -->
                     </div><!-- end clearfix -->
+                    <div> <iframe align="right" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13293.768608763525!2d-7.530243!3d33.5938305!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1e0fc88dd347653d!2sFacult%C3%A9%20des%20sciences%20juridiques%2C%20%C3%A9conomiques%20et%20sociales%20d&#39;Ain%20Seb%C3%A2a!5e0!3m2!1sfr!2sma!4v1625674352117!5m2!1sfr!2sma" width="750" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
                 </div><!-- end col -->
 				
             </div><!-- end row -->
         </div><!-- end container -->
 		<!---------------------------------------- MAPS  **  GPS ------------------------------------------->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXwHdqwFVyaYjUCShzb_EymazKpqYFNEw"
-        type="text/javascript"></script>
-        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=iniMap"
-        type="text/javascript"></script> -->
-        <style type="text/css">
-                    #map {width: 700px; margin-left: auto;
-    margin-right: auto ;
-                    height: 200px;}</style>
-        <script type="text/javascript">
-                x = navigator.geolocation;
-                x.getCurrentPosition(success, failure);
-                function success(position){
-                    var myLat = position.coords.latitude;
-                    var myLong = position.coords.longitude;
-                    var coords = new google.maps.LatLng(myLat,myLong);
-                    var mapOptions = {
-                        zoom:11,
-                        center: coords,
-                        mapTypeId: google.maps.MapTypeId.ROADMAP}
-                    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-                    var marker = new google.maps.Marker({map:map, position:coords});}
-                    function failure(){ }</script><body><div id="map"> </div></body>
+
 
         <!---------------------------------------- MAPS  **  GPS ------------------------------------------->
     

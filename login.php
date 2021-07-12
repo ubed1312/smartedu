@@ -22,8 +22,8 @@ if(isset($_POST['Envoyer']))
 
 
 
-        if($result->num_rows > 0) {
-
+        if($result->num_rows > 0) {   // Kbar mn 0 => 1.2.3... kate3ni kayn fbase donne 
+                                      // 0  makinch tem
 
 
           header("location: ensei.html");
