@@ -320,9 +320,9 @@ while ($ligne = $result->fetch_assoc() )
                      
                     </td>
 
-                    <td class="mailbox-name"><b><?php echo 'De &nbsp;'.$ligne["nom"].''; ?></b></td>
+                    <td class="mailbox-name"><b><?php echo 'De :</b>&nbsp;&nbsp;&nbsp;&nbsp;'.$ligne["nom"].'  '.$ligne["prenom"].'  '; ?></td>
 
-                     <td class="mailbox-name"><b>À : &nbsp;</b><?php echo $ligne["mail"]; ?>
+                     <td class="mailbox-name"><b>Mail : &nbsp;&nbsp;&nbsp;&nbsp;</b><?php echo $ligne["mail"]; ?>
                        
                      </td>
 

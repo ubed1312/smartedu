@@ -445,7 +445,7 @@ else{
                 <td class="project-actions text-left">
 
 
-                            Deja Valide
+                            Déja validé
 
                         </td>
   <?php } ?>

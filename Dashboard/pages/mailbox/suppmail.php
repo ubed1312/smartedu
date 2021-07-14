@@ -8,23 +8,21 @@
   <title>
     Super Prof
   </title>
-  <link href="../../dist/img/cap.png" rel="shortcut icon" />
+  <link href="../../dist/img/fsjes.png" rel="shortcut icon" /> 
   </head>
   <body>
-
-
+      
+  
 <?php
 session_start();
 
-include('dbconnection.php');
-
-
+include('../../Admin/examples/dbconnection.php');   
 
 $id=$_REQUEST['id'];
 
 
+$query = "DELETE FROM user WHERE ID='".$id."' ";
 
-$query = "UPDATE note SET statut='valide'  WHERE ID='".$id."' ";
 $result = mysqli_query($mysqli,$query) or die ( mysqli_error($mysqli));
 
 
@@ -33,23 +31,23 @@ echo  '
 
   <script src="../../plugins/jquery/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
-         <script type="text/javascript">
-
+         <script type="text/javascript">   
+  
                   $(document).ready(function(){
-
-
-
+  
+                   
+                    
                     swal({
                       icon: "success",
                       title: "Bien .",
-                      text: "Notification validé",
+                      text: "Mail Supprimé",
                     })
                   });
                 </script>
   ';
 
 
-header( "refresh:2;url=notification.php" );
+header( "refresh:2;url=mailbox.php" );
 ?>
 
 </body>

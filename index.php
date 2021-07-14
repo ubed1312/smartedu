@@ -317,7 +317,7 @@
 		</div>
 	</div>
 
-    <div id="overviews" class="section wb">
+    <div id="overviews" class="section wb" >
         <div class="container">
             <div class="section-title row text-center">
                 <div class="col-md-8 offset-md-2">

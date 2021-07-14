@@ -174,7 +174,7 @@ $row1 = mysqli_fetch_assoc($result1);
                 <li class="nav-item">
                   <a href="#" class="nav-link active">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Lire Mail</p>
+                    <p style="text-align:left;">Lire Mail</p>
                   </a>
                 </li>
               </ul>
@@ -250,7 +250,7 @@ $row1 = mysqli_fetch_assoc($result1);
        <div class="col-md-9">
           <div class="card card-primary card-outline">
             <div class="card-header">
-            <h3 class="card-title">Lire Mail</h3>
+            <h3 class="card-title" >Lire Mail</h3>
 
               <div class="card-tools">
                 <a href="#" class="btn btn-tool" data-toggle="tooltip" title="Previous"><i class="fas fa-chevron-left"></i></a>
@@ -260,7 +260,7 @@ $row1 = mysqli_fetch_assoc($result1);
             <!-- /.card-header -->
             <div class="card-body p-0">
               <div class="mailbox-read-info">
-              <h5>De &nbsp;: <?php echo $row['nom']; ?></h5>
+              <h5><b>De</b> &nbsp;: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $row['nom']; ?></h5>
                 <h6>
                   <span class="mailbox-read-time float-right"><?php echo $row['mail']; ?></span></h6>
               </div>
@@ -274,7 +274,8 @@ $row1 = mysqli_fetch_assoc($result1);
               </div>
               <!-- /.mailbox-controls -->
               <div class="mailbox-read-message">
-                <?php echo 'Message :  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$msg; ?>
+                <?php echo '<b>Message :</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$msg; ?>
               </div>
               <!-- /.mailbox-read-message -->
             </div>
@@ -290,6 +291,11 @@ $row1 = mysqli_fetch_assoc($result1);
 
               <!-- supprimer -->
               <!-- <button type="submit" name="delete" class="btn btn-default" onclick="archiveFunction(this.id)"><i class="far fa-trash-alt"></i>Supprimer</button> -->
+              <a class="delete btn btn-info btn-sm" href="suppmail.php?id=<?php echo $row["id"]; ?>">
+                            <i class="far fa-check-circle"></i>
+
+                            Supprimer
+                          </a>
             </div>
             <!-- /.card-footer -->
           </div>

@@ -244,28 +244,29 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
                     <div class="widget-user-image">
                     <img class="zoom img-circle elevation-2" src="../../dist/<?php echo $row['imagename'];?>" alt="User Avatar">
                             </div>
-                   <br><br> <div class="card-footer">
-                   <br><br>  <div class="row">
-                        <div class="col-sm-4 border-right">
+                        
+                    <div class="card-footer">
+                   <br><br>  <div class="row"> <hr>
+                        <div class="col-sm-4 border-right"> <hr>
                           <div class="description-block">
-                            <h5 class="description-header">3,200</h5>
-                            <span class="description-text">Amis</span>
+                            <h5 class="description-header">Partie</h5>
+                            <a href="tables.php"> <span class="description-text">Prof</span></a>
                           </div>
                           <!-- /.description-block -->
                         </div>
                         <!-- /.col -->
-                        <div class="col-sm-4 border-right">
+                        <div class="col-sm-4 border-right"> <hr>
                           <div class="description-block">
-                            <h5 class="description-header">13,000</h5>
-                            <span class="description-text">Abonnées</span>
+                            <h5 class="description-header">Partie</h5>
+                            <a href="students.php"> <span class="description-text">Etudiants</span></a>
                           </div>
                           <!-- /.description-block -->
                         </div>
                         <!-- /.col -->
-                        <div class="col-sm-4">
+                        <div class="col-sm-4"> <hr>
                           <div class="description-block">
-                            <h5 class="description-header">35</h5>
-                            <span class="description-text">Projets</span>
+                            <h5 class="description-header">Partie</h5>
+                            <a href="../../pages/mailbox/mailbox.php"><span class="description-text">Mail</span></a>
                           </div>
                           <!-- /.description-block -->
                         </div>

@@ -346,7 +346,7 @@ if(!isset($_SESSION['Email'])){
                           Image
                         </th>
                       <th>
-                          Nom
+                          Nom 
                         </th>
 
                         <th>

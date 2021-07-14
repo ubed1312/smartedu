@@ -51,6 +51,7 @@
             <div class="form-row-last">
                 <cennter><input type="submit" name="Envoyer" id="Envoyer" class="register" value="S'identifier"></cennter>
             </div>
+            
         </form>
         </div></center>
     </div>
@@ -68,13 +69,31 @@
         </div>
         <form class="form-detail" role="form" action = "loginetud.php" method = "POST"  >
             <h2>S'identifier</h2>
-
+                
+            
             <div class="form-row">
                 <input type="text" name="Email" id="Email" class="input-text" placeholder="Email"  required >
             </div>
+        
             <div class="form-row">
+                <!-- <label> -->
+
                 <input type="password" name="cne" id="cne" class="input-text" placeholder="Mot de passe"  required>
+                <!-- <div class="password-icon">
+                    <i data-feather="eye"></i>
+                    <i data-feather="eye-off"></i>
+                  </div></label> -->
             </div>
+
+
+            
+              
+              <!-- ICON SCRIPT -->
+              <script src="https://unpkg.com/feather-icons"></script>
+              <script>
+                feather.replace();
+              </script>
+
 
             <div class="form-row-last">
                 <cennter><input type="submit" name="Envoyer1" id="Envoyer1" class="register" value="S'identifier"></cennter>
@@ -230,7 +249,44 @@
 		</nav>
 	</header>
 	
-    <style> .al{
+    <style>
+    /* label {
+  position: relative;
+}
+
+label input {
+  font-size: 1em;
+  color: #f9f9f9;
+  background: transparent;
+  padding: 1rem 1.2rem;
+  width: 350px;
+  border-radius: 5px;
+  border: 2px solid #7a7a7a;
+  transition: all 0.2s;
+}
+label input:focus {
+  border-color: #ff4754;
+}
+label .password-icon {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 20px;
+  color: #f9f9f9;
+  transition: all 0.2s;
+}
+label .password-icon:hover {
+  cursor: pointer;
+  color: #ff4754;
+}
+
+label .password-icon .feather-eye-off {
+  display: none;
+} */
+    .al{
         background: url(images/about.jpg)no-repeat;
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -593,11 +649,6 @@
 				
             </div><!-- end row -->
         </div><!-- end container -->
-        <!---------------------------------------- MAPS  **  GPS ------------------------------------------->
-
-
-
-        <!---------------------------------------- MAPS  **  GPS ------------------------------------------->
     
     </footer><!-- end footer -->
 
@@ -617,6 +668,34 @@
     <script src="js/all.js"></script>
     <!-- ALL PLUGINS -->
     <script src="js/custom.js"></script>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("password");
+          if (x.type === "password") {
+            x.type = "text";
+          } else {
+            x.type = "password";
+          }
+        }
+      </script>
 
+
+<!-- <script>
+const eye = document.querySelector(".feather-eye");
+const eyeoff = document.querySelector(".feather-eye-off");
+const passwordField = document.querySelector("input[type=password]");
+eye.addEventListener("click", () => {
+  eye.style.display = "none";
+  eyeoff.style.display = "block";
+  passwordField.type = "text";
+});
+
+eyeoff.addEventListener("click", () => {
+  eyeoff.style.display = "none";
+  eye.style.display = "block";
+  passwordField.type = "password";
+});
+
+</script> -->
 </body>
 </html>
