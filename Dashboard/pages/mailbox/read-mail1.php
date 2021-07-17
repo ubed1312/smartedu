@@ -245,7 +245,7 @@ $row1 = mysqli_fetch_assoc($result1);
            
             <!-- /.card -->
           </div>
-          <!-- /.col -->
+          <!--  /.col -->
       
        <div class="col-md-9">
           <div class="card card-primary card-outline">
