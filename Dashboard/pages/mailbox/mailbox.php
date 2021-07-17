@@ -26,7 +26,7 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
 
     $value1 = '1';
 
-    $sql = "SELECT * FROM user "; 
+    $sql = "SELECT * FROM admin "; 
     $result =$con->query($sql);
     
     $row = mysqli_fetch_assoc($result);
@@ -126,7 +126,7 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
         
         <p style="text-transform: uppercase;">
                 <b>
-                &nbsp; <?php echo $row['nom'];?>
+                &nbsp; <?php echo $row['Nom'];?>
                 </b>
                 </p>
               </a>

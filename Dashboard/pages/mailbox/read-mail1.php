@@ -12,15 +12,15 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
 
 $value1 = '1';
 
-$sql = "SELECT * FROM user"; 
+$sql = "SELECT * FROM admin"; 
 $result1 =$con->query($sql);
 
 $row1 = mysqli_fetch_assoc($result1);
 
 
-   $msg=$_REQUEST["msg"];
+  $msg=$_REQUEST["msg"];
 
-  $query = "SELECT * from user where  msg='".$msg."'"; 
+  $query = "SELECT * from user where  msg=$msg"; 
   $result =$con->query($sql);
   $row = mysqli_fetch_assoc($result);  
   ?>
@@ -117,7 +117,7 @@ $row1 = mysqli_fetch_assoc($result1);
 
         <p style="text-transform: uppercase;">
                 <b>
-                &nbsp; <?php echo $row1['nom'];?>
+                &nbsp; <?php echo $row1['Nom'];?>
                 </b>
                 </p>
               </a>
