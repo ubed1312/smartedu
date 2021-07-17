@@ -1,6 +1,8 @@
-<?php 
+<?php
+  include("../../Admin/examples/connection/DB.php");
+?>
 
-    
+<?php  
 $servername="localhost";
 $username="root";
 $password="";
@@ -179,13 +181,75 @@ $row1 = mysqli_fetch_assoc($result1);
                 </li>
               </ul>
             </li>
+            <?php
+       $find_notifications = "Select * from note where statut='en cours'";
+       $result = mysqli_query($connection,$find_notifications);
+       $count_active = '';
+       $notifications_data = array();
+       $deactive_notifications_dump = array();
+        while($rows = mysqli_fetch_assoc($result)){
+                $count_active = mysqli_num_rows($result);
+                $notifications_data[] = array(
+                                 "id" => $rows['id'],
+                            "module"=>$rows['module'],
+                            "nom"=>$rows['nom']
+                );
+        }
+        //only five specific posts
+        $deactive_notifications = "Select * from note";
+        $result = mysqli_query($connection,$deactive_notifications);
+        while($rows = mysqli_fetch_assoc($result)){
+          $deactive_notifications_dump[] = array(
+                       "id" => $rows['id'],
+                            "module"=>$rows['module'],
+                            "nom"=>$rows['nom']
+          );
+        }
 
+     ?>
+              <li class="nav-item">
+              <a href="../../Admin/examples/notification.php" class="nav-link ">
+             <i class="fa fa-bell"   id="over" data-value ="<?php echo $count_active;?>" style="z-index:-99 !important;font-size:10px;color:white;margin:0.6rem 0.1rem !important;"></i>
+
+
+                <p>
+               Notifications
+
+                </p><?php if(!empty($count_active)){?>
+                    <div class="round"  data-value ="<?php echo $count_active;?>"><span><?php echo $count_active; ?></span></div>
+                    <?php }?>
+              </a>
+            </li>
           </ul>
         </nav>
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
   </aside>
+
+<style>
+  .round{
+           width:21px;
+          height:21px;
+          border-radius:50%;
+          position:relative;
+          background:red;
+          display:inline-block;
+          padding:-7rem 1rem !important;
+          margin:0.3rem 2rem !important;
+          left:-19px;
+          top:3px;
+
+        }
+        .round > span {
+          color:white;
+          display:block;
+          text-align:center;
+          font-size:1rem !important;
+          padding:0 !important;
+        }
+</style>
+
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -245,7 +309,7 @@ $row1 = mysqli_fetch_assoc($result1);
            
             <!-- /.card -->
           </div>
-          <!--  /.col -->
+          <!-- /.col -->
       
        <div class="col-md-9">
           <div class="card card-primary card-outline">
