@@ -241,7 +241,7 @@
 	</div>
 
 
-    <div id="contact" class="section wb" style="background: url(images/back_con.jpg); background-attachment:fixed; background-size: cover;">
+    <div id="contact" class="section wb" style="background: url(images/tt.jpg); background-attachment:fixed; background-size: cover;">
         
         <div class="container">
             <div style="background-color: transparent; border-radius: 0px;">

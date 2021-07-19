@@ -1,11 +1,11 @@
 <?php
   include("./connection/DB.php");
 ?>
-<?php
+<?php 
 
 include('dbconnection.php');
 
-session_start();
+session_start(); 
 
 if(!isset($_SESSION['Email'])){
 
@@ -18,26 +18,26 @@ if(!isset($_SESSION['Email'])){
           </script>
         ";
       }
-
+  
       $servername="localhost";
       $username="root";
       $password="";
       $dbname="siteweb";
-
+      
       $con=mysqli_connect($servername,$username,$password,$dbname);
-
+  
       $value1 = '1';
 
-      $sql = "SELECT * FROM admin where Code_Adm='$value1'";
+      $sql = "SELECT * FROM admin where Code_Adm='$value1'"; 
       $result =$con->query($sql);
-
+      
       $row = mysqli_fetch_assoc($result);
-
+     
     ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Notifications</title>
+    <title>Liste des professeurs</title>
 
 <style>
         body {
@@ -138,7 +138,7 @@ if(!isset($_SESSION['Email'])){
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
-  <link href="../../dist/img/cap.png" rel="shortcut icon" />
+  <link href="../../dist/img/fsjes.png" rel="shortcut icon" />
 </head>
 <style>
 
@@ -155,12 +155,12 @@ if(!isset($_SESSION['Email'])){
         <li class="nav-item">
           <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
         </li>
-
+        
 
       </ul>
 
-
-
+   
+    
 
       <!-- Right navbar links -->
       <ul class="navbar-nav ml-auto">
@@ -221,7 +221,7 @@ if(!isset($_SESSION['Email'])){
               <a href="tables.php" class="nav-link">
                 <i class="nav-icon fas fa-chalkboard-teacher"></i>
                 <p>
-                Liste des Professeurs
+                Liste des professeurs
 
                 </p>
               </a>
@@ -282,7 +282,7 @@ if(!isset($_SESSION['Email'])){
 
      ?>
               <li class="nav-item">
-              <a href="#" class="nav-link  active">
+              <a href="notification.php" class="nav-link">
              <i class="fa fa-bell"   id="over" data-value ="<?php echo $count_active;?>" style="z-index:-99 !important;font-size:10px;color:white;margin:0.6rem 0.1rem !important;"></i>
 
 
@@ -294,10 +294,9 @@ if(!isset($_SESSION['Email'])){
                     <?php }?>
               </a>
             </li>
-
-            <!------------ Evenement ------------>
+<!------------ Evenement ------------>
             <li class="nav-item ">
-              <a href="Evenements.php" class="nav-link ">
+            <a href="#" class="nav-link active">
               <i class="far fa-calendar-alt"></i>
                 <p>
                 Evenements
@@ -323,7 +322,7 @@ if(!isset($_SESSION['Email'])){
         <!-- Default box -->
         <div class="card card-info">
           <div class="card-header">
-          <h3 class="card-title">Liste des notes saisis par les professeurs</h3>
+          <h3 class="card-title">Liste des Evenements</h3>
 
             <div class="card-tools">
               <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip"
@@ -336,6 +335,15 @@ if(!isset($_SESSION['Email'])){
           <div class="card-body p-0">
             <div class="card-body">
               <div class="table-responsive">
+<!-- /*********************************Hadshi ylh kanzido pour ajout prof****************************/ -->
+              <table class="table table-striped table-advance table-hover">
+                <h4><div class=pull-right>
+                <a href="ajouteven.php"><button class="btn btn-success" >Ajouter Evenement</button></a>&nbsp;&nbsp;</div></h4>
+                <hr>
+
+
+
+<!-- /*********************************Hadshi ylh kanzido pour ajout prof****************************/ -->
 
                 <form name="f1" action="" onsubmit="return validation()" method="POST">
 
@@ -346,33 +354,21 @@ if(!isset($_SESSION['Email'])){
 
                       <tr>
                              <th>
-                          ID
+                          Image
                         </th>
                       <th>
-                          Nom
+                          Nom 
                         </th>
 
                         <th>
-                          Prénom
+                          Description
                         </th>
                         <th>
-                          Module
+                          Date
                         </th>
 
-                        <th>
-                          Session
-                        </th>
-                        <th>
-                        Filière
-                        </th>
-                          <th>
-                          File
-                        </th>
                            <th>
                           Actions
-                        </th>
-                          <th>
-                          Afficher
                         </th>
                       </tr>
                     </thead>
@@ -385,9 +381,9 @@ if(!isset($_SESSION['Email'])){
                       <?php
 
 
-
-$del_at="0";
-$requete = "SELECT * FROM note ";
+                        
+// $del_at="0"; 
+$requete = "SELECT * FROM evenement";
 // envoi de la requête
 global $resultat;
 $resultat = $mysqli->query($requete) or die ('Erreur '.$requete.' '.$mysqli->error);
@@ -396,89 +392,102 @@ $resultat = $mysqli->query($requete) or die ('Erreur '.$requete.' '.$mysqli->err
 $news = '';
 
 // tant qu'il y a un enregistrement, les instructions dans la boucle s'exécutent
-while ($ligne = $resultat->fetch_assoc())
+while ($ligne = $resultat->fetch_assoc()) 
 { ?>
                       <tr>
-      <td>
-                          <?php echo $ligne["id"]; ?>
+       <td>
+                       <center>
+                          <img src="<?php echo $ligne['file'];?>" class="zoom profile-user-img img-fluid img-circle" >
+                      </center>
                         </td>
-
                         <td>
                           <?php echo $ligne["nom"]; ?>
                         </td>
 
-
+                        
                         <td>
-                          <?php echo $ligne["prenom"]; ?>
-
+                          <?php echo $ligne["description"]; ?>
                         </td>
                         <td>
-                          <?php echo $ligne["module"]; ?>
-
+                          <?php echo $ligne["date"]; ?>
                         </td>
 
-                        <td>
-                          <?php echo $ligne["drone"]; ?>
-
-                        </td>
-                           <td>
-                          <?php echo $ligne["filiere"]; ?>
-
-                        </td>
-                           <td>
-                         <a class=" btn btn-success btn-sm" href="download.php?file=<?php echo $ligne["file"] ?>"><i class="fas fa-download"></i>Download</a><br>
-
-                        </td>
+                        
+                        
 
 
                      <?php
 
-                        if ($ligne['statut'] == 'en cours')
+
+                        if ($ligne['Date_deleted'] == NULL && $ligne['is_deleted'] =='0')
 {
 
 ?>
                         <td class="project-actions text-left">
 
+                         <!-- jjjjjj -->
+ <?php
 
-
-
-                          <a class="delete btn btn-info btn-sm" href="valide.php?id=<?php echo $ligne["id"]; ?>">
-                            <i class="far fa-check-circle"></i>
-
-                            Valide
-                          </a>
-                        </td>
-   <?php
-}
-else{
-
-
-?>
-                <td class="project-actions text-left">
-
-
-                            Déja validé
-
-                        </td>
-  <?php } ?>
-                                 <?php
-
-                        if ($ligne['event'] == 'masque')
+if ($ligne['event'] == 'masque')
 {
 
 ?>
-                          <td>
-                               <a class=" btn btn-dark btn-sm" href="afficher.php?id=<?php echo $ligne["id"] ?>"><i class="fas fa-eye"></i>Afficher</a><br>
+  
+       <a class=" btn btn-dark btn-sm" href="affichereven.php?id=<?php echo $ligne["id"] ?>"><i class="fas fa-eye"></i>Afficher</a>
 
-                          </td>
-                          <?php }else{  ?>
-                          <td>
-                               <a class=" btn btn-light btn-sm" href="masque.php?id=<?php echo $ligne["id"] ?>"><i class="fas fa-eye"></i>Masquer</a><br>
+ 
+  <?php }else{  ?>
+  
+       <a class=" btn btn-light btn-sm" href="masqueeven.php?id=<?php echo $ligne["id"] ?>"><i class="fas fa-eye"></i>Masquer</a>
 
-                          </td>
-                          <?php } ?>
+  
+  <?php } ?>
+
+<!-- jjjj -->
+
+
+
+                          <a class="btn btn-info btn-sm" href="edit.php?id=<?php echo $ligne["id"]; ?>">
+                            <i class="fas fa-pencil-alt">
+                            </i>
+                            Éditer
+                          </a>
+
+                          <a class="delete btn btn-danger btn-sm" href="deleteeven.php?id=<?php echo $ligne["id"]; ?>">
+                            <i class="fas fa-trash">
+                            </i>
+                            Supprimer
+                          </a>
+
+
+                          
+                        </td>
+   <?php 
+}
+
+else
+{
+
+?>
+                             <td class="project-actions text-left">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                             <a class="btn btn-success btn-sm" href="ajoutevenement.php?id=<?php echo $ligne["id"]; ?>">
+                         
+                            <i class="fas fa-user-plus">
+                            </i>
+                            &nbsp; Ajouter une autre fois
+                          </a>
+                        </td>
+
+<?php 
+}
+
+?>
+
+
+
+
                         <?php } ?>
-
 
                       </tr>
 
@@ -499,10 +508,10 @@ else{
 
 
 
-
+    
     <footer class="main-footer">
-
-    <strong>Copyright &copy;<script>document.write(new Date().getFullYear());</script></strong>
+    
+    <strong>Copyright &copy;<script>document.write(new Date().getFullYear());</script></strong> 
   </footer>
   </div>
 
@@ -514,7 +523,7 @@ else{
   <script language="JavaScript" type="text/javascript">
     $(document).ready(function () {
       $("a.delete").click(function (e) {
-        if (!confirm('êtes-vous sûr de valider ?')) {
+        if (!confirm('êtes-vous sûr de supprimer ?')) {
           e.preventDefault();
           return false;
         }

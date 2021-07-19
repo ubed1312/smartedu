@@ -241,6 +241,18 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
                 </p><?php if(!empty($count_active)){?>
                     <div class="round"  data-value ="<?php echo $count_active;?>"><span><?php echo $count_active; ?></span></div>
                     <?php }?>
+              </a></li>
+<!------------ Evenement ------------>
+<li class="nav-item ">
+<a href="../../Admin/examples/Evenements.php" class="nav-link ">
+              <i class="far fa-calendar-alt"></i>
+                <p>
+                Evenements
+
+                </p>
+              </a>
+            </li>
+<!-- . -->
 
           </ul>
         </nav>

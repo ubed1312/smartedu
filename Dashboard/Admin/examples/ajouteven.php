@@ -168,7 +168,7 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
 
            
             <li class="nav-item">
-              <a href="tables.php" class="nav-link active ">
+              <a href="tables.php" class="nav-link ">
                 <i class="nav-icon fas fa-chalkboard-teacher"></i>
                 <p>
                   Liste des professeurs
@@ -322,9 +322,10 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
                     <?php }?>
               </a>
             </li>
+
 <!------------ Evenement ------------>
 <li class="nav-item ">
-<a href="Evenements.php" class="nav-link ">
+<a href="Evenements.php" class="nav-link active">
               <i class="far fa-calendar-alt"></i>
                 <p>
                 Evenements
@@ -333,7 +334,6 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
               </a>
             </li>
 <!-- . -->
-
           </ul>
         </nav>
 
@@ -370,7 +370,7 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
 
             <section id="main-content">
     <section class="wrapper">
-      <h3><i class="fa fa-angle-right"></i> Form Professeur</h3><br><br><br>
+      <h3><i class="fa fa-angle-right"></i> Form Evenement</h3><br><br><br>
       <!-- BASIC FORM ELELEMNTS  -->
       <div class="row mt">
         <div class="col-lg-12">
@@ -379,61 +379,30 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
             <form class="form-horizontal style-form" method="post" enctype='multipart/form-data'>
               
               <div class="form-group">
-                <label class="col-sm-2 col-sm-2 control-label">Nom & Prénom</label>
+                <label class="col-sm-2 col-sm-2 control-label">Nom d'évenement</label>
                 <div class="col-sm-10">
                   <input type="text" name="nom" class="form-control" placeholder="" required>
                 </div>
               </div>
               
                 <div class="form-group">
-                <label class="col-sm-2 col-sm-2 control-label">cin</label>
+                <label class="col-sm-2 col-sm-2 control-label">Description</label>
                 <div class="col-sm-10">
-                  <input type="text"  name="cin" class="form-control" placeholder="" required>
+                  <input type="text"  name="description" class="form-control" placeholder="" required>
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-sm-2 col-sm-2 control-label">GSM</label>
-                <div class="col-sm-10">
-                  <input type="text" name="tel" class="form-control round-form" placeholder="" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-2 col-sm-2 control-label">Ville</label>
+                <label class="col-sm-2 col-sm-2 control-label">Date de l'évenement</label>
                 <div class="col-sm-10">
                 
-                <textarea class="form-control"name="ville" aria-label="With textarea" placeholder="" required></textarea>
-                
-                </div>
-              </div>
-              
-              <div class="form-group">
-                <label class="col-sm-2 col-sm-2 control-label">Matiere</label>
-                <div class="col-sm-10">
-                  <input type="text" name="matiere" class="form-control round-form" placeholder="" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-2 col-sm-2 control-label">Compétence</label>
-                <div class="col-sm-10">
-                  <input type="text" name="skills" class="form-control round-form" placeholder="" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-2 col-sm-2 control-label">Email</label>
-                <div class="col-sm-10">
-                  <input type="text" name="email" class="form-control round-form" placeholder="" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-2 col-sm-2 control-label">Password</label>
-                <div class="col-sm-10">
-                  <input type="text" name="password"class="form-control round-form" placeholder="" required>
-                </div>
-              </div>
+                  <input type="datetime-local" id="date" name="date" value="2021-07-15T19:30" min="2018-06-07T00:00" max="2022-06-14T00:00" class="form-control round-form" placeholder="" required>
 
+                </div>
+              </div>
+            
               <div class="form-group">
                 <label class="col-sm-2 col-sm-2 control-label">Telecharger l'image </label>
-                <input type="file" name="file" required/>
+                <input type="file" name="file" />
                         <br><br>
                      <!-- <center>
                         <button type="submit" name="imagename" class="btn btn-info" style='align="center"'>Saisir l'image
@@ -460,15 +429,9 @@ include_once("dbconnection.php");
 if(isset($_POST['Ajouter']))  
 {
 
-
 @$nom = $_POST['nom'];
-@$cin = $_POST['cin'];
-@$tel = $_POST['tel'];
-@$ville = $_POST['ville'];
-@$matiere = $_POST['matiere'];
-@$skills = $_POST['skills'];
-@$email = $_POST['email'];
-@$password = $_POST['password'];
+@$description = $_POST['description'];
+@$date = $_POST['date'];
 
      $file = $_FILES['file'];
         $fileName = $_FILES['file']['name'];
@@ -476,7 +439,6 @@ if(isset($_POST['Ajouter']))
         $fileSize = $_FILES['file']['size'];
         $fileError = $_FILES['file']['error'];
         $fileType = $_FILES['file']['type'];
-
 
         $fileExt = explode('.', $fileName);
         $fileActualExt = strtolower(end($fileExt));
@@ -503,7 +465,7 @@ if(isset($_POST['Ajouter']))
 // $Education = $_POST['Education'];
 // $skills = $_POST['skills'];
 
-$sql = "INSERT INTO listeprof( nom, cin, tel, ville, matiere, skills, email, password, file) VALUES('$nom','$cin','$tel','$ville','$matiere','$skills','$email','$password','$fileDestination1')";
+$sql = "INSERT INTO evenement( file,nom, description, date) VALUES('$fileDestination1','$nom','$description','$date')";
 $result = $con->query($sql);
                 }}}
 

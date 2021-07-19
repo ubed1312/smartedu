@@ -424,7 +424,7 @@ des recherches qui y sont menées attirent un nombre croissant d’étudiants.<b
     <div id="plan" class="section lb">
         <div class="container">
             <div class="section-title text-center">
-                <h3>Actualités</h3>
+                <h3>Actualités & Evenements</h3>
                 <p>Toutes les informations relatives aux événements récents ou aux actualités diffusées par les enseignants et l'administration de la faculté seront afficher dedans. </p>
             </div><!-- end title -->
 <center>
@@ -437,7 +437,7 @@ des recherches qui y sont menées attirent un nombre croissant d’étudiants.<b
                         
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </p>
-                            <li><a class="active" href="#tab1" data-toggle="pill">Actualités</a></li>
+                            <li><a class="active" href="#tab1" data-toggle="pill">Actualités & Evenements</a></li>
                         </ul>
                     </div>
                 </div><!-- end col -->
@@ -460,8 +460,10 @@ $dbname="siteweb";
 
 $con=mysqli_connect($servername,$username,$password,$dbname);
 $requete = "SELECT * FROM note where event='afficher' limit 6";
+$requetee = "SELECT * FROM evenement where event='afficher' limit 6";
 // envoi de la requête
 $resultat = $con->query($requete);
+$resultate = $con->query($requetee);
 
 // intialisation de la variable $news
 $news = '';
@@ -483,6 +485,27 @@ while ($ligne = $resultat->fetch_assoc())
                                         </div>
                                         <div class="pricing-table-sign-up">
                                             <a  href='https://sca.univh2c.ma/cas/login'><span >Voir les notes sur Ent</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php } ?>
+                                <?php
+                                while ($ligne = $resultate->fetch_assoc())
+{ ?>
+                                <div class="col-md-4">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>L'évenement</h2>
+                                            <h3><?php echo $ligne['nom']; ?></h3>
+                                            <p><?php echo $ligne['description']; ?></p>
+                                             <p>Date : <?php echo $ligne['date']; ?></p>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <img src=<?php echo $ligne['file']; ?> alt="" class="img-fluid">
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a  href='https://sca.univh2c.ma/cas/login'><span >Voir plus détails sur l'évenement</span></a>
                                         </div>
                                     </div>
                                 </div>

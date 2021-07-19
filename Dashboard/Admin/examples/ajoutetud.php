@@ -324,7 +324,17 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
                     <?php }?>
               </a>
             </li>
+<!------------ Evenement ------------>
+<li class="nav-item ">
+<a href="Evenements.php" class="nav-link ">
+              <i class="far fa-calendar-alt"></i>
+                <p>
+                Evenements
 
+                </p>
+              </a>
+            </li>
+<!-- . -->
 
 
           </ul>
