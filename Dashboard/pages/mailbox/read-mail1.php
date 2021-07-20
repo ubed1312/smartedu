@@ -24,7 +24,7 @@ $row1 = mysqli_fetch_assoc($result1);
 
   $query = "SELECT * from user where  msg='$msg'";
   $result =$con->query($query);
-  $row = mysqli_fetch_assoc($result);  
+  $row = mysqli_fetch_array($result);
   ?>
 
 

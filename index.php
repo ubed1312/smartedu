@@ -505,7 +505,7 @@ while ($ligne = $resultat->fetch_assoc())
                                         </div>
                                         <div class="pricing-table-space"></div>
                                         <div class="pricing-table-features">
-                                            <img src="<?php echo $ligne['file'];?>" width="175" height="200" class="img-fluid"/>
+                                            <img src="Dashboard/Admin/examples/<?php echo $ligne['file'];?>" width="175" height="200" class="img-fluid"/>
                                             
                                         </div>
                                         <div class="pricing-table-sign-up">
