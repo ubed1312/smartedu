@@ -499,13 +499,17 @@ while ($ligne = $resultat->fetch_assoc())
                                             <h3><?php echo $ligne['nom']; ?></h3>
                                             <p><?php echo $ligne['description']; ?></p>
                                              <p>Date : <?php echo $ligne['date']; ?></p>
+                                             
+
+                                             
                                         </div>
                                         <div class="pricing-table-space"></div>
                                         <div class="pricing-table-features">
-                                            <img src=<?php echo $ligne['file']; ?> alt="" class="img-fluid">
+                                            <img src="<?php echo $ligne['file'];?>" width="175" height="200" class="img-fluid"/>
+                                            
                                         </div>
                                         <div class="pricing-table-sign-up">
-                                            <a  href='https://sca.univh2c.ma/cas/login'><span >Voir plus détails sur l'évenement</span></a>
+                                            <a  ><span >Voir plus détails sur l'évenement</span></a>
                                         </div>
                                     </div>
                                 </div>
