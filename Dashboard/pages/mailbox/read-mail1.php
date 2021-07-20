@@ -22,8 +22,8 @@ $row1 = mysqli_fetch_assoc($result1);
 
   $msg=$_REQUEST["msg"];
 
-  $query = "SELECT * from user where  msg=$msg"; 
-  $result =$con->query($sql);
+  $query = "SELECT * from user where  msg='$msg'";
+  $result =$con->query($query);
   $row = mysqli_fetch_assoc($result);  
   ?>
 
