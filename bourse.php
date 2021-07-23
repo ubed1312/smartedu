@@ -241,7 +241,11 @@
 	</header>
 	<!-- End header -->
 	
-	<style> .al{
+	<style> 
+    .footer-links-soi li a:hover{
+	background: #17202A;
+}
+    .al{
         background: url(images/bours.jpg)no-repeat;
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -311,7 +315,7 @@
 							</form>
 						</div>
 					</div> 
-					 <div class="d-flex flex-column align-items-start bg-warning my-2"> 
+					 
                                     <div >
                                     <?php
 
@@ -350,7 +354,7 @@ while ($ligne = $resultat->fetch_assoc())
                                     </div>
                                 </div>
                                 <?php } ?>
-                                        </div></div><br><br>
+                                        </div><br><br>
                                         <!-- <div class="pricing-table pricing-table-highlighted">
                                             <center> <div class="pricing-table-header grd1">
                                                 <h2>Inscription</h2>
@@ -375,25 +379,6 @@ while ($ligne = $resultat->fetch_assoc())
                                                 <li><a href="#"><i class="fa fa-dribbble"></i></a></li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dribbble</b><br><br>
                                                 <li><a href="#"><i class="fa fa-pinterest"></i></a></li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pinterest</b><br><br>
                                             </ul> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                            
-
-
                                         </div>
                                     </div>
                                 
@@ -437,7 +422,7 @@ while ($ligne = $resultat->fetch_assoc())
                     <a><img src="images/efe.png" alt="" class="img-repsonsive"></a>
                 </div>
                 <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a ><img src="images/logo_06.png" alt="" class="img-repsonsive"></a>
+                <a ><img src="images/cho.png" height="75px" width="70px" alt="" class="img-repsonsive"></a>
                 </div>
             </div><!-- end row -->
         </div><!-- end container -->

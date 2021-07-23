@@ -281,7 +281,11 @@
 				
 
 				<style type="text/css">/* Reset CSS */
-                    .al{                        
+                    
+                    .footer-links-soi li a:hover{
+	background: #17202A;
+}
+.al{                        
         background: url(images/ccc.jpg)no-repeat;
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -600,7 +604,7 @@ $q ->execute([ 'nom' => $nom,
                     <a><img src="images/efe.png" alt="" class="img-repsonsive"></a>
                 </div>
                 <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a ><img src="images/logo_06.png" alt="" class="img-repsonsive"></a>
+                <a ><img src="images/cho.png" height="75px" width="70px" alt="" class="img-repsonsive"></a>
                 </div>
             </div><!-- end row -->
         </div><!-- end container -->

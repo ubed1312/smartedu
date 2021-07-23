@@ -447,7 +447,7 @@ if ($ligne['event'] == 'masque')
 
 
 
-                          <a class="btn btn-info btn-sm" href="edit.php?id=<?php echo $ligne["id"]; ?>">
+                          <a class="btn btn-info btn-sm" href="editeven.php?id=<?php echo $ligne["id"]; ?>">
                             <i class="fas fa-pencil-alt">
                             </i>
                             Éditer

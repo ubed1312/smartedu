@@ -367,8 +367,8 @@ $row1 = mysqli_fetch_assoc($result1);
 
               <!-- supprimer -->
               <!-- <button type="submit" name="delete" class="btn btn-default" onclick="archiveFunction(this.id)"><i class="far fa-trash-alt"></i>Supprimer</button> -->
-              <a class="delete btn btn-info btn-sm" href="suppmail.php?id=<?php echo $row["id"]; ?>">
-                            <i class="far fa-check-circle"></i>
+              <a class="delete btn btn-danger btn-sm" href="suppmail.php?id=<?php echo $row["id"]; ?>">
+                            <i class="far fa-trash-alt"></i>
 
                             Supprimer
                           </a>

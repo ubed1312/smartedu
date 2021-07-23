@@ -42,6 +42,7 @@
 </head>
 <body class="host_version">
 
+<!-- Identifiant d'enseignant -->
 <div id="add_data_Modal" class="modal fade">
 
     <center><div class="form-v6-content">
@@ -65,7 +66,7 @@
         </div></center>
     </div>
 
-
+<!-- -------- -->
 
     <!-- Identifiant d'etudiant -->
 
@@ -84,13 +85,32 @@
         <div class="form-row">
             <input type="password" name="cne" id="cne" class="input-text" placeholder="Mot de passe"  required>
         </div>
-
+        <input type="checkbox" onclick="myFunction()" style="background-color: red;">
+             <label for="remember" style="color: red;">
+                Afficher Mot de passe
+              </label>
         <div class="form-row-last">
             <cennter><input type="submit" name="Envoyer1" id="Envoyer1" class="register" value="S'identifier"></cennter>
         </div>
     </form>
     </div></center>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("password");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+  </script>
+
 
 <!-- -------- -->
 
@@ -331,7 +351,7 @@
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <div class="message-box">
                         <!-- <h4>2021 BEST University in Morocco</h4> -->
-                        <h2>Ses principes :</h2>
+                        <h2 style="color: #F4D03F;">Ses principes :</h2>
                         <p>
                             - Pluridisciplinarité ,Autonomie pédagogique et scientifique,
                              Autonomie administrative et financière. <br>
@@ -385,7 +405,7 @@ des recherches qui y sont menées attirent un nombre croissant d’étudiants.<b
 
 				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <div class="message-box">
-                        <h2>Ses missions :</h2>
+                        <h2 style="color: #F4D03F;">Ses missions :</h2>
                         <p>
                            <span> -  Formation initiale et continue <br>
                             -  Recherche Scientifique et Technologique <br>
@@ -505,7 +525,7 @@ while ($ligne = $resultat->fetch_assoc())
                                         </div>
                                         <div class="pricing-table-space"></div>
                                         <div class="pricing-table-features">
-                                            <img src="Dashboard/Admin/examples/<?php echo $ligne['file'];?>" width="175" height="200" class="img-fluid"/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="Dashboard/Admin/examples/<?php echo $ligne['file'];?>" width="175" height="200" class="img-fluid"/>
                                             
                                         </div>
                                         <div class="pricing-table-sign-up">
@@ -726,7 +746,7 @@ while ($ligne = $resultat->fetch_assoc())
                     <a><img src="images/efe.png" alt="" class="img-repsonsive"></a>
                 </div>
                 <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                    <a ><img src="images/logo_06.png" alt="" class="img-repsonsive"></a>
+                <a ><img src="images/cho.png" height="75px" width="70px" alt="" class="img-repsonsive"></a>
                 </div>
             </div><!-- end row -->
         </div><!-- end container -->
@@ -773,8 +793,10 @@ while ($ligne = $resultat->fetch_assoc())
                         <div class="widget-title">
                             <h3>Contact Details</h3>
                         </div>
-
-                        <ul class="footer-links">
+<style>.footer-links-soi li a:hover{
+	background: #17202A;
+}</style>
+                        <ul class="footer-links" >
 							<li><i class="fa fa-fax"></i><a href="mailto:#">fsjesas2016@gmail.com</a></li>
                             <li><i class="fa fa-globe"></i><a href="#">www.uvh2.com</a></li>
                             <li> <i class="fa fa-map-marker"></i>Beausite, BP. 2634 Ain Sebaa - 2634 casablanca, Maroc</li>
