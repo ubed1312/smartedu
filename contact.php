@@ -39,9 +39,7 @@
 
 
 <body class="host_version"> 
-
 <!-- Identifiant d'enseignant -->
-
 <div id="add_data_Modal" class="modal fade">
 
     <center><div class="form-v6-content">
@@ -55,7 +53,8 @@
                 <input type="text" name="email" id="email" class="input-text" placeholder="Email"  required >
             </div>
             <div class="form-row">
-                <input type="password" name="psd" id="psd" class="input-text" placeholder="Mot de passe"  required>
+                <input type="password" name="psd" id="password-field" class="input-text" placeholder="Mot de passe"  required>
+                   <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
             </div>
 
             <div class="form-row-last">
@@ -67,34 +66,47 @@
 
 <!-- -------- -->
 
-<!-- Identifiant d'etudiant -->
+    <!-- Identifiant d'etudiant -->
 
-<div id="add_data_Modal2" class="modal fade">
+    <div id="add_data_Modal2" class="modal fade">
 
-    <center><div class="form-v6-content">
-        <div class="form-left">
-            <img src="images/etu.jpg" alt="form" width="580" height="429">
+        <center><div class="form-v6-content">
+            <div class="form-left">
+                <img src="images/etu.jpg" alt="form" width="580" height="429">
+            </div>
+            <form class="form-detail" role="form" action = "loginetud.php" method = "POST"  >
+                <h2>S'identifier</h2>
+        
+                <div class="form-row">
+                    <input type="text" name="Email" id="Email" class="input-text" placeholder="Email"  required >
+                </div>
+                <div class="form-row">
+                    <input type="password" name="cne" id="cne" class="input-text" placeholder="Mot de passe"  required>
+                    <span toggle="#cne" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                </div>
+                
+                <div class="form-row-last">
+                    <cennter><input type="submit" name="Envoyer1" id="Envoyer1" class="register" value="S'identifier"></cennter>
+                </div>
+            </form>
+            </div></center>
         </div>
-        <form class="form-detail" role="form" action = "loginetud.php" method = "POST"  >
-            <h2>S'identifier</h2>
-
-            <div class="form-row">
-                <input type="text" name="Email" id="Email" class="input-text" placeholder="Email"  required >
-            </div>
-            <div class="form-row">
-                <input type="password" name="cne" id="cne" class="input-text" placeholder="Mot de passe"  required>
-            </div>
-
-            <div class="form-row-last">
-                <cennter><input type="submit" name="Envoyer1" id="Envoyer1" class="register" value="S'identifier"></cennter>
-            </div>
-        </form>
-        </div></center>
-    </div>
-
-<!-- -------- -->
-
-
+        
+        <!-- -------- -->
+<style>
+	.field-icon {
+	  float: right;
+		color: black;
+	  margin-left: -30px;
+	  margin-top: 14px;
+	  position: relative;
+	  z-index: 2;
+	}
+	
+	.container{
+	  padding-top:50px;
+	  margin: auto;
+	}</style>
 
 
 	<!-- Modal -->
@@ -235,13 +247,13 @@
 
 	<div class="al">
 		<div class="container text-center">
-			<h1 style="color :white">Contact
+			<h1 style="color :white">
                 <!-- <span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span> --></h1>
 		</div>
 	</div>
 
 
-    <div id="contact" class="section wb" style="background: url(images/tt.jpg); background-attachment:fixed; background-size: cover;">
+    <div id="contact" class="section wb" style="background: url(images/footer.jpeg); background-attachment:fixed; background-size: cover;">
         
         <div class="container">
             <div style="background-color: transparent; border-radius: 0px;">
@@ -256,22 +268,22 @@
                                 <div class="contact-info-wrap-flex">
                                     
                                         <div class="con-info" >
-                                        <h4 style="font-size: 20px; font-weight: 50;" >
-                                        <b><p><span style="color: #17202A; font: size 25px ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-map-marker"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Faculté des Sciences Juridique Economique et Sociale Beausite, BP :2634 Ain sebaa - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+                                        <h4 style="font-size: 13px;" >
+                                        <b><p><span >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-map-marker"  style="font-size: 25px;"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Faculté des Sciences Juridique Economique et Sociale Beausite, BP :2634 Ain sebaa - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Casablanca, MAROC</p></b>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Casablanca, MAROC</p></b>
                                         </h4></div>
                                     
-                                        <div class="con-info"><h4>
-                                        <B><p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-phone"></i></span> <a style="color: #17202A; font: size 25px " href="tel://00212614000420/21/22">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0522 34 34 82/21/22</a></p></h4></B>
+                                        <div class="con-info"><h4 style="font-size: 13px;">
+                                        <B><p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-phone" style="font-size: 25px;"></i></span> <a style="color: #17202A; font: size 25px " href="tel://00212614000420/21/22">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0522 34 34 82/21/22</a></p></h4></B>
                                         </div>
 
-                                        <div class="con-info"><h4>
-                                        <b><p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-fax"></i></span> <a style="color: #17202A; font: size 25px " href="tel://00212 522 252 245">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;00212 522 252 245</a></p></h4></b>
+                                        <div class="con-info"><h4 style="font-size: 13px;">
+                                        <b><p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-fax" style="font-size: 25px;"></i></span> <a style="color: #17202A; font: size 25px " href="tel://00212 522 252 245">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;00212 522 252 245</a></p></h4></b>
                                         </div>
 
-                                        <div class="con-info"><h4>
-                                        <b><p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-globe"></i></span> <a style="color: #17202A; font: size 25px " href="https://www.est-uh2c.ac.ma/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://www.Fsjes-uh2c.ac.ma/</a></p></h4></b>
+                                        <div class="con-info"><h4 style="font-size: 13px;">
+                                        <b><p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-globe" style="font-size: 25px;"></i></span> <a style="color: #17202A; font: size 25px " href="https://www.est-uh2c.ac.ma/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://www.Fsjes-uh2c.ac.ma/</a></p></h4></b>
                                         </div>
                                     
                                 </div></div></div></div>
@@ -286,7 +298,7 @@
 	background: #17202A;
 }
 .al{                        
-        background: url(images/ccc.jpg)no-repeat;
+        background: url(images/cont1.jpg)no-repeat;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -543,12 +555,19 @@ form:after {
             <div >
            <input style="height:65px;" type="text" placeholder="votre message" name="msg" id="msg" />
             </div>
-            
-            <div>
-                <input type="submit" value="Envoyer" name="Envoyer" id="Envoyer" />
+            <div style="margin-left: 100px;">
+            <input type="submit" value="Envoyer" name="Envoyer" id="Envoyer" />
             </div>
         </form><!-- form -->
-        
+        <div class="footer-right">
+							<ul class="footer-links-soi">
+								<li><a href="https://www.facebook.com/i.UH2C/?_rdc=1&_rdr"><i class="fa fa-facebook"></i></a></li>&nbsp;&nbsp;
+								<li><a href="#"><i class="fa fa-github"></i></a></li>&nbsp;&nbsp;
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>&nbsp;&nbsp;
+								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>&nbsp;&nbsp;
+								<li><a href="#"><i class="fa fa-pinterest"></i></a></li>&nbsp;&nbsp;
+							</ul><!-- end links -->
+						</div><br>
     </section>
 </div><!-- container -->
 
@@ -690,6 +709,28 @@ $q ->execute([ 'nom' => $nom,
 	<script src="js/01-custom-places-example.js"></script>
     <!-- ALL PLUGINS -->
     <script src="js/custom.js"></script>
+	<script src="js/timeline.min.js"></script>
+	<script>
+		timeline(document.querySelectorAll('.timeline'), {
+			forceVerticalMode: 700,
+			mode: 'horizontal',
+			verticalStartPosition: 'left',
+			visibleItems: 4
+		});
+	</script>
+
+<script>
+$(".toggle-password").click(function() {
+
+  $(this).toggleClass("fa-eye fa-eye-slash");
+  var input = $($(this).attr("toggle"));
+  if (input.attr("type") == "password") {
+    input.attr("type", "text");
+  } else {
+    input.attr("type", "password");
+  }
+});
+</script>
 
 </body>
 </html>

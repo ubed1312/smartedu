@@ -99,11 +99,9 @@
         </div>
         <div class="form-row">
             <input type="password" name="cne" id="cne" class="input-text" placeholder="Mot de passe"  required>
+            <span toggle="#cne" class="fa fa-fw fa-eye field-icon toggle-password"></span>
         </div>
-        <input type="checkbox" onclick="myFunction()" style="background-color: red;">
-             <label for="remember" style="color: red;">
-                Afficher Mot de passe
-              </label>
+        
         <div class="form-row-last">
             <cennter><input type="submit" name="Envoyer1" id="Envoyer1" class="register" value="S'identifier"></cennter>
         </div>
@@ -111,20 +109,6 @@
     </div></center>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
-  <script>
-    function myFunction() {
-      var x = document.getElementById("password");
-      if (x.type === "password") {
-        x.type = "text";
-      } else {
-        x.type = "password";
-      }
-    }
-  </script>
 
 
 <!-- -------- -->
@@ -366,14 +350,14 @@
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <div class="message-box">
                         <!-- <h4>2021 BEST University in Morocco</h4> -->
-                        <h2 style="color: #F4D03F;">Ses principes :</h2>
-                        <p>
-                            - Pluridisciplinarité ,Autonomie pédagogique et scientifique,
+                        <h2 style="color: #000;">Ses principes :</h2>
+                        <p style="color: #34495E;">
+                            -&nbsp;&nbsp; Pluridisciplinarité ,Autonomie pédagogique et scientifique,
                              Autonomie administrative et financière. <br>
-                            - La FSJES remplit deux missions fondamentales: <br>
+                            - &nbsp;&nbsp; La FSJES remplit deux missions fondamentales: <br>
 
-                            ■ la formation de cadres spécialisés aptes à répondre aux besoins des organisations privées et publiques, <br>
-                            ■ le développement de recherches fondamentales et appliquées en sciences Juridiques, sciences économiques, sciences de gestion et sciences sociales.<br><br>
+                            ■  &nbsp; la formation de cadres spécialisés aptes à répondre aux besoins des organisations privées et publiques, <br>
+                            ■ &nbsp; le développement de recherches fondamentales et appliquées en sciences Juridiques, sciences économiques, sciences de gestion et sciences sociales.<br><br>
 Elle propose un large spectre de formations au sein desquelles les enseignants et des intervenants professionnels transmettent aux étudiants des savoirs
 et des méthodes les préparant à faire face à toutes les situations que présente, sur le plan national et international, notre société en mutation. <br>
 
@@ -381,7 +365,7 @@ La diversification des formations qui y sont proposées, les collaborations rég
 des recherches qui y sont menées attirent un nombre croissant d’étudiants.<br>
                             Ainsi, la Faculté accueille chaque année, dans ses locaux, plus de 20 000 étudiants marocains et étrangers.<br>
                              Elle est habilitée à délivrer les diplômes de Licence (Etudes Fondamentales et Professionnelles), DEUG/DUT, Master et Master Spécialisé et Doctorat.<br>
-                             <div id="mDIV" style="display:none;">
+                             <div id="mDIV" style="display:none;color: #34495E;" >
                             Parallèlement à sa mission de formation, d’enseignement et de recherche scientifique,
                              la Faculté des sciences Juridiques, Economiques et Sociales noue de fructueux partenariats avec plus d’une vingtaine d’universités étrangères.
 
@@ -420,19 +404,19 @@ des recherches qui y sont menées attirent un nombre croissant d’étudiants.<b
 
 				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <div class="message-box">
-                        <h2 style="color: #F4D03F;">Ses missions :</h2>
-                        <p>
-                           <span> -  Formation initiale et continue <br>
-                            -  Recherche Scientifique et Technologique <br>
-                            -  Diffusion de la culture et Information Scientifique et Technique <br>
-                            -  Coopération Nationale et Internationale <br>
-                            -  Orientation et Insertion Professionnelle <span id="maDIV" style="display:none;">
-                        -  Former en initial comme en continu les cadres de demain en économie, en gestion et en méthodes quantitatives appliquées.<br>
-                        -  Promouvoir la recherche scientifique<br>
-                        -  Participer à l'insertion professionnelle de nos lauréats<br>
-                        -  Véhiculer une culture para-universitaire et citoyenne<br>
+                        <h2 >Ses missions :</h2>
+                        <p style="color: #34495E;">
+                           <span> -&nbsp;&nbsp; Formation initiale et continue <br>
+                            -&nbsp;&nbsp;  Recherche Scientifique et Technologique <br>
+                            -&nbsp;&nbsp;  Diffusion de la culture et Information Scientifique et Technique <br>
+                            -&nbsp;&nbsp;  Coopération Nationale et Internationale <br>
+                            -&nbsp;&nbsp;  Orientation et Insertion Professionnelle <span id="maDIV" style="display:none;">
+                        -&nbsp;&nbsp;  Former en initial comme en continu les cadres de demain en économie, en &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gestion et en méthodes quantitatives appliquées.<br>
+                        -&nbsp;&nbsp;  Promouvoir la recherche scientifique<br>
+                        -&nbsp;&nbsp;  Participer à l'insertion professionnelle de nos lauréats<br>
+                        -&nbsp;&nbsp;  Véhiculer une culture para-universitaire et citoyenne<br>
 
-                        -  Participation au développement économique régional et national.</span></span></p>
+                        -&nbsp;&nbsp;  Participation au développement économique régional et national.</span></span></p>
 
                         <!-- <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum.</p> -->
                         <script>

@@ -314,12 +314,12 @@ if(isset($_POST['Modifier']))
 $value1 = $_POST['nom'];
 
 $value2 = $_POST['description'];
-$value3 = $_POST['file'];
+
 $value4 = $_POST['date'];
 
 
 
-$sql="SELECT * From evenement where file='$value3' and nom='$value1' and description='$value2' and date='$value4'";
+$sql="SELECT * From evenement where nom='$value1' and description='$value2' and date='$value4'";
 $result = $mysqli->query($sql); 
 
 
@@ -349,7 +349,7 @@ if ($result->num_rows > 0 ) {
 
 else{
 
- $sql1 = "UPDATE evenement SET file='$value3', nom='$value1', description='$value2', date='$value4' where id='$id'";
+ $sql1 = "UPDATE evenement SET nom='$value1', description='$value2', date='$value4' where id='$id'";
  $result1 =$mysqli->query($sql1);
 
  echo  '

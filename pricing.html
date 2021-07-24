@@ -43,35 +43,47 @@
 
 </head>
 <body class="host_version"> 
+<!-- Identifiant d'enseignant -->
+<div id="add_data_Modal" class="modal fade">
 
-	<!-- Modal -->
-	 <div id="add_data_Modal" class="modal fade">
-
-		<center><div class="form-v6-content">
-			<div class="form-left">
-				<img src="images/login2.jpg" alt="form" width="490" height="431">
-			</div>
-			<form class="form-detail" role="form" action = "login.php" method = "POST"  >
-				<h2>S'identifier</h2>
-
-				<div class="form-row">
-					<input type="text" name="email" id="email" class="input-text" placeholder="Email"  required >
-				</div>
-				<div class="form-row">
-					<input type="password" name="psd" id="psd" class="input-text" placeholder="Mot de passe"  required>
-				</div>
-
-				<div class="form-row-last">
-                    <cennter><input type="submit" name="Envoyer" id="Envoyer" class="register" value="S'identifier"></cennter>
-
-
-
-				</div>
-            </form>
-
-            </div></center>
-
+    <center><div class="form-v6-content">
+        <div class="form-left">
+            <img src="images/login2.jpg" alt="form" width="490" height="431">
         </div>
+        <form class="form-detail" role="form" action = "login.php" method = "POST"  >
+            <h2>S'identifier</h2>
+
+            <div class="form-row">
+                <input type="text" name="email" id="email" class="input-text" placeholder="Email"  required >
+            </div>
+            <div class="form-row">
+                <input type="password" name="psd" id="password-field" class="input-text" placeholder="Mot de passe"  required>
+                   <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+            </div>
+
+            <div class="form-row-last">
+                <cennter><input type="submit" name="Envoyer" id="Envoyer" class="register" value="S'identifier"></cennter>
+            </div>
+        </form>
+        </div></center>
+    </div>
+
+<!-- -------- -->
+<style>
+	.field-icon {
+	  float: right;
+		color: black;
+	  margin-left: -30px;
+	  margin-top: 14px;
+	  position: relative;
+	  z-index: 2;
+	}
+	
+	.container{
+	  padding-top:50px;
+	  margin: auto;
+	}</style>
+	
 
     <!-- LOADER -->
 	<div id="preloader">
@@ -607,11 +619,32 @@
     </div><!-- end copyrights -->
 
     <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
-
     <!-- ALL JS FILES -->
     <script src="js/all.js"></script>
     <!-- ALL PLUGINS -->
     <script src="js/custom.js"></script>
+	<script src="js/timeline.min.js"></script>
+	<script>
+		timeline(document.querySelectorAll('.timeline'), {
+			forceVerticalMode: 700,
+			mode: 'horizontal',
+			verticalStartPosition: 'left',
+			visibleItems: 4
+		});
+	</script>
+
+<script>
+$(".toggle-password").click(function() {
+
+  $(this).toggleClass("fa-eye fa-eye-slash");
+  var input = $($(this).attr("toggle"));
+  if (input.attr("type") == "password") {
+    input.attr("type", "text");
+  } else {
+    input.attr("type", "password");
+  }
+});
+</script>
 <script>
     function toggle(ele) {
         var cont = document.getElementById('cont');
