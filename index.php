@@ -40,6 +40,20 @@
     <![endif]-->
 
 </head>
+<style>
+.field-icon {
+  float: right;
+    color: black;
+  margin-left: -25px;
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.container{
+  padding-top:50px;
+  margin: auto;
+}</style>
 <body class="host_version">
 
 <!-- Identifiant d'enseignant -->
@@ -56,7 +70,8 @@
                 <input type="text" name="email" id="email" class="input-text" placeholder="Email"  required >
             </div>
             <div class="form-row">
-                <input type="password" name="psd" id="psd" class="input-text" placeholder="Mot de passe"  required>
+                <input type="password" name="psd" id="password-field" class="input-text" placeholder="Mot de passe"  required>
+                   <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
             </div>
 
             <div class="form-row-last">
@@ -848,5 +863,17 @@ while ($ligne = $resultat->fetch_assoc())
 			visibleItems: 4
 		});
 	</script>
+<script>
+$(".toggle-password").click(function() {
+
+  $(this).toggleClass("fa-eye fa-eye-slash");
+  var input = $($(this).attr("toggle"));
+  if (input.attr("type") == "password") {
+    input.attr("type", "text");
+  } else {
+    input.attr("type", "password");
+  }
+});
+</script>
 </body>
 </html>
