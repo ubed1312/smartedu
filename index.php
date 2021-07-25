@@ -248,7 +248,7 @@
 						<li class="nav-item"><a class="nav-link" href="http://localhost/smartedu/contact.php">Contact</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-                        <li><a class="hover-btn-new log orange" href="#" data-toggle="modal" data-target="#login"><span>Login</span></a></li>
+                        <li><a class="hover-btn-new log orange " href="#" data-toggle="modal" data-target="#login"><span>Login</span></a></li>
                     </ul>
 				</div>
 			</div>

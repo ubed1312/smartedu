@@ -234,8 +234,8 @@
 						</li>
 						<li class="nav-item active"><a class="nav-link" href="http://localhost/smartedu/contact.php">Contact</a></li>
 					</ul>
-					<ul class="nav navbar-nav navbar-right">
-                        <li><a class="hover-btn-new log orange" href="#" data-toggle="modal" data-target="#login"><span>Login</span></a></li>
+					<ul class="nav navbar-nav navbar-right" style="background: #000;">
+                        <li ><a class="hover-btn-new log green" href="#" data-toggle="modal" data-target="#login" ><span>Login</span></a></li>
                     </ul>
 				</div>
 			</div>
@@ -562,9 +562,9 @@ form:after {
         <div class="footer-right">
 							<ul class="footer-links-soi">
 								<li><a href="https://www.facebook.com/i.UH2C/?_rdc=1&_rdr"><i class="fa fa-facebook"></i></a></li>&nbsp;&nbsp;
-								<li><a href="#"><i class="fa fa-github"></i></a></li>&nbsp;&nbsp;
+								<li><a href="#"><i class="fa fa-google"></i></a></li>&nbsp;&nbsp;
 								<li><a href="#"><i class="fa fa-twitter"></i></a></li>&nbsp;&nbsp;
-								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>&nbsp;&nbsp;
+								<li><a href="#"><i class="fa fa-instagram"></i></a></li>&nbsp;&nbsp;
 								<li><a href="#"><i class="fa fa-pinterest"></i></a></li>&nbsp;&nbsp;
 							</ul><!-- end links -->
 						</div><br>

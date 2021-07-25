@@ -209,11 +209,11 @@ $row1 = mysqli_fetch_assoc($result1);
      ?>
               <li class="nav-item">
               <a href="../../Admin/examples/notification.php" class="nav-link ">
-             <i class="fa fa-bell"   id="over" data-value ="<?php echo $count_active;?>" style="z-index:-99 !important;font-size:10px;color:white;margin:0.6rem 0.1rem !important;"></i>
+            &nbsp; <i class="fa fa-bell" style="font-size: 18;"  id="over" data-value ="<?php echo $count_active;?>" style="z-index:-99 !important;font-size:10px;color:white;margin:0.6rem 0.1rem !important;"></i>
 
 
                 <p>
-               Notifications
+              &nbsp; Notifications
 
                 </p><?php if(!empty($count_active)){?>
                     <div class="round"  data-value ="<?php echo $count_active;?>"><span><?php echo $count_active; ?></span></div>
