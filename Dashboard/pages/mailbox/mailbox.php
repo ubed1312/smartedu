@@ -42,7 +42,7 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>
-    Super Prof
+  Administration
   </title>
 
 

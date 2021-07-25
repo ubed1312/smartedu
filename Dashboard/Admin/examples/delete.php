@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>
-    Super Prof
+  Administration
   </title>
   <link href="../../dist/img/cap.png" rel="shortcut icon" /> 
   </head>

@@ -21,7 +21,7 @@ if(!isset($_SESSION['Email'])){
     $servername="localhost";
     $username="root";
     $password="";
-    $dbname="pfe";
+    $dbname="siteweb";
     
     $con=mysqli_connect($servername,$username,$password,$dbname);
 
@@ -35,7 +35,7 @@ $row1 = mysqli_fetch_assoc($result1);
     $msg=$_REQUEST["msg"];
 
 
-$query = "SELECT * from listeprof where email='$msg'"; 
+$query = "SELECT * from user where msg='$msg'"; 
 $result = mysqli_query($mysqli, $query) or die ( mysqli_error($mysqli));
 $row = mysqli_fetch_assoc($result);
 
@@ -49,10 +49,10 @@ $row = mysqli_fetch_assoc($result);
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>
-    Super Prof
+    Administration
   </title>
 
-  <link href="../../dist/img/cap.png" rel="shortcut icon" />   <!-- Tell the browser to be responsive to screen width -->
+  <link href="../../dist/img/fsjes.png" rel="shortcut icon" />   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Font Awesome -->
@@ -272,7 +272,7 @@ $row = mysqli_fetch_assoc($result);
 $servername="localhost";
 $username="root";
 $password="";
-$dbname="pfe";
+$dbname="siteweb";
 
 //connexion au serveur
 $con=mysqli_connect($servername,$username,$password,$dbname);
@@ -335,7 +335,7 @@ if ($value4 == NULL OR $value4 == '<br>')
                     });
                   </script>
     ';
-      $sql3 = "INSERT INTO contact_adm VALUES('$value1','$value2','$value3','$value4','$value5','$value6','$value7')"; 
+      $sql3 = "INSERT INTO user VALUES('$value1','$value2','$value3')"; 
       $result3 = $con->query($sql3);
 
 }
@@ -349,10 +349,12 @@ if ($value4 == NULL OR $value4 == '<br>')
 
 <div class="col-md-9">
             <div class="card card-primary card-outline">
-              <div class="card-header">
-              <h3 class="card-title">Message au Professeur</h3>
-              </div>
 
+              <div class="card-header">
+              <h3 class="card-title">Répondre :</h3>
+              <a href="read-mail1.php?msg=d%20accord"><i style="margin-left: 650px;" class="fas fa-angle-double-left"></i></a>
+              
+              </div>
                <form method="POST" action="">
               <!-- /.card-header -->
               <div class="card-body">
@@ -360,15 +362,15 @@ if ($value4 == NULL OR $value4 == '<br>')
           
                    <table>
 
-                   <tr>
+                    <!-- <tr>
 
-    <td>Email : &nbsp;</td>
-      <td>
-        <label>
-       <input class="form-control"  Value="<?php echo $row["email"]; ?>" readonly>
-      </label>
-    </td>
-         </tr>
+      <td>Email : &nbsp;</td>
+        <td>
+          <label>
+        <input class="form-control"  Value="<?php echo $row["nom"]; ?>" readonly>
+        </label>
+      </td>
+          </tr> -->
 
 
          <tr>
@@ -376,7 +378,7 @@ if ($value4 == NULL OR $value4 == '<br>')
              <td>Type : &nbsp;</td>
       <td>
         <label>
-       <input class="form-control"  Value="<?php echo 'Professeur'; ?>" readonly>
+       <input class="form-control"  type="text" >
       </label>
     </td>
 

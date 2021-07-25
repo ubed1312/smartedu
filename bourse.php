@@ -356,7 +356,8 @@ while ($ligne = $resultat->fetch_assoc())
                                             <h2>Les Notes</h2>
                                             <h3><?php echo $ligne['filiere']; ?></h3>
                                             <p><?php echo $ligne['drone']; ?></p>
-                                             <p>Pr : <?php echo $ligne['nom']; ?></p>
+                                             <p>Pr : <?php echo $ligne['nom']; ?>
+                                             <?php echo $ligne['prenom']; ?></p></p>
                                         </div>
                                         
                                         <div class="pricing-table-features">

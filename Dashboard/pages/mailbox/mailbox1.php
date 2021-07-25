@@ -25,7 +25,7 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>
-    Super Prof
+  Administration
   </title>
 
   <link href="../../dist/img/fsjes.png" rel="shortcut icon" />   <!-- Tell the browser to be responsive to screen width -->

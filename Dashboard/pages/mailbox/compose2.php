@@ -49,7 +49,7 @@ $row = mysqli_fetch_assoc($result);
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>
-    Super Prof
+  Administration
   </title>
 
   <link href="../../dist/img/cap.png" rel="shortcut icon" />   <!-- Tell the browser to be responsive to screen width -->
