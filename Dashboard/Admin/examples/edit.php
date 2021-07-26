@@ -408,18 +408,18 @@ else{
                     <div class="form-group">
                       <label for="exampleInputPassword1">Ville</label>
                       <input class="form-control" type="text" name="Ville" placeholder="Ville"
-                      title="Ville Invalid" pattern="[A-Za-z ]{3,20}" value="<?php echo $row['ville'];?>">
+                      title="Ville Invalid" value="<?php echo $row['ville'];?>">
                     </div>
 
                     <div class="form-group">
                       <label>Telephone</label>
                       <input class="form-control" type="text" name="tel" placeholder="Telephone"
-                      title="Telephone Invalid" minlength='2' value="<?php echo $row['tel'];?>">
+                      title="Telephone Invalid"  value="<?php echo $row['tel'];?>">
                     </div>
                     <div class="form-group">
                       <label>Matiere</label>
                       <input class="form-control" type="text" name="matiere" placeholder="Matiere"
-                      title="Matiere Invalid" minlength='2' value="<?php echo $row['matiere'];?>">
+                      title="Matiere Invalid"  value="<?php echo $row['matiere'];?>">
                     </div>
 
                     <!-- <div class="form-group">
@@ -431,7 +431,7 @@ else{
                     <div class="form-group">
                       <label>Compétences</label>
                       <input class="form-control" type="text" name="Skills" placeholder="Skills"
-                      title="Champ Invalid" minlength='4' value="<?php echo $row['skills'];?>">
+                      title="Champ Invalid"  value="<?php echo $row['skills'];?>">
                     </div>
                     <!-- <div class="form-group">
                       <label>Identifiant</label>

@@ -352,8 +352,10 @@ if ($value4 == NULL OR $value4 == '<br>')
 
               <div class="card-header">
               <h3 class="card-title">Répondre :</h3>
-              <a href="read-mail1.php?msg=d%20accord"><i style="margin-left: 650px;" class="fas fa-angle-double-left"></i></a>
-              
+            
+<div class="float-right">
+                  <button type="submit" name="Retour" class="btn btn-light" onclick = "history.go(-1)"><i class="fas fa-angle-double-left"></i> Return</button>
+                </div>
               </div>
                <form method="POST" action="">
               <!-- /.card-header -->

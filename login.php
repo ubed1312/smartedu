@@ -57,7 +57,7 @@ if(isset($_POST['Envoyer']))
 
  {
 
-        $sql = "SELECT * from listeprof where email='$value1' and password = '$value2'";
+        $sql = "SELECT * from listeprof where email='$value1' and password = '$value2' 	and is_deleted= 0";
         $result = $con->query($sql);
 
 

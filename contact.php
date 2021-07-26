@@ -221,14 +221,14 @@
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
                             <a class="dropdown-item" href="https://sca.univh2c.ma/cas/login">Espace ENT </a>
 								<a class="dropdown-item" href="bourse.php">Bourse</a>
-                                <a class="dropdown-item" href="Emploi.html">Calendrier</a>
+                                <a class="dropdown-item" href="Emploi.php">Calendrier</a>
 							</div>
 						</li>
 						<li class="nav-item"><a class="nav-link" href="teachers.html">Professeurs</a></li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Administration </a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-                            <a class="dropdown-item" data-toggle="modal" data-target="#add_data_Modal2" href="pricing.html">Corps administratif </a>
+                            <a class="dropdown-item" data-toggle="modal" data-target="#add_data_Modal2" href="pricing.html">Administration</a>
 								<a class="dropdown-item" data-toggle="modal" data-target="#add_data_Modal" href="ensei.html">Corps enseignant </a>
 							</div>
 						</li>

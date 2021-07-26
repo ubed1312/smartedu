@@ -362,7 +362,7 @@ $row1 = mysqli_fetch_assoc($result1);
             <div class="card-footer">
               <div class="float-right">
 
-                <a href="compose1.php?msg=<?php echo $row['nom']; ?>" class="nav-link"><button type="button" class="btn btn-default"><i class="fas fa-share"></i>Repondre</button></a>
+                <a href="compose1.php?msg=<?php echo $row['msg']; ?>" class="nav-link"><button type="button" class="btn btn-default"><i class="fas fa-share"></i>Repondre</button></a>
               </div>
 
               <!-- supprimer -->

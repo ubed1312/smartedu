@@ -227,14 +227,14 @@
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
 								<a class="dropdown-item" href="https://sca.univh2c.ma/cas/login">Espace ENT </a>
 								<a class="dropdown-item " href="bourse.php">Bourse</a>
-                                <a class="dropdown-item dropdown active" href="Emploi.html">Calendrier</a>
+                                <a class="dropdown-item dropdown active" href="Emploi.php">Calendrier</a>
 							</div>
 						</li>
 						<li class="nav-item"><a class="nav-link" href="teachers.html">Professeurs</a></li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Administration </a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" data-toggle="modal" data-target="#add_data_Modal2" href="pricing.html">Corps administratif </a>
+								<a class="dropdown-item" data-toggle="modal" data-target="#add_data_Modal2" href="pricing.html">Administration </a>
 								<a class="dropdown-item" data-toggle="modal" data-target="#add_data_Modal" href="ensei.html">Corps enseignant </a>
 							</div>
 						</li>
@@ -290,6 +290,7 @@
 					
                 </div><!-- end col -->
 				<div class="col-lg-3 col-12 right-single">
+               
 					<div class="widget-search">
 						<div class="site-search-area">
 							<form method="get" id="site-searchform" action="#">
@@ -299,44 +300,48 @@
 								</div>
 							</form>
 						</div>
-					</div>
-					
+					</div> 
+					 
+                                    <div >
+                                    <?php
+
+
+$servername="localhost";
+$username="root";
+$password="";
+$dbname="siteweb";
+
+$con=mysqli_connect($servername,$username,$password,$dbname);
+$requete = "SELECT * FROM note where event='afficher' limit 6";
+// envoi de la requête
+$resultat = $con->query($requete);
+
+// intialisation de la variable $news
+$news = '';
+
+// tant qu'il y a un enregistrement, les instructions dans la boucle s'exécutent
+while ($ligne = $resultat->fetch_assoc())
+{ ?>
+                                <div >
                                     <div class="pricing-table pricing-table-highlighted">
-                                        <center> <div class="pricing-table-header grd1">
-                                            <h2>Inscription</h2>
-                                            <h3>2020-2021</h3>
+                                    <center> <div class="pricing-table-header grd1">
+                                            <h2>Les Notes</h2>
+                                            <h3><?php echo $ligne['filiere']; ?></h3>
+                                            <p><?php echo $ligne['drone']; ?></p>
+                                             <p>Pr : <?php echo $ligne['nom']; ?>
+                                             <?php echo $ligne['prenom']; ?></p></p>
                                         </div>
-                                        <div class="pricing-table-space"></div>
+                                        
                                         <div class="pricing-table-features">
                                             <img src="images/download.jpg" alt="" class="img-fluid">
                                         </div>
                                         <div class="pricing-table-sign-up">
-                                            <a href="#" class="hover-btn-new orange"><span>View</span></a></center>
+                                        <a  href='https://sca.univh2c.ma/cas/login'><span >Voir les notes sur Ent</span></a></center>
                                         </div><br><br>
-                                        <div class="pricing-table pricing-table-highlighted">
-                                            <center> <div class="pricing-table-header grd1">
-                                                <h2>Inscription</h2>
-                                                <h3>2020-2021</h3>
-                                            </div>
-                                            <div class="pricing-table-space"></div>
-                                            <div class="pricing-table-features">
-                                                <img src="images/download.jpg" alt="" class="img-fluid">
-                                            </div>
-                                            <div class="pricing-table-sign-up">
-                                                <a href="#" class="hover-btn-new orange"><span>View</span></a></center>
-                                            </div><br><br>
-                                            <!-- <h3 class="widget-title"><strong>Contacts</strong></h3><br>
-                                            <ul class="footer-links-soi">
-                                                <li><a href="https://www.facebook.com/i.UH2C/?_rdc=1&_rdr"><i class="fa fa-facebook"></i> </a></li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Facebook</b><br><br>
-                                                <li><a href="#"><i class="fa fa-github"></i></a></li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Github</b><br><br>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twitter</b><br><br>
-                                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dribbble</b><br><br>
-                                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pinterest</b><br><br>
-                                            </ul> -->
-
-
-
-                                        </div>
+                                    </div>
+                                </div>
+                                <?php } ?>
+                                        </div><br><br>
                                     </div>
                                 
 					

@@ -482,6 +482,21 @@ $(document).ready(function(){
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- Page Script -->
 
+<script>
+    $(function () {
+      $("#example1").DataTable();
+      $('#example2').DataTable({
+        "paging": true,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+      });
+    });
+
+  </script>
+
 <script src="../../plugins/jquery/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 

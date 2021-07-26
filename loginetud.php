@@ -57,7 +57,7 @@ if(isset($_POST['Envoyer1']))
 
  {
 
-        $sql = "SELECT * from listeetud where Email='$value1' and cne = '$value2'";
+        $sql = "SELECT * from listeetud where Email='$value1' and cne = '$value2' and is_deleted = 0 ";
         $result = $con->query($sql);
 
 
