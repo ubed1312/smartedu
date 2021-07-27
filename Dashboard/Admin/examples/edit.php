@@ -318,6 +318,7 @@ $value3 = $_POST['matiere'];
 $value4 = $_POST['Email'];
 $value5 = $_POST['tel'];
 $value6 = $_POST['Skills'];
+
 // $value7 = $_POST['identifiant'];
 $value8 = $_POST['password'];
 
@@ -429,7 +430,7 @@ else{
                     </div> -->
 
                     <div class="form-group">
-                      <label>Compétences</label>
+                      <label>Compétences</label> 
                       <input class="form-control" type="text" name="Skills" placeholder="Skills"
                       title="Champ Invalid"  value="<?php echo $row['skills'];?>">
                     </div>
