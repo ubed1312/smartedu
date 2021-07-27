@@ -328,7 +328,7 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
 <a href="Evenements.php" class="nav-link active">
               <i class="far fa-calendar-alt"></i>
                 <p>
-                Evenements
+                Evénements
 
                 </p>
               </a>
@@ -370,7 +370,7 @@ $con=mysqli_connect($servername,$username,$password,$dbname);
 
             <section id="main-content">
     <section class="wrapper">
-      <h3><i class="fa fa-angle-right"></i> Form Evenement</h3><br><br><br>
+      <h3><i class="fa fa-angle-right"></i> Form Evénement</h3><br><br><br>
       <!-- BASIC FORM ELELEMNTS  -->
       <div class="row mt">
         <div class="col-lg-12">

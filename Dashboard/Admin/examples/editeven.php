@@ -258,7 +258,7 @@ $row = mysqli_fetch_assoc($result);
 <a href="Evenements.php" class="nav-link active">
               <i class="far fa-calendar-alt"></i>
                 <p>
-                Evenements
+                Evénements
 
                 </p>
               </a>
@@ -301,7 +301,7 @@ $row = mysqli_fetch_assoc($result);
               <!-- general form elements -->
               <div class="card card-primary">
                 <div class="card-header">
-                  <h3 class="card-title">Edit Evenement</h3>
+                  <h3 class="card-title">Edit Evénement</h3>
                 </div>
                 <!-- /.card-header -->
 
@@ -366,7 +366,7 @@ else{
                    swal({
                      icon: "success",
                      title: "Bien .",
-                     text: "L evenement a ete modifiée",
+                     text: "L événement a ete modifiée",
                    })
                  });
                </script>
@@ -386,7 +386,7 @@ else{
                   <div class="card-body">
 
                     <div class="form-group">
-                      <label>Nom de l'évenement :</label>
+                      <label>Nom de l'événement :</label>
                       <input class="form-control" type="text" name="nom" placeholder="nom"
                       title="nom Invalid"   value="<?php echo $row['nom'];?>" >
                     </div>
@@ -397,7 +397,7 @@ else{
                       title="Description Invalid"    value="<?php echo $row['description'];?>">
                     </div>
                     <div class="form-group">
-                      <label>Date de l'évenement</label>
+                      <label>Date de l'événement</label>
                       <input class="form-control" type="datetime-local" name="date" placeholder="DATE"
                       title="Date Invalid"   value="<?php echo $row['date'];?>">
                     </div>
@@ -425,7 +425,7 @@ else{
               <div class="card card-widget widget-user">
                 <!-- Add the bg color to the header using any of the bg-* classes -->
                 <div class="widget-user-header bg-info">
-                  <h3 class="widget-user-desc">Evenement</h3>
+                  <h3 class="widget-user-desc">Evénement</h3>
 
                 </div>
                 <div class="widget-user-image">

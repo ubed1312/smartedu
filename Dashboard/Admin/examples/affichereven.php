@@ -42,7 +42,7 @@ echo  '
                     swal({
                       icon: "success",
                       title: "Bien .",
-                      text: "Evenement Afficher",
+                      text: "Evénement Afficher",
                     })
                   });
                 </script>

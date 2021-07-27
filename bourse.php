@@ -341,9 +341,10 @@ $dbname="siteweb";
 
 $con=mysqli_connect($servername,$username,$password,$dbname);
 $requete = "SELECT * FROM note where event='afficher' limit 6";
+$requetee = "SELECT * FROM evenement where event='afficher' and is_deleted=0 limit 6";
 // envoi de la requête
 $resultat = $con->query($requete);
-
+$resultate = $con->query($requetee);
 // intialisation de la variable $news
 $news = '';
 
@@ -367,9 +368,29 @@ while ($ligne = $resultat->fetch_assoc())
                                         <a  href='https://sca.univh2c.ma/cas/login'><span >Voir les notes sur Ent</span></a></center>
                                         </div><br><br>
                                     </div>
-                                </div>
+                                
                                 <?php } ?>
+
+                                <?php
+                                while ($ligne = $resultate->fetch_assoc())
+{ ?>
+<div >
+                                    <div class="pricing-table pricing-table-highlighted">
+                                    <center> <div class="pricing-table-header grd1">
+                                            <h2>L'événement</h2>
+                                            <h3><?php echo $ligne['nom']; ?></h3>
+                                            <p><?php echo $ligne['description']; ?></p>
+                                             <p>Date : <?php echo $ligne['date']; ?></p>
+                                        </div>
+                                        
+                                        <div class="pricing-table-features">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="Dashboard/Admin/examples/<?php echo $ligne['file'];?>" width="175" height="200" class="img-fluid"/>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                        <a  href=''><span >Voir plus détails sur l'événement</span></a></center>
                                         </div><br><br>
+                                    </div><?php } ?>
+                                        </div></div><br><br>
                                         <!-- <div class="pricing-table pricing-table-highlighted">
                                             <center> <div class="pricing-table-header grd1">
                                                 <h2>Inscription</h2>

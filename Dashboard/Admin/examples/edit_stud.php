@@ -279,7 +279,7 @@ $row = mysqli_fetch_assoc($result);
 <a href="Evenements.php" class="nav-link ">
               <i class="far fa-calendar-alt"></i>
                 <p>
-                Evenements
+                Evénements
 
                 </p>
               </a>

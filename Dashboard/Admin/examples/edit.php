@@ -258,7 +258,7 @@ $row = mysqli_fetch_assoc($result);
 <a href="Evenements.php" class="nav-link ">
               <i class="far fa-calendar-alt"></i>
                 <p>
-                Evenements
+                Evénements
 
                 </p>
               </a>
@@ -280,7 +280,7 @@ $row = mysqli_fetch_assoc($result);
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1>Form Prof</h1>
+              <h1>Form Professeur</h1>
             </div>
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">

@@ -299,7 +299,7 @@ if(!isset($_SESSION['Email'])){
             <a href="#" class="nav-link active">
               <i class="far fa-calendar-alt"></i>
                 <p>
-                Evenements
+                Evénements
 
                 </p>
               </a>
@@ -322,7 +322,7 @@ if(!isset($_SESSION['Email'])){
         <!-- Default box -->
         <div class="card card-info">
           <div class="card-header">
-          <h3 class="card-title">Liste des Evenements</h3>
+          <h3 class="card-title">Liste des Evénements</h3>
 
             <div class="card-tools">
               <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip"
@@ -338,7 +338,7 @@ if(!isset($_SESSION['Email'])){
 <!-- /*********************************Hadshi ylh kanzido pour ajout prof****************************/ -->
               <table class="table table-striped table-advance table-hover">
                 <h4><div class=pull-right>
-                <a href="ajouteven.php"><button class="btn btn-success" >Ajouter Evenement</button></a>&nbsp;&nbsp;</div></h4>
+                <a href="ajouteven.php"><button class="btn btn-success" >Ajouter Evénement</button></a>&nbsp;&nbsp;</div></h4>
                 <hr>
 
 

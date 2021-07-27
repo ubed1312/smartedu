@@ -515,7 +515,7 @@ while ($ligne = $resultat->fetch_assoc())
                                 <div class="col-md-4">
                                     <div class="pricing-table pricing-table-highlighted">
                                         <div class="pricing-table-header grd1">
-                                            <h2>L'évenement</h2>
+                                            <h2>L'événement</h2>
                                             <h3><?php echo $ligne['nom']; ?></h3>
                                             <p><?php echo $ligne['description']; ?></p>
                                              <p>Date : <?php echo $ligne['date']; ?></p>
@@ -529,7 +529,7 @@ while ($ligne = $resultat->fetch_assoc())
                                             
                                         </div>
                                         <div class="pricing-table-sign-up">
-                                            <a  ><span >Voir plus détails sur l'évenement</span></a>
+                                            <a href='' ><span >Voir plus détails sur l'événement</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -557,19 +557,19 @@ while ($ligne = $resultat->fetch_assoc())
 			<div class="row text-left stat-wrap">
 				<div class="col-md-4 col-sm-4 col-xs-12">
 					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-study"></i></span>
-					<p class="stat_count">9530</p>
+					<p class="stat_count">7530</p>
 					<h3>Students</h3>
 				</div><!-- end col -->
 
 				<div class="col-md-4 col-sm-4 col-xs-12">
 					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-online"></i></span>
-					<p class="stat_count">240</p>
+					<p class="stat_count">160</p>
 					<h3>Courses</h3>
 				</div><!-- end col -->
 
 				<div class="col-md-4 col-sm-4 col-xs-12">
 					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-years"></i></span>
-					<p class="stat_count">25</p>
+					<p class="stat_count">16</p>
 					<h3>Years Completed</h3>
 				</div><!-- end col -->
 			</div><!-- end row -->
